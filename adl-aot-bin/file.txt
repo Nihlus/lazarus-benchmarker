@@ -1,0 +1,3 @@
+2018-11-03 22:01:22.8474|INFO|AdvancedDLSupport.AOT.Program|Loaded input assembly "Lazarus.ADL".
+2018-11-03 22:01:22.9124|INFO|AdvancedDLSupport.AOT.PregeneratedAssemblyBuilder|Scanning Lazarus.ADL...
+2018-11-03 22:01:22.9124|INFO|AdvancedDLSupport.AOT.PregeneratedAssemblyBuilder|Discovered ILazarus.

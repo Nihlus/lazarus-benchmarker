@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rewrite</name>
+    </assembly>
+    <members>
+        <member name="T:OpenTK.Rewrite.GeneratedVariableIdentifier">
+            <summary>
+            Acts as a unique identifier for a generated named variable that can be passed between methods. Replaces uses of
+            variable names from Mono.Cecil.
+            </summary>
+        </member>
+        <member name="P:OpenTK.Rewrite.GeneratedVariableIdentifier.Body">
+            <summary>
+            The <see cref="T:Mono.Cecil.Cil.MethodBody"/> which the variable is in.
+            </summary>
+        </member>
+        <member name="P:OpenTK.Rewrite.GeneratedVariableIdentifier.Definition">
+            <summary>
+            The <see cref="T:Mono.Cecil.Cil.VariableDefinition"/> which the variable idetifier maps to.
+            </summary>
+        </member>
+        <member name="P:OpenTK.Rewrite.GeneratedVariableIdentifier.Name">
+            <summary>
+            The name of the generated variable.
+            </summary>
+        </member>
+        <member name="M:OpenTK.Rewrite.GeneratedVariableIdentifier.#ctor(Mono.Cecil.Cil.MethodBody,Mono.Cecil.Cil.VariableDefinition,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:OpenTK.Rewrite.GeneratedVariableIdentifier"/> class.
+            </summary>
+            <param name="body">The method body which the variable is in.</param>
+            <param name="definition">The definition of the generated variable.</param>
+            <param name="name">The name of the generated variable.</param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="T:OpenTK.Rewrite.OpenTKAssemblyResolver">
+            This is based on the Mono.Cecil BaseAssemblyResolver. But with
+            additions to GetCorlib but with some extra code to check for -api
+            directories which we're added by mono in the 4.4 release. Without this
+            we can end up adding assembly references to mscorlib 4.0 even though
+            OpenTK is compiled for 2.0.
+        </member>
+        <member name="T:OpenTK.Rewrite.Options">
+            <summary>
+            A container class used by <see cref="T:CommandLine.Parser"/> to parse command line arguments.
+            </summary>
+        </member>
+        <member name="P:OpenTK.Rewrite.Options.TargetAssembly">
+            <summary>
+            Gets or sets the path to the target assembly that should be rewritten.
+            </summary>
+        </member>
+        <member name="P:OpenTK.Rewrite.Options.StrongNameKey">
+            <summary>
+            Get or sets the path to the strong name key which should be used to sign or resign the assembly.
+            </summary>
+        </member>
+        <member name="P:OpenTK.Rewrite.Options.EnableDebugCalls">
+            <summary>
+            Gets or sets a value indicating whether calls to GL.GetError() are wrapped around each native call.
+            </summary>
+        </member>
+        <member name="P:OpenTK.Rewrite.Options.UseDLLImport">
+            <summary>
+            Gets or sets a value indicating whether native calls are forced to use DllImport instead of GetProcAddress.
+            </summary>
+        </member>
+        <member name="M:OpenTK.Rewrite.Program.GetGeneratedVariable(System.Collections.Generic.IEnumerable{OpenTK.Rewrite.GeneratedVariableIdentifier},System.String,Mono.Cecil.Cil.MethodBody)">
+            <summary>
+            Retrieves a generated variable by searching the given list by the variable's name and associated method body.
+            </summary>
+            <param name="variableIdentifiers"></param>
+            <param name="name"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>AdvancedDLSupport.AOT</name>
+    </assembly>
+    <members>
+        <member name="T:AdvancedDLSupport.AOT.Arguments.CommandLineArguments">
+            <summary>
+            Hosts command-line arguments given to the tool.
+            <p /><c>[UsedImplicitly]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.AOT.Arguments.CommandLineArguments.InputAssemblies">
+            <summary>
+            Gets or sets a list of input assemblies to process.
+            <p /><c>[PublicAPI, NotNull, ItemNotNull]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.AOT.Arguments.CommandLineArguments.ImplementationOptions">
+            <summary>
+            Gets or sets the implementation options to use when generating.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.AOT.Arguments.CommandLineArguments.OutputPath">
+            <summary>
+            Gets or sets the output path where the generated assemblies should be stored.
+            <p /><c>[PublicAPI, NotNull]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.AOT.Arguments.CommandLineArguments.Verbose">
+            <summary>
+            Gets or sets a value indicating whether or not verbose logging should be enabled.
+            </summary>
+        </member>
+        <member name="T:AdvancedDLSupport.AOT.ExitCodes">
+            <summary>
+            Holds exit codes for the application.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.AOT.ExitCodes.Success">
+            <summary>
+            No error, all is fine.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.AOT.ExitCodes.InputAssemblyNotFound">
+            <summary>
+            Could not find one or more of the input assemblies.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.AOT.ExitCodes.FailedToLoadAssembly">
+            <summary>
+            Failed to load a given assembly.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.AOT.ExitCodes.InvalidArguments">
+            <summary>
+            Input arguments could not be parsed.
+            </summary>
+        </member>
+        <member name="T:AdvancedDLSupport.AOT.PersistentDynamicAssemblyProvider">
+            <summary>
+            Provides a persistent dynamic assembly for use with the native binding generator.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.AOT.PersistentDynamicAssemblyProvider.IsDebuggable">
+            <summary>
+            Gets a value indicating whether or not the assembly is debuggable.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.AOT.PersistentDynamicAssemblyProvider.UniqueIdentifier">
+            <summary>
+            Gets the unique identifier for the assembly.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="F:AdvancedDLSupport.AOT.PersistentDynamicAssemblyProvider.DynamicAssemblyName">
+            <summary>
+            Gets the name of the dynamic assembly.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.AOT.PersistentDynamicAssemblyProvider.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.AOT.PersistentDynamicAssemblyProvider" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="debuggable">
+            Whether or not the assembly should be marked as debuggable. This disables any compiler optimizations.
+            </param>
+            <param name="outputDirectory">The directory where the dynamic assembly should be saved.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.AOT.PersistentDynamicAssemblyProvider.GetDynamicAssembly">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.AOT.PersistentDynamicAssemblyProvider.GetDynamicModule">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.AOT.PregeneratedAssemblyBuilder">
+            <summary>
+            Builder class for ahead-of-time compiled native-to-managed glue assemblies.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.AOT.PregeneratedAssemblyBuilder.#ctor(AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.AOT.PregeneratedAssemblyBuilder" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="options">The implementation options to use.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.AOT.PregeneratedAssemblyBuilder.WithSourceAssembly(System.Reflection.Assembly)">
+            <summary>
+            Adds an assembly as a source assembly to generate.
+            <p /><c>[PublicAPI, NotNull]</c></summary>
+            <param name="assembly">The source assembly.<p /><c>[NotNull]</c></param>
+            <returns>The builder, with the assembly.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.AOT.PregeneratedAssemblyBuilder.WithSourceExplicitTypeCombination``2">
+            <summary>
+            Adds an explicit type combination that isn't automatically discovered from the assembly set.
+            <p /><c>[PublicAPI, NotNull]</c></summary>
+            <typeparam name="TBaseClass">The base class of the type.</typeparam>
+            <typeparam name="TInterface">The interface to implement.</typeparam>
+            <returns>The builder, with the combination.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.AOT.PregeneratedAssemblyBuilder.WithSourceExplicitTypeCombination(System.Type,System.Type[])">
+            <summary>
+            Adds an explicit type combination that isn't automatically discovered from the assembly set.
+            <p /><c>[PublicAPI, NotNull]</c></summary>
+            <param name="classType">The base class of the type.<p /><c>[NotNull]</c></param>
+            <param name="interfaceTypes">The interfaces to implement.<p /><c>[NotNull]</c></param>
+            <returns>The builder, with the combination.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.AOT.PregeneratedAssemblyBuilder.Build(System.String)">
+            <summary>
+            Builds the implementation assembly, saving it to the given path.
+            <p /><c>[PublicAPI, NotNull]</c></summary>
+            <param name="outputPath">The path where the assembly should be saved.<p /><c>[NotNull]</c></param>
+            <returns>The name of the output assembly.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.AOT.PregeneratedAssemblyBuilder.CreateMetadataType(System.Reflection.Emit.ModuleBuilder,System.Collections.Generic.IReadOnlyDictionary{AdvancedDLSupport.GeneratedImplementationTypeIdentifier,System.Type})">
+            <summary>
+            Creates a metadata type in the assembly that contains a listing of the pregenerated types and their
+            respective lookup keys.
+            </summary>
+            <param name="module">The module to emit the type in.</param>
+            <param name="typeDictionary">The generated types.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.AOT.PregeneratedAssemblyBuilder.EmitCreateKeyInstance(System.Reflection.Emit.ILGenerator,AdvancedDLSupport.GeneratedImplementationTypeIdentifier)">
+            <summary>
+            Emits a set of IL instructions that creates a new instance of the given <paramref name="entryKey" />.
+            </summary>
+            <param name="constructorIL">The generator where the IL is to be emitted.</param>
+            <param name="entryKey">The instance to emit.</param>
+        </member>
+        <member name="T:AdvancedDLSupport.AOT.Program">
+            <summary>
+            The main entrypoint class of the program.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.AOT.Program.Arguments">
+            <summary>
+            Gets the command-line arguments to the program.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.AOT.Program.Main(System.String[])">
+            <summary>
+            The main entry point.
+            </summary>
+            <param name="args">The raw arguments passed to the program.</param>
+            <returns>The exit code of the application.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFrameworks>net471</TargetFrameworks>
+        <RuntimeIdentifiers>win-x64;win-x86</RuntimeIdentifiers>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Lazarus.ADL\Lazarus.ADL.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <Reference Include="Lazarus.RW, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Condition="'$(TargetFramework)' == 'net471'">
+            <HintPath>..\Lazarus.RW\bin\Release\net471\Lazarus.RW.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+</Project>

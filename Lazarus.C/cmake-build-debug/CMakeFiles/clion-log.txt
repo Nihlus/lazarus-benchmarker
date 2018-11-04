@@ -1,0 +1,8 @@
+D:\_C\Programs\CMake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C
+Framework: netcoreapp2.0
+Destination: C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/lib/netcoreapp2.0
+Framework: net461
+Destination: C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/lib/net461
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C

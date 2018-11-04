@@ -1,0 +1,4 @@
+C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/lib/netcoreapp2.0/TestLibrary.lib
+C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/lib/netcoreapp2.0/TestLibrary.dll
+C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/lib/net461/TestLibrary.lib
+C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/lib/net461/TestLibrary.dll

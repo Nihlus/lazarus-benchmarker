@@ -1,0 +1,6 @@
+C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/CMakeFiles/install/local.dir
+C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/CMakeFiles/install.dir
+C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/CMakeFiles/edit_cache.dir
+C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/CMakeFiles/TestLibrary.dir
+C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/CMakeFiles/rebuild_cache.dir
+C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/CMakeFiles/list_install_components.dir

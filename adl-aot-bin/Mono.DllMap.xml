@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Mono.DllMap</name>
+    </assembly>
+    <members>
+        <member name="T:Mono.DllMap.DllConfiguration">
+            <summary>
+            Represents a set of Mono DllMap entries.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:Mono.DllMap.DllConfiguration.Maps">
+            <summary>
+            Gets or sets the mapping entries.
+            <p /><c>[PublicAPI, CanBeNull, ItemNotNull]</c></summary>
+        </member>
+        <member name="M:Mono.DllMap.DllConfiguration.GetRelevantMaps">
+            <summary>
+            Gets the map entries that are relevant for the current platform.
+            <p /><c>[PublicAPI, NotNull, ItemNotNull]</c></summary>
+            <returns>The entries relevant for the current platform.</returns>
+        </member>
+        <member name="M:Mono.DllMap.DllConfiguration.Parse(System.String)">
+            <summary>
+            Parses a DllMap configuration from the given XML document.
+            <p /><c>[PublicAPI, NotNull, Pure]</c></summary>
+            <param name="xml">The XML to parse.<p /><c>[NotNull]</c></param>
+            <returns>A <see cref="T:Mono.DllMap.DllConfiguration" /> object.</returns>
+        </member>
+        <member name="M:Mono.DllMap.DllConfiguration.Parse(System.IO.Stream)">
+            <summary>
+            Parses a DllMap configuration from the given XML document.
+            <p /><c>[PublicAPI, NotNull, Pure]</c></summary>
+            <param name="s">The stream containing the xml.<p /><c>[NotNull]</c></param>
+            <returns>A <see cref="T:Mono.DllMap.DllConfiguration" /> object.</returns>
+        </member>
+        <member name="M:Mono.DllMap.DllConfiguration.Parse(System.IO.TextReader)">
+            <summary>
+            Parses a DllMap configuration from the given XML document.
+            <p /><c>[PublicAPI, NotNull, Pure]</c></summary>
+            <param name="tr">The reader containing the xml.<p /><c>[NotNull]</c></param>
+            <returns>A <see cref="T:Mono.DllMap.DllConfiguration" /> object.</returns>
+        </member>
+        <member name="M:Mono.DllMap.DllConfiguration.TryParse(System.IO.Stream,Mono.DllMap.DllConfiguration@)">
+            <summary>
+            Attempts to parse a DllMap configuration from the given XML document.
+            <p /><c>[PublicAPI, Pure]</c></summary>
+            <param name="s">The XML to parse.<p /><c>[NotNull]</c></param>
+            <param name="result">The resulting <see cref="T:Mono.DllMap.DllConfiguration" /> object.<p /><c>[CanBeNull]</c></param>
+            <returns>true if the parsing succeeded; otherwise, false.</returns>
+        </member>
+        <member name="M:Mono.DllMap.DllConfiguration.TryParse(System.IO.TextReader,Mono.DllMap.DllConfiguration@)">
+            <summary>
+            Attempts to parse a DllMap configuration from the given XML document.
+            <p /><c>[PublicAPI, Pure]</c></summary>
+            <param name="tr">The XML to parse.<p /><c>[NotNull]</c></param>
+            <param name="result">The resulting <see cref="T:Mono.DllMap.DllConfiguration" /> object.<p /><c>[CanBeNull]</c></param>
+            <returns>true if the parsing succeeded; otherwise, false.</returns>
+        </member>
+        <member name="M:Mono.DllMap.DllConfiguration.TryParse(System.String,Mono.DllMap.DllConfiguration@)">
+            <summary>
+            Attempts to parse a DllMap configuration from the given XML document.
+            <p /><c>[PublicAPI, Pure]</c></summary>
+            <param name="xml">The XML to parse.<p /><c>[NotNull]</c></param>
+            <param name="result">The resulting <see cref="T:Mono.DllMap.DllConfiguration" /> object.<p /><c>[CanBeNull]</c></param>
+            <returns>true if the parsing succeeded; otherwise, false.</returns>
+        </member>
+        <member name="T:Mono.DllMap.DllEntry">
+            <summary>
+            Represents a subentry in a Mono DllMap for specific functions.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:Mono.DllMap.DllEntry.TargetLibrary">
+            <summary>
+            Gets or sets the target library that the entry should map to.
+            <p /><c>[PublicAPI, CanBeNull]</c></summary>
+        </member>
+        <member name="P:Mono.DllMap.DllEntry.SourceSymbol">
+            <summary>
+            Gets or sets the name of the source symbol that the entry maps.
+            <p /><c>[PublicAPI, CanBeNull]</c></summary>
+        </member>
+        <member name="P:Mono.DllMap.DllEntry.TargetSymbol">
+            <summary>
+            Gets or sets the name of the target symbol that the entry should map to.
+            <p /><c>[PublicAPI, CanBeNull]</c></summary>
+        </member>
+        <member name="T:Mono.DllMap.DllMap">
+            <summary>
+            Represents an entry in a Mono DllMap configuration.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:Mono.DllMap.DllMap.SourceLibrary">
+            <summary>
+            Gets or sets the name of the source library that the map maps.
+            <p /><c>[PublicAPI, CanBeNull]</c></summary>
+        </member>
+        <member name="P:Mono.DllMap.DllMap.TargetLibrary">
+            <summary>
+            Gets or sets the name of the target library that the map maps to.
+            <p /><c>[PublicAPI, CanBeNull]</c></summary>
+        </member>
+        <member name="P:Mono.DllMap.DllMap.SymbolEntries">
+            <summary>
+            Gets or sets the list of symbol remapping entries in the mapping entry.
+            <p /><c>[PublicAPI, CanBeNull]</c></summary>
+        </member>
+        <member name="T:Mono.DllMap.DllMapResolver">
+            <summary>
+            Helper class for resolving library paths and alternate symbol names through Mono's DllMap files.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:Mono.DllMap.DllMapResolver.MapLibraryName``1(System.String)">
+            <summary>
+            Finds the matching remapping entry, if any, for the given library name and type, and returns the
+            remapped library name. If no match is found, the library name is returned unchanged.
+            <p /><c>[PublicAPI, Pure, NotNull]</c></summary>
+            <typeparam name="T">A type defined in the assembly to search the DllMap for.</typeparam>
+            <param name="libraryName">The original name of the library.<p /><c>[NotNull]</c></param>
+            <returns>The remapped name.</returns>
+        </member>
+        <member name="M:Mono.DllMap.DllMapResolver.MapLibraryName(System.Type,System.String)">
+            <summary>
+            Finds the matching remapping entry, if any, for the given library name and type, and returns the
+            remapped library name. If no match is found, the library name is returned unchanged.
+            <p /><c>[PublicAPI, Pure, NotNull]</c></summary>
+            <param name="type">A type defined in the assembly to search the DllMap for.<p /><c>[NotNull]</c></param>
+            <param name="libraryName">The original name of the library.<p /><c>[NotNull]</c></param>
+            <returns>The remapped name.</returns>
+        </member>
+        <member name="M:Mono.DllMap.DllMapResolver.MapLibraryName(System.Reflection.Assembly,System.String)">
+            <summary>
+            Finds the matching remapping entry, if any, for the given library name and assembly, and returns the
+            remapped library name. If no match is found, the library name is returned unchanged.
+            <p /><c>[PublicAPI, Pure, NotNull]</c></summary>
+            <param name="assembly">The assembly to search the DllMap for.<p /><c>[NotNull]</c></param>
+            <param name="libraryName">The original name of the library.<p /><c>[NotNull]</c></param>
+            <returns>The remapped name.</returns>
+        </member>
+        <member name="M:Mono.DllMap.DllMapResolver.MapLibraryName(Mono.DllMap.DllConfiguration,System.String)">
+            <summary>
+            Finds the matching remapping entry, if any, for the given library name, and returns the remapped library
+            name. If no match is found, the library name is returned unchanged.
+            <p /><c>[PublicAPI, Pure, NotNull]</c></summary>
+            <param name="configuration">The DllMap to search.<p /><c>[NotNull]</c></param>
+            <param name="libraryName">The original name of the library.<p /><c>[NotNull]</c></param>
+            <returns>The remapped name.</returns>
+        </member>
+        <member name="M:Mono.DllMap.DllMapResolver.HasDllMapFile``1">
+            <summary>
+            Determines whether or not the assembly that the given type is declared in has a Mono DllMap configuration
+            file.
+            <p /><c>[PublicAPI, Pure]</c></summary>
+            <typeparam name="T">The type to check.</typeparam>
+            <returns>true if it has a file; otherwise, false.</returns>
+        </member>
+        <member name="M:Mono.DllMap.DllMapResolver.HasDllMapFile(System.Type)">
+            <summary>
+            Determines whether or not the assembly that the given type is declared in has a Mono DllMap configuration
+            file.
+            <p /><c>[PublicAPI, Pure]</c></summary>
+            <param name="type">The type to check.<p /><c>[NotNull]</c></param>
+            <returns>true if it has a file; otherwise, false.</returns>
+        </member>
+        <member name="M:Mono.DllMap.DllMapResolver.HasDllMapFile(System.Reflection.Assembly)">
+            <summary>
+            Determines whether or not the given assembly has a Mono DllMap configuration file.
+            <p /><c>[PublicAPI, Pure]</c></summary>
+            <param name="assembly">The assembly to check.<p /><c>[NotNull]</c></param>
+            <returns>true if it has a file; otherwise, false.</returns>
+        </member>
+        <member name="M:Mono.DllMap.DllMapResolver.GetDllMap``1">
+            <summary>
+            Gets the DllMap file for the assembly that the given type is declared in.
+            <p /><c>[PublicAPI, Pure, NotNull]</c></summary>
+            <typeparam name="T">The type to get the configuration for.</typeparam>
+            <returns>The DllMap.</returns>
+        </member>
+        <member name="M:Mono.DllMap.DllMapResolver.GetDllMap(System.Type)">
+            <summary>
+            Gets the DllMap file for the assembly that the given type is declared in.
+            <p /><c>[PublicAPI, Pure, NotNull]</c></summary>
+            <param name="type">The type to get the configuration for.<p /><c>[NotNull]</c></param>
+            <returns>The DllMap.</returns>
+        </member>
+        <member name="M:Mono.DllMap.DllMapResolver.GetDllMap(System.Reflection.Assembly)">
+            <summary>
+            Gets the DllMap file for the given assembly.
+            <p /><c>[PublicAPI, Pure, NotNull]</c></summary>
+            <param name="assembly">The assembly to get the configuration for.<p /><c>[NotNull]</c></param>
+            <returns>The DllMap.</returns>
+        </member>
+        <member name="T:Mono.DllMap.Extensions.EnumExtensions">
+            <summary>
+            Extension methods for enums.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:Mono.DllMap.Extensions.EnumExtensions.HasFlagFast``1(``0,``0)">
+            <summary>
+            Checks if a flag is set on the given flag enum.
+            <p /><c>[PublicAPI, Pure]</c></summary>
+            <param name="value">The value to check against.</param>
+            <param name="flag">The flag to check for.</param>
+            <typeparam name="TEnum">The enum type.</typeparam>
+            <returns>true if the value has the flag; otherwise, false.</returns>
+            <exception cref="T:System.ArgumentException">
+            Thrown if the type parameter is not an enum decorated with a flag attribute.
+            </exception>
+        </member>
+        <member name="M:Mono.DllMap.Extensions.EnumExtensions.HasFlagsFast``1(``0,``0[])">
+            <summary>
+            Checks if all given flags are set on the given flag enum.
+            <p /><c>[PublicAPI, Pure]</c></summary>
+            <param name="value">The value to check against.</param>
+            <param name="flags">The flags to check for.<p /><c>[NotNull]</c></param>
+            <typeparam name="TEnum">The enum type.</typeparam>
+            <returns>true if the value has all of the flags; otherwise, false.</returns>
+            <exception cref="T:System.ArgumentException">
+            Thrown if the type parameter is not an enum decorated with a flag attribute.
+            </exception>
+        </member>
+        <member name="M:Mono.DllMap.Extensions.EnumExtensions.HasAll``1(``0)">
+            <summary>
+            Determines whether or not the flag value is a compound value consisting of all available flags.
+            <p /><c>[PublicAPI, Pure]</c></summary>
+            <param name="value">The value to check.</param>
+            <typeparam name="TEnum">The enum type.</typeparam>
+            <returns>true if it is all flag values; otherwise, false.</returns>
+            <exception cref="T:System.ArgumentException">
+            Thrown if the type parameter is not an enum decorated with a flag attribute.
+            </exception>
+        </member>
+        <member name="M:Mono.DllMap.Extensions.EnumExtensions.GetFlags``1(``0)">
+            <summary>
+            Gets all set flag values from the given enum value.
+            <p /><c>[PublicAPI, Pure]</c></summary>
+            <param name="input">The enum.</param>
+            <typeparam name="TEnum">The enum type.</typeparam>
+            <returns>A list of set flags.</returns>
+            <exception cref="T:System.ArgumentException">
+            Thrown if the type parameter is not an enum decorated with a flag attribute.
+            </exception>
+        </member>
+        <member name="M:Mono.DllMap.Extensions.EnumExtensions.ThrowIfEnumIsNotEnumOrNotFlags``1">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if the provided generic type is not an enum decorated with a
+            <see cref="T:System.FlagsAttribute" />.
+            </summary>
+            <typeparam name="TEnum">The type to check.</typeparam>
+            <exception cref="T:System.ArgumentException">Thrown if the generic type is not a flag enum.</exception>
+        </member>
+        <member name="T:Mono.DllMap.MappingBase">
+            <summary>
+            The base class for Dll mapping entries, containing system constraint information.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:Mono.DllMap.MappingBase.RawOperatingSystems">
+            <summary>
+            Gets or sets the raw string containing the supported operating systems.
+            <p /><c>[PublicAPI, CanBeNull]</c></summary>
+        </member>
+        <member name="P:Mono.DllMap.MappingBase.RawArchitecture">
+            <summary>
+            Gets or sets the raw string containing the supported processor architectures.
+            <p /><c>[PublicAPI, CanBeNull]</c></summary>
+        </member>
+        <member name="P:Mono.DllMap.MappingBase.RawWordSize">
+            <summary>
+            Gets or sets the raw string containing the supported word sizes.
+            <p /><c>[PublicAPI, CanBeNull]</c></summary>
+        </member>
+        <member name="P:Mono.DllMap.MappingBase.OperatingSystems">
+            <summary>
+            Gets the supported operating systems of the entry.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:Mono.DllMap.MappingBase.Architecture">
+            <summary>
+            Gets the supported processor architectures of the entry.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:Mono.DllMap.MappingBase.WordSize">
+            <summary>
+            Gets the supported word sizes of the entry.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="T:Mono.DllMap.Utility.DllConfigurationPlatformHelper">
+            <summary>
+            Helper class for determining the current platform.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:Mono.DllMap.Utility.DllConfigurationPlatformHelper.GetCurrentPlatform">
+            <summary>
+            Gets the current platform that we're running on.
+            <p /><c>[PublicAPI, Pure]</c></summary>
+            <returns>The current platform.</returns>
+            <exception cref="T:System.PlatformNotSupportedException">Thrown if the current platform couldn't be detected.</exception>
+        </member>
+        <member name="M:Mono.DllMap.Utility.DllConfigurationPlatformHelper.GetCurrentRuntimeArchitecture">
+            <summary>
+            Gets the current process architecture of the machine.
+            <p /><c>[PublicAPI, Pure]</c></summary>
+            <returns>The runtime architecture.</returns>
+            <exception cref="T:System.PlatformNotSupportedException">Thrown if the architecture couldn't be detected.</exception>
+        </member>
+        <member name="M:Mono.DllMap.Utility.DllConfigurationPlatformHelper.GetRuntimeWordSize">
+            <summary>
+            Gets the word size of the runtime.
+            <p /><c>[PublicAPI, Pure]</c></summary>
+            <returns>The word size.</returns>
+        </member>
+        <member name="T:Mono.DllMap.Utility.DllMapAttributeParser">
+            <summary>
+            Parses DllMap attribute lists.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:Mono.DllMap.Utility.DllMapAttributeParser.Parse``1(System.String)">
+            <summary>
+            Parses the given string as a DllMap attribute list.
+            <p /><c>[PublicAPI, Pure]</c></summary>
+            <param name="content">
+            The attribute list. This is a comma-separated list of constrained values. The list can optionally be
+            prefixed with '!' to invert its meaning.
+            <p /><c>[CanBeNull]</c></param>
+            <typeparam name="TEnum">
+            The enum type to parse into. This enum must be an enum decorated with a flag attribute.
+            </typeparam>
+            <returns>A compound flag value.</returns>
+            <exception cref="T:System.ArgumentException">
+            Thrown if the type parameter is not an enum decorated with a flag attribute.
+            </exception>
+        </member>
+    </members>
+</doc>

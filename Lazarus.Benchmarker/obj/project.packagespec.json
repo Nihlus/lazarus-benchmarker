@@ -1,0 +1,45 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\Users\\perks\\Documents\\RiderProjects\\Lazarus\\Lazarus.Benchmarker\\Lazarus.Benchmarker.csproj",
+    "projectName": "Lazarus.Benchmarker",
+    "projectPath": "C:\\Users\\perks\\Documents\\RiderProjects\\Lazarus\\Lazarus.Benchmarker\\Lazarus.Benchmarker.csproj",
+    "outputPath": "C:\\Users\\perks\\Documents\\RiderProjects\\Lazarus\\Lazarus.Benchmarker\\obj\\",
+    "projectStyle": "PackageReference",
+    "crossTargeting": true,
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "net471"
+    ],
+    "frameworks": {
+      "net471": {
+        "projectReferences": {
+          "C:\\Users\\perks\\Documents\\RiderProjects\\Lazarus\\Lazarus.ADL\\Lazarus.ADL.csproj": {
+            "projectPath": "C:\\Users\\perks\\Documents\\RiderProjects\\Lazarus\\Lazarus.ADL\\Lazarus.ADL.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "net471": {}
+  },
+  "runtimes": {
+    "win-x64": {
+      "#import": []
+    },
+    "win-x86": {
+      "#import": []
+    },
+    "win7-x86": {
+      "#import": []
+    }
+  }
+}

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="c"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;CMake Files\CMake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 install/local"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 install"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestLibrary">
+				<Option output="C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/TestLibrary.dll" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add option="-DUNICODE"/>
+					<Add directory="C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 TestLibrary"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestLibrary/fast">
+				<Option output="C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/TestLibrary.dll" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add option="-DUNICODE"/>
+					<Add directory="C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 TestLibrary/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 list_install_components"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.C\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/src/comp.h">
+			<Option target="TestLibrary"/>
+		</Unit>
+		<Unit filename="C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/src/test.c">
+			<Option target="TestLibrary"/>
+		</Unit>
+		<Unit filename="C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/CMake/install-functions.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

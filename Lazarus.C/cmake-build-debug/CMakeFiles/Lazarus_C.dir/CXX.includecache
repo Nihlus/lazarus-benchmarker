@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/library.cpp
+library.h
+C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/library.h
+
+C:/Users/perks/Documents/RiderProjects/Lazarus/Lazarus.C/library.h
+stddef.h
+-
+stdint.h
+-
+uchar.h
+-
+Windows.h
+-
+stdint.h
+-
+Tchar.h
+-
+
