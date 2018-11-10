@@ -1,0 +1,11 @@
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW.Rewriter\bin\Release\netcoreapp2.1\Lazarus.RW.Rewriter.deps.json
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW.Rewriter\bin\Release\netcoreapp2.1\Lazarus.RW.Rewriter.runtimeconfig.json
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW.Rewriter\bin\Release\netcoreapp2.1\Lazarus.RW.Rewriter.runtimeconfig.dev.json
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW.Rewriter\bin\Release\netcoreapp2.1\Lazarus.RW.Rewriter.dll
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW.Rewriter\bin\Release\netcoreapp2.1\Lazarus.RW.Rewriter.pdb
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW.Rewriter\obj\Release\netcoreapp2.1\Lazarus.RW.Rewriter.csprojAssemblyReference.cache
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW.Rewriter\obj\Release\netcoreapp2.1\Lazarus.RW.Rewriter.csproj.CoreCompileInputs.cache
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW.Rewriter\obj\Release\netcoreapp2.1\Lazarus.RW.Rewriter.AssemblyInfoInputs.cache
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW.Rewriter\obj\Release\netcoreapp2.1\Lazarus.RW.Rewriter.AssemblyInfo.cs
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW.Rewriter\obj\Release\netcoreapp2.1\Lazarus.RW.Rewriter.dll
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW.Rewriter\obj\Release\netcoreapp2.1\Lazarus.RW.Rewriter.pdb

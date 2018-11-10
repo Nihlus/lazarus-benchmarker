@@ -1,10 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>netstandard2.0;net471</TargetFrameworks>
+        <TargetFrameworks>netstandard2.0</TargetFrameworks>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
 
+    <Target Name="Rewrite" BeforeTargets="Build">
+        <Exec Command="dotnet ..\Lazarus.RW.Rewriter\bin\Release\netcoreapp2.1\Lazarus.RW.Rewriter.dll bin/Release/netstandard2.0/Lazarus.RW.dll" />
+    </Target>
+    
     <ItemGroup>
       <ProjectReference Include="..\Lazarus.ADL\Lazarus.ADL.csproj" />
     </ItemGroup>

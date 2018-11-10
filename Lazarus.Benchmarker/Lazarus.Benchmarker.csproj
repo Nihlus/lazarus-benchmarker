@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFrameworks>net471</TargetFrameworks>
+        <TargetFrameworks>netcoreapp2.1</TargetFrameworks>
         <RuntimeIdentifiers>win-x64;win-x86</RuntimeIdentifiers>
     </PropertyGroup>
 
@@ -11,8 +11,8 @@
     </ItemGroup>
     
     <ItemGroup>
-        <Reference Include="Lazarus.RW, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Condition="'$(TargetFramework)' == 'net471'">
-            <HintPath>..\Lazarus.RW\bin\Release\net471\Lazarus.RW.dll</HintPath>
+        <Reference Include="Lazarus.RW, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\Lazarus.RW\bin\Release\netstandard2.0\Lazarus.RW.dll</HintPath>
         </Reference>
     </ItemGroup>
 </Project>

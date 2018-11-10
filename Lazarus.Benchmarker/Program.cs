@@ -17,6 +17,7 @@ namespace Lazarus.Benchmarker
         
         static void Main(string[] args)
         {
+            var sb = new StringBuilder();
             Console.WriteLine("Lazarus Benchmarker");
             Console.WriteLine();
             Console.WriteLine("-=-= ADL =-=-");
@@ -44,10 +45,11 @@ namespace Lazarus.Benchmarker
                                   String.Format("{0:F20}", (double) sw.ElapsedMilliseconds / (double) i).TrimEnd('0','0') +
                                   "ms per call.");
                 Console.WriteLine("["+j+"] Approximately "+Math.Round(Tests/results[j]*1000)+" calls per second.");
+                results[j] = Math.Round(Tests / results[j] * 1000);
                 sw.Reset();
                 i = 0;
             }
-            Console.WriteLine("Mean: "+String.Format("{0:F20}",results.Sum() / Tests).TrimEnd('0','0')+"ms");
+            Console.WriteLine("Mean Calls Per Second: "+results.Sum() / Tests);
 
             Console.WriteLine("-- InvertMatrixByValue");
             results.Clear();
@@ -69,11 +71,12 @@ namespace Lazarus.Benchmarker
                                   String.Format("{0:F20}", (double) sw.ElapsedMilliseconds / (double) i).TrimEnd('0','0') +
                                   "ms per call.");
                 Console.WriteLine("["+j+"] Approximately "+Math.Round(Tests/results[j]*1000)+" calls per second.");
+                results[j] = Math.Round(Tests / results[j] * 1000);
                 sw.Reset();
 
                 i = 0;
             }
-            Console.WriteLine("Mean: "+String.Format("{0:F20}",results.Sum() / Tests).TrimEnd('0','0')+"ms");
+            Console.WriteLine("Mean Calls Per Second: "+Math.Round(results.Sum() / Tests));
             
             
             
@@ -83,10 +86,11 @@ namespace Lazarus.Benchmarker
             
             
             
-            #if NET471
+            #if true
             
             Console.WriteLine("-=-= RW =-=-");
             Console.WriteLine();
+            RW.Lazarus.LoadEntryPoints();
             sw = new Stopwatch();
             i = 0;
             Console.WriteLine("-- InvertMatrixByPtr");
@@ -109,10 +113,11 @@ namespace Lazarus.Benchmarker
                                   String.Format("{0:F20}", (double) sw.ElapsedMilliseconds / (double) i).TrimEnd('0','0') +
                                   "ms per call.");
                 Console.WriteLine("["+j+"] Approximately "+Math.Round(Tests/results[j]*1000)+" calls per second.");
+                results[j] = Math.Round(Tests / results[j] * 1000);
                 sw.Reset();
                 i = 0;
             }
-            Console.WriteLine("Mean: "+String.Format("{0:F20}",results.Sum() / Tests).TrimEnd('0','0')+"ms");
+            Console.WriteLine("Mean Calls Per Second: "+Math.Round(results.Sum() / Tests));
 
             Console.WriteLine("-- InvertMatrixByValue");
             results.Clear();
@@ -135,10 +140,11 @@ namespace Lazarus.Benchmarker
                                   "ms per call.");
                 Console.WriteLine("["+j+"] Approximately "+Math.Round(Tests/results[j]*1000)+" calls per second.");
                 sw.Reset();
+                results[j] = Math.Round(Tests / results[j] * 1000);
 
                 i = 0;
             }
-            Console.WriteLine("Mean: "+String.Format("{0:F20}",results.Sum() / Tests).TrimEnd('0','0')+"ms");
+            Console.WriteLine("Mean Calls Per Second: "+Math.Round(results.Sum() / Tests));
     #endif
         }
     }
