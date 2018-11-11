@@ -2,27 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b35ea9a-d617-447b-9d98-f767dd12d163" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Lazarus/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lazarus.SG/Mappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lazarus.SG/lz.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lazarus/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lazarus/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lazarus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lazarus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lazarus.Benchmarker/Lazarus.Benchmarker.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.Benchmarker/Lazarus.Benchmarker.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lazarus.ADL/bin/Release/netstandard2.0/Lazarus.ADL.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.ADL/bin/Release/netstandard2.0/Lazarus.ADL.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lazarus.ADL/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.ADL/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lazarus.Benchmarker/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.Benchmarker/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lazarus.Benchmarker/bin/Release/netcoreapp2.1/Lazarus.Benchmarker.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.Benchmarker/bin/Release/netcoreapp2.1/Lazarus.Benchmarker.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lazarus.Benchmarker/bin/Release/netcoreapp2.1/win-x64/Lazarus.Benchmarker.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.Benchmarker/bin/Release/netcoreapp2.1/win-x64/Lazarus.Benchmarker.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lazarus.Benchmarker/bin/Release/netcoreapp2.1/win-x64/publish/Lazarus.Benchmarker.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.Benchmarker/bin/Release/netcoreapp2.1/win-x64/publish/Lazarus.Benchmarker.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lazarus.Benchmarker/bin/Release/netcoreapp2.1/win-x86/Lazarus.Benchmarker.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.Benchmarker/bin/Release/netcoreapp2.1/win-x86/Lazarus.Benchmarker.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lazarus.Benchmarker/bin/Release/netcoreapp2.1/win-x86/publish/Lazarus.Benchmarker.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.Benchmarker/bin/Release/netcoreapp2.1/win-x86/publish/Lazarus.Benchmarker.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lazarus.Benchmarker/obj/Lazarus.Benchmarker.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.Benchmarker/obj/Lazarus.Benchmarker.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lazarus.Benchmarker/obj/Lazarus.Benchmarker.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.Benchmarker/obj/Lazarus.Benchmarker.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lazarus.Benchmarker/obj/Release/netcoreapp2.1/Lazarus.Benchmarker.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.Benchmarker/obj/Release/netcoreapp2.1/Lazarus.Benchmarker.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lazarus.Benchmarker/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.Benchmarker/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lazarus.Benchmarker/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.Benchmarker/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lazarus.C/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.C/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lazarus.RW/Lazarus.RW.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.RW/Lazarus.RW.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lazarus.RW/Lazarus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.RW/Lazarus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lazarus.RW/RewrittenAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.RW/RewrittenAttribute.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lazarus.RW/bin/Release/netstandard2.0/Lazarus.RW.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.RW/bin/Release/netstandard2.0/Lazarus.RW.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lazarus.RW/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.RW/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lazarus.RW/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.RW/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lazarus.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Lazarus.sln" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +53,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="5055" />
+          <entry key="cs" value="5113" />
           <entry key="csproj" value="723" />
           <entry key="h" value="53" />
           <entry key="targets" value="2" />
@@ -73,7 +62,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="5055" />
+          <entry key="C#" value="5113" />
           <entry key="C++" value="53" />
           <entry key="Csproj" value="723" />
           <entry key="MsBuild targets file" value="2" />
@@ -86,24 +75,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lazarus.Benchmarker/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+              <caret line="93" column="82" lean-forward="true" selection-start-line="93" selection-start-column="82" selection-end-line="93" selection-end-column="82" />
               <folding>
-                <marker date="1541889549374" expanded="false" signature="6:193" ph="..." />
-                <marker date="1541889549374" expanded="true" signature="224:6227" ph="{...}" />
-                <marker date="1541889549374" expanded="true" signature="244:6225" ph="{...}" />
-                <marker date="1541889549374" expanded="true" signature="384:6219" ph="{...}" />
-                <marker date="1541889549374" expanded="true" signature="906:1960" ph="{...}" />
-                <marker date="1541889549374" expanded="true" signature="988:1256" ph="{...}" />
-                <marker date="1541889549374" expanded="true" signature="2171:3220" ph="{...}" />
-                <marker date="1541889549374" expanded="true" signature="2249:2515" ph="{...}" />
-                <marker date="1541889549374" expanded="true" signature="3766:4827" ph="{...}" />
-                <marker date="1541889549374" expanded="true" signature="3848:4123" ph="{...}" />
-                <marker date="1541889549374" expanded="true" signature="5050:6106" ph="{...}" />
-                <marker date="1541889549374" expanded="true" signature="5128:5401" ph="{...}" />
+                <marker date="1541940989541" expanded="false" signature="6:193" ph="..." />
+                <marker date="1541940989541" expanded="true" signature="224:9778" ph="{...}" />
+                <marker date="1541940989541" expanded="true" signature="244:9776" ph="{...}" />
+                <marker date="1541940989541" expanded="true" signature="376:9770" ph="{...}" />
+                <marker date="1541940989541" expanded="true" signature="900:2052" ph="{...}" />
+                <marker date="1541940989541" expanded="true" signature="982:1250" ph="{...}" />
+                <marker date="1541940989541" expanded="true" signature="2266:3417" ph="{...}" />
+                <marker date="1541940989541" expanded="true" signature="2348:2614" ph="{...}" />
+                <marker date="1541940989541" expanded="true" signature="4188:5340" ph="{...}" />
+                <marker date="1541940989541" expanded="true" signature="4270:4538" ph="{...}" />
+                <marker date="1541940989541" expanded="true" signature="5554:6705" ph="{...}" />
+                <marker date="1541940989541" expanded="true" signature="5636:5902" ph="{...}" />
+                <marker date="1541940989541" expanded="true" signature="7115:8274" ph="{...}" />
+                <marker date="1541940989541" expanded="true" signature="7197:7472" ph="{...}" />
+                <marker date="1541940989541" expanded="true" signature="8500:9658" ph="{...}" />
+                <marker date="1541940989541" expanded="true" signature="8582:8855" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -167,11 +160,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lazarus.Benchmarker/Lazarus.Benchmarker.csproj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" column="70" lean-forward="true" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
+            <state relative-caret-position="64">
+              <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -197,9 +190,7 @@
     <setting file="file://$PROJECT_DIR$/Lazarus.ADL/ILazarus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/348F8125-57D0-4686-932E-5F160E650120/aa/7827ddf9/NativeLibraryBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Lazarus.RW/Lazarus.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Lazarus.SG/lz.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Lazarus.RW.Rewriter/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Lazarus.SG/Class1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Lazarus.RW/SlotAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Lazarus.RW/RewrittenAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Lazarus.RW/BindingsBase.cs" root0="FORCE_HIGHLIGHTING" />
@@ -353,12 +344,12 @@
       <workItem from="1541271273924" duration="1889000" />
       <workItem from="1541273237505" duration="25176000" />
       <workItem from="1541534231701" duration="6189000" />
-      <workItem from="1541881699474" duration="7794000" />
+      <workItem from="1541881699474" duration="9974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41048000" />
+    <option name="totallyTimeSpent" value="43228000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -371,7 +362,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26285347" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -514,12 +504,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="10" column="48" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="48" />
-          <folding>
-            <marker date="1541538080345" expanded="true" signature="6:56" ph="..." />
-            <marker date="1541538080345" expanded="true" signature="116:384" ph="{...}" />
-            <marker date="1541538080345" expanded="true" signature="180:249" ph="{...}" />
-            <marker date="1541538080345" expanded="true" signature="309:378" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -592,13 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lazarus.Benchmarker/Lazarus.Benchmarker.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="70" lean-forward="true" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lazarus.RW.Rewriter/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
@@ -618,21 +595,32 @@
     <entry file="file://$PROJECT_DIR$/Lazarus.Benchmarker/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+          <caret line="93" column="82" lean-forward="true" selection-start-line="93" selection-start-column="82" selection-end-line="93" selection-end-column="82" />
           <folding>
-            <marker date="1541889549374" expanded="false" signature="6:193" ph="..." />
-            <marker date="1541889549374" expanded="true" signature="224:6227" ph="{...}" />
-            <marker date="1541889549374" expanded="true" signature="244:6225" ph="{...}" />
-            <marker date="1541889549374" expanded="true" signature="384:6219" ph="{...}" />
-            <marker date="1541889549374" expanded="true" signature="906:1960" ph="{...}" />
-            <marker date="1541889549374" expanded="true" signature="988:1256" ph="{...}" />
-            <marker date="1541889549374" expanded="true" signature="2171:3220" ph="{...}" />
-            <marker date="1541889549374" expanded="true" signature="2249:2515" ph="{...}" />
-            <marker date="1541889549374" expanded="true" signature="3766:4827" ph="{...}" />
-            <marker date="1541889549374" expanded="true" signature="3848:4123" ph="{...}" />
-            <marker date="1541889549374" expanded="true" signature="5050:6106" ph="{...}" />
-            <marker date="1541889549374" expanded="true" signature="5128:5401" ph="{...}" />
+            <marker date="1541940989541" expanded="false" signature="6:193" ph="..." />
+            <marker date="1541940989541" expanded="true" signature="224:9778" ph="{...}" />
+            <marker date="1541940989541" expanded="true" signature="244:9776" ph="{...}" />
+            <marker date="1541940989541" expanded="true" signature="376:9770" ph="{...}" />
+            <marker date="1541940989541" expanded="true" signature="900:2052" ph="{...}" />
+            <marker date="1541940989541" expanded="true" signature="982:1250" ph="{...}" />
+            <marker date="1541940989541" expanded="true" signature="2266:3417" ph="{...}" />
+            <marker date="1541940989541" expanded="true" signature="2348:2614" ph="{...}" />
+            <marker date="1541940989541" expanded="true" signature="4188:5340" ph="{...}" />
+            <marker date="1541940989541" expanded="true" signature="4270:4538" ph="{...}" />
+            <marker date="1541940989541" expanded="true" signature="5554:6705" ph="{...}" />
+            <marker date="1541940989541" expanded="true" signature="5636:5902" ph="{...}" />
+            <marker date="1541940989541" expanded="true" signature="7115:8274" ph="{...}" />
+            <marker date="1541940989541" expanded="true" signature="7197:7472" ph="{...}" />
+            <marker date="1541940989541" expanded="true" signature="8500:9658" ph="{...}" />
+            <marker date="1541940989541" expanded="true" signature="8582:8855" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lazarus.Benchmarker/Lazarus.Benchmarker.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
         </state>
       </provider>
     </entry>

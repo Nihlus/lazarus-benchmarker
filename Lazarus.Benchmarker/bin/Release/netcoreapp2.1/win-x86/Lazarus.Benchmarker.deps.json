@@ -10,7 +10,8 @@
       "Lazarus.Benchmarker/1.0.0": {
         "dependencies": {
           "Lazarus.ADL": "1.0.0",
-          "Microsoft.NETCore.App": "2.1.4"
+          "Microsoft.NETCore.App": "2.1.4",
+          "Lazarus.RW": "1.0.0.0"
         },
         "runtime": {
           "Lazarus.Benchmarker.dll": {}
@@ -1443,6 +1444,14 @@
         "runtime": {
           "Lazarus.ADL.dll": {}
         }
+      },
+      "Lazarus.RW/1.0.0.0": {
+        "runtime": {
+          "Lazarus.RW.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1896,7 +1905,7 @@
     "System.Runtime.CompilerServices.Unsafe/4.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9dLLuBxr5GNmOfl2jSMcsHuteEg32BEfUotmmUkmZjpR3RpVHE8YQwt0ow3p6prwA1ME8WqDVZqrr8z6H8G+Kw==",
+      "sha512": "sha512-oXzVVwwsT4sfWRzOEKaHn6GLleNZ7gGTjk+gHgLuXj3M61p3TjoAvWmZDJDeDuf0WX8UW4ew0MTJbJOmCSZrVA==",
       "path": "system.runtime.compilerservices.unsafe/4.4.0",
       "hashPath": "system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512"
     },
@@ -1917,12 +1926,17 @@
     "System.ValueTuple/4.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BahUww/+mdP4ARCAh2RQhQTg13wYLVrBb9SYVgW8ZlrwjraGCXHGjo0oIiUfZ34LUZkMMR+RAzR7dEY4S1HeQQ==",
+      "sha512": "sha512-6FvjECwwsvwtdnm2uD91MlFEgId6C2SWsdZk23gFpynHQ9x5ruqjsfEadb0VNzpkEHDQ6cq31CXUv3ouT09EHA==",
       "path": "system.valuetuple/4.4.0",
       "hashPath": "system.valuetuple.4.4.0.nupkg.sha512"
     },
     "Lazarus.ADL/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Lazarus.RW/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }
