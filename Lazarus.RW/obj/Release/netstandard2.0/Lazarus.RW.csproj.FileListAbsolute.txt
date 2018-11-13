@@ -10,3 +10,6 @@ C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW\obj\Release\netstandar
 C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW\obj\Release\netstandard2.0\Lazarus.RW.csproj.CopyComplete
 C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW\obj\Release\netstandard2.0\Lazarus.RW.dll
 C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW\obj\Release\netstandard2.0\Lazarus.RW.pdb
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW\bin\Release\netstandard2.0\AdvancedDLSupport.dll
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW\bin\Release\netstandard2.0\AdvancedDLSupport.pdb
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.RW\bin\Release\netstandard2.0\AdvancedDLSupport.xml

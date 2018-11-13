@@ -14,3 +14,6 @@ C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.Benchmarker\obj\Release\n
 C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.Benchmarker\obj\Release\netcoreapp2.1\Lazarus.Benchmarker.pdb
 C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.Benchmarker\bin\Release\netcoreapp2.1\Lazarus.RW.dll
 C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.Benchmarker\bin\Release\netcoreapp2.1\Lazarus.RW.pdb
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.Benchmarker\bin\Release\netcoreapp2.1\AdvancedDLSupport.dll
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.Benchmarker\bin\Release\netcoreapp2.1\AdvancedDLSupport.pdb
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.Benchmarker\bin\Release\netcoreapp2.1\AdvancedDLSupport.xml

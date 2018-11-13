@@ -1,0 +1,2367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>AdvancedDLSupport</name>
+    </assembly>
+    <members>
+        <member name="T:AdvancedDLSupport.AOT.IAOTMetadata">
+            <summary>
+            Interface for metadata classes in AOT assemblies.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.AOT.IAOTMetadata.GeneratedTypes">
+            <summary>
+            Gets the ahead-of-time-generated types in the assembly.
+            </summary>
+        </member>
+        <member name="T:AdvancedDLSupport.AOT.AOTAssemblyAttribute">
+            <summary>
+            Tags an assembly as containing precompiled types.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="T:AdvancedDLSupport.AOT.AOTMetadataAttribute">
+            <summary>
+            Tags a type as containing precompiled type metadata.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="T:AdvancedDLSupport.AOT.AOTTypeAttribute">
+            <summary>
+            Tags an interface as being eligible for native binding ahead-of-time compilation.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="T:AdvancedDLSupport.AnonymousConstructorAttribute">
+            <summary>
+            Tags a constructor as the anonymous constructor defined in the base class for generated types.
+            </summary>
+        </member>
+        <member name="T:AdvancedDLSupport.CallerFreeAttribute">
+            <summary>
+            Parameters which are marshalled into unmanaged memory with this attribute are freed by the caller after the conclusion of the call.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="T:AdvancedDLSupport.NativeSymbolAttribute">
+            <summary>
+            Holds metadata for native functions.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.NativeSymbolAttribute.Entrypoint">
+            <summary>
+            Gets or sets the name of the function's entrypoint.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.NativeSymbolAttribute.CallingConvention">
+            <summary>
+            Gets or sets the function's calling convention.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeSymbolAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.NativeSymbolAttribute" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="entrypoint">The name of the function's entry point.<p /><c>[NotNull]</c></param>
+        </member>
+        <member name="T:AdvancedDLSupport.DynamicAssemblyProviders.IDynamicAssemblyProvider">
+            <summary>
+            Provides and constructs a dynamic assembly for consumption.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.DynamicAssemblyProviders.IDynamicAssemblyProvider.GetDynamicAssembly">
+            <summary>
+            Gets the dynamic assembly provided by this instance.
+            <p /><c>[PublicAPI, NotNull, Pure]</c></summary>
+            <returns>The assembly.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.DynamicAssemblyProviders.IDynamicAssemblyProvider.GetDynamicModule">
+            <summary>
+            Gets the dynamic module from the assembly, creating one if it doesn't exist.
+            <p /><c>[PublicAPI, NotNull]</c></summary>
+            <returns>The module.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.DynamicAssemblyProviders.TransientDynamicAssemblyProvider">
+            <summary>
+            Provides transient dynamic assemblies.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.DynamicAssemblyProviders.TransientDynamicAssemblyProvider.IsDebuggable">
+            <summary>
+            Gets a value indicating whether or not the assembly is debuggable.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.DynamicAssemblyProviders.TransientDynamicAssemblyProvider.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.DynamicAssemblyProviders.TransientDynamicAssemblyProvider" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="assemblyName">
+            The name of the dynamic assembly. This name will be suffixed with a unique identifier.
+            <p /><c>[NotNull]</c></param>
+            <param name="debuggable">
+            Whether or not the assembly should be marked as debuggable. This disables any compiler optimizations.
+            </param>
+        </member>
+        <member name="M:AdvancedDLSupport.DynamicAssemblyProviders.TransientDynamicAssemblyProvider.GetDynamicAssembly">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.DynamicAssemblyProviders.TransientDynamicAssemblyProvider.GetDynamicModule">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.LibraryLoadingException">
+            <summary>
+            Represents a failure to load a native library.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.LibraryLoadingException.LibraryName">
+            <summary>
+            Gets the name of the library that failed to load.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.LibraryLoadingException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.LibraryLoadingException" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.LibraryLoadingException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.LibraryLoadingException" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="message">The message of the exception.<p /><c>[CanBeNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.LibraryLoadingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.LibraryLoadingException" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="message">The message of the exception.<p /><c>[CanBeNull]</c></param>
+            <param name="inner">The exception which caused this exception.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.LibraryLoadingException.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.LibraryLoadingException" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="message">The message of the exception.<p /><c>[NotNull]</c></param>
+            <param name="libraryName">The name of the library that failed to load.<p /><c>[CanBeNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.LibraryLoadingException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.LibraryLoadingException" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="message">The message of the exception.<p /><c>[NotNull]</c></param>
+            <param name="libraryName">The name of the library that failed to load.<p /><c>[CanBeNull]</c></param>
+            <param name="inner">The exception which caused this exception.<p /><c>[NotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.LibraryLoadingException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.LibraryLoadingException" /> class.
+            </summary>
+            <param name="info">The serialized information.<p /><c>[NotNull]</c></param>
+            <param name="context">The streaming context.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.LibraryLoadingException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.SymbolLoadingException">
+            <summary>
+            Represents a failure to load a native library.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.SymbolLoadingException.SymbolName">
+            <summary>
+            Gets the name of the symbol that failed to load.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.SymbolLoadingException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.SymbolLoadingException" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.SymbolLoadingException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.SymbolLoadingException" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="message">The message of the exception.<p /><c>[NotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.SymbolLoadingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.SymbolLoadingException" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="message">The message of the exception.<p /><c>[CanBeNull]</c></param>
+            <param name="inner">The exception which caused this exception.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.SymbolLoadingException.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.SymbolLoadingException" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="message">The message of the exception.<p /><c>[NotNull]</c></param>
+            <param name="symbolName">The name of the symbol that failed to load.<p /><c>[NotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.SymbolLoadingException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.SymbolLoadingException" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="message">The message of the exception.<p /><c>[NotNull]</c></param>
+            <param name="symbolName">The name of the symbol that failed to load.<p /><c>[NotNull]</c></param>
+            <param name="inner">The exception which caused this exception.<p /><c>[NotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.SymbolLoadingException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.SymbolLoadingException" /> class.
+            </summary>
+            <param name="info">The serialized information.<p /><c>[NotNull]</c></param>
+            <param name="context">The streaming context.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.SymbolLoadingException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.Extensions.AssemblyExtensions">
+            <summary>
+            Extension methods for the <see cref="T:System.Reflection.MemberInfo" /> class.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.AssemblyExtensions.HasCustomAttribute``1(System.Reflection.Assembly)">
+            <summary>
+            Determines whether or not the given member has a custom attribute of the given type.
+            </summary>
+            <param name="this">The member info.</param>
+            <typeparam name="T">The attribute type.</typeparam>
+            <returns>true if it has one; otherwise, false.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.Extensions.BitArrayExtensions">
+            <summary>
+            Extension methods for the <see cref="T:System.Collections.BitArray" /> class.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.BitArrayExtensions.ToInt32(System.Collections.BitArray)">
+            <summary>
+            Converts the <see cref="T:System.Collections.BitArray" /> into its equivalent integer representation.
+            </summary>
+            <param name="this">The array.</param>
+            <returns>An equivalent integer.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.Extensions.CustomAttributeDataExtensions">
+            <summary>
+            Extension methods for the <see cref="T:System.Reflection.CustomAttributeData" /> class.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.CustomAttributeDataExtensions.GetAttributeBuilder(System.Reflection.CustomAttributeData)">
+            <summary>
+            Gets an attribute builder for the given attribute data instance.
+            </summary>
+            <param name="this">The attribute data to create a builder for.</param>
+            <returns>An attribute builder.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.CustomAttributeDataExtensions.ToInstance``1(System.Reflection.CustomAttributeData)">
+            <summary>
+            Uses the attribute data to create an instance of the attribute.
+            </summary>
+            <param name="this">The attribute data.</param>
+            <typeparam name="T">The encapsulated type of the attribute.</typeparam>
+            <returns>An instance of the attribute as described by the attribute data.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if the attribute type and the generic type doesn't match.</exception>
+        </member>
+        <member name="T:AdvancedDLSupport.Extensions.MarshalAsAttributeExtensions">
+            <summary>
+            Extensions to the <see cref="T:System.Runtime.InteropServices.MarshalAsAttribute" /> class.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.MarshalAsAttributeExtensions.GetAttributeData(System.Runtime.InteropServices.MarshalAsAttribute)">
+            <summary>
+            Gets a <see cref="T:System.Reflection.CustomAttributeData" /> object that sufficiently describes a <see cref="T:System.Runtime.InteropServices.MarshalAsAttribute" />
+            instance.
+            </summary>
+            <param name="this">The instance.</param>
+            <returns>The data.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.Extensions.MemberInfoExtensions">
+            <summary>
+            Extension methods for the <see cref="T:System.Reflection.MemberInfo" /> class.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.MemberInfoExtensions.HasCustomAttribute``1(System.Reflection.MemberInfo)">
+            <summary>
+            Determines whether or not the given member has a custom attribute of the given type.
+            </summary>
+            <param name="this">The member info.</param>
+            <typeparam name="T">The attribute type.</typeparam>
+            <returns>true if it has one; otherwise, false.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.Extensions.MethodBuilderExtensions">
+            <summary>
+            Extension methods for the <see cref="T:System.Reflection.Emit.MethodBuilder" /> class.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.Extensions.MethodBuilderExtensions.AttributeBlacklist">
+            <summary>
+            Holds blacklisted attributes which will not be copied to their respective types.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.MethodBuilderExtensions.ApplyCustomAttributesFrom(System.Reflection.Emit.MethodBuilder,AdvancedDLSupport.Reflection.IntrospectiveMethodInfo,System.Type,System.Collections.Generic.IReadOnlyList{System.Type},System.Func{System.Reflection.CustomAttributeData,System.Boolean},System.Func{System.Reflection.CustomAttributeData,System.Int32,System.Boolean})">
+            <summary>
+            Copies all custom attributes from the given <see cref="T:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo" /> instance. This method will redefine the
+            return value and method parameters in order to apply the required custom attributes.
+            </summary>
+            <param name="this">The builder to copy the attributes to.</param>
+            <param name="source">The method to copy the attributes from.</param>
+            <param name="newReturnParameterType">
+            The return type of the target method. Defaults to the source return type.
+            </param>
+            <param name="newParameterTypes">
+            The parameter types of the target method. Defaults to the source parameter types.
+            </param>
+            <param name="returnParameterAttributeFilter">
+            A filter predicate for the attributes being copied to the return parameter. If the predicate returns true,
+            the attribute is not copied.
+            </param>
+            <param name="parameterAttributeFilter">
+            A filter predicate for the attributes being copied to the method parameters. The predicate receives the
+            zero-based index of the parameter. If the predicate returns true, the attribute is not copied.
+            </param>
+        </member>
+        <member name="T:AdvancedDLSupport.Extensions.ModuleBuilderExtensions">
+            <summary>
+            Extensions methods for the <see cref="T:System.Reflection.Emit.ModuleBuilder" /> class.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.ModuleBuilderExtensions.DefineDelegate(System.Reflection.Emit.ModuleBuilder,System.String,AdvancedDLSupport.Reflection.IntrospectiveMethodInfo,System.Boolean)">
+            <summary>
+            Defines a delegate type in the given module with the given name and parameters.
+            <p /><c>[NotNull]</c></summary>
+            <param name="module">The module to define the delegate in.<p /><c>[NotNull]</c></param>
+            <param name="name">The name of the delegate type.<p /><c>[NotNull]</c></param>
+            <param name="baseMember">The base member to take parameter types from.<p /><c>[NotNull]</c></param>
+            <param name="suppressSecurity">Whether or not code security should be suppressed on the delegate.</param>
+            <returns>The delegate type.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.ModuleBuilderExtensions.DefineDelegate(System.Reflection.Emit.ModuleBuilder,System.String,System.Runtime.InteropServices.CallingConvention,System.Type,System.Type[],System.Boolean)">
+            <summary>
+            Defines a delegate type in the given module with the given name and parameters.
+            <p /><c>[NotNull]</c></summary>
+            <param name="module">The module to define the delegate in.<p /><c>[NotNull]</c></param>
+            <param name="name">The name of the delegate type.<p /><c>[NotNull]</c></param>
+            <param name="callingConvention">The unmanaged calling convention to use.</param>
+            <param name="returnType">The return type of the delegate.<p /><c>[NotNull]</c></param>
+            <param name="parameterTypes">The parameter types of the delegate.<p /><c>[NotNull]</c></param>
+            <param name="suppressSecurity">Whether or not code security should be suppressed on the delegate.</param>
+            <returns>The delegate type.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.ModuleBuilderExtensions.DefineDelegateType(System.Reflection.Emit.ModuleBuilder,System.String,System.Runtime.InteropServices.CallingConvention,System.Boolean)">
+            <summary>
+            Defines a delegate type in the given module with the given name and parameters.
+            </summary>
+            <param name="module">The module to define the delegate in.</param>
+            <param name="name">The name of the delegate type.</param>
+            <param name="callingConvention">The unmanaged calling convention to use.</param>
+            <param name="suppressSecurity">Whether or not code security should be suppressed on the delegate.</param>
+            <returns>The delegate type.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.ModuleBuilderExtensions.DefineDelegateInvocationMethod(System.Reflection.Emit.TypeBuilder,System.Type,System.Type[])">
+            <summary>
+            Defines a delegate invocation method on a delegate type.
+            </summary>
+            <param name="delegateBuilder">The delegate type builder.</param>
+            <param name="returnType">The return type of the method.</param>
+            <param name="parameterTypes">The parameter types of the method.</param>
+            <returns>The delegate invocation method.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.Extensions.StringExtensions">
+            <summary>
+            Extension methods for <see cref="T:System.String" />.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.StringExtensions.IsValidPath(System.String)">
+            <summary>
+            Determines whether or not the given string is a valid path. This does not neccesarily indicate that
+            the path exists.
+            </summary>
+            <param name="this">The string to inspect.</param>
+            <returns>true if the string is a valid path; otherwise, false.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.StringExtensions.IsNullOrWhiteSpace(System.String)">
+            <summary>
+            Determines whether or not a string is null or consists entirely of whitespace characters.
+            </summary>
+            <param name="this">The string to check.</param>
+            <returns>true if the string is null or whitespace; otherwise, false.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.StringExtensions.IsNullOrEmpty(System.String)">
+            <summary>
+            Determines whether or not a string is null or has no characters.
+            </summary>
+            <param name="this">The string to check.</param>
+            <returns>true if the string is null or empty; otherwise, false.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.Extensions.TypeExtensions">
+            <summary>
+            Extension methods for the <see cref="T:System.Type" /> class.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.TypeExtensions.IsGenericDelegate(System.Type)">
+            <summary>
+            Determines whether the given type is a generic delegate type - that is, a <see cref="T:System.Func`1" /> or
+            <see cref="T:System.Action" />.
+            </summary>
+            <param name="this">The type.</param>
+            <returns>true if the type is a generic delegate type; Otherwise, false.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.TypeExtensions.IsGenericActionDelegate(System.Type)">
+            <summary>
+            Determines whether or not the given type is a generic <see cref="T:System.Action" /> delegate.
+            </summary>
+            <param name="this">The type.</param>
+            <returns>true if the type is an action delegate; otherwise, false.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.TypeExtensions.IsGenericFuncDelegate(System.Type)">
+            <summary>
+            Determines whether or not the given type is a generic <see cref="T:System.Func`1" /> delegate.
+            </summary>
+            <param name="this">The type.</param>
+            <returns>true if the type is a func delegate; otherwise, false.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.TypeExtensions.GetIntrospectiveMethods(System.Type,System.Boolean)">
+            <summary>
+            Gets the methods defined in the given type as wrapped introspective methods.
+            </summary>
+            <param name="this">The type to inspect.</param>
+            <param name="flattenHierarchy">Whether or not the hierarchy of the type should be flattened when scanning.</param>
+            <returns>The methods.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.TypeExtensions.GetIntrospectiveMethod(System.Type,System.String,System.Type[])">
+            <summary>
+            Gets a method defined in the given type by its name and parameter types.
+            </summary>
+            <param name="this">The type to inspect.</param>
+            <param name="name">The name of the method.</param>
+            <param name="parameterTypes">The parameter types of the method.</param>
+            <returns>The method.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.TypeExtensions.HasInterface``1(System.Type)">
+            <summary>
+            Checks if the give type implements a given interface type.
+            </summary>
+            <param name="this">The type.</param>
+            <typeparam name="T">The interface.</typeparam>
+            <exception cref="T:System.ArgumentException">Thrown if the interface type is not an interface.</exception>
+            <returns>true if the type implements the interface; otherwise, false.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.TypeExtensions.IsNonRefNullable(System.Type)">
+            <summary>
+            Determines whether or not the given type is a <see cref="T:System.Nullable`1" /> that is not passed by reference.
+            </summary>
+            <param name="this">The type.</param>
+            <returns>true if it is a nullable that is not passed by reference; otherwise, false.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Extensions.TypeExtensions.IsRefNullable(System.Type)">
+            <summary>
+            Determines whether or not the given type is a <see cref="T:System.Nullable`1" /> passed by reference.
+            </summary>
+            <param name="this">The type.</param>
+            <returns>true if it is a nullable passed by reference; otherwise, false.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.ImplementationGenerators.GeneratorComplexity">
+            <summary>
+            Represents levels of complexity in a generator.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="F:AdvancedDLSupport.ImplementationGenerators.GeneratorComplexity.None">
+            <summary>
+            The generator does not perform any operations that are considered complex.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.ImplementationGenerators.GeneratorComplexity.TransformsParameters">
+            <summary>
+            The generator transforms the parameters of the input definition in some way.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.ImplementationGenerators.GeneratorComplexity.MemberDependent">
+            <summary>
+            The generator alters its behaviour based on data about the input member - skipping it altogether, performing
+            a different operation, etc.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.ImplementationGenerators.GeneratorComplexity.OptionDependent">
+            <summary>
+            The generator alters its behaviour based on the current active <see cref="T:AdvancedDLSupport.ImplementationOptions" /> -
+            skipping it altogether, performing a different operation, etc.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.ImplementationGenerators.GeneratorComplexity.Terminating">
+            <summary>
+            The generator is a terminating generator, and will not produce any output definitions. These generators are
+            sorted apart from the normal generators, and are always executed last.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.ImplementationGenerators.GeneratorComplexity.CreatesTypes">
+            <summary>
+            The generator will create additional types in the assembly.
+            </summary>
+        </member>
+        <member name="T:AdvancedDLSupport.ImplementationGenerators.ImplementationGeneratorSorter">
+            <summary>
+            Sorts a set of input generators based on their complexity.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ImplementationGeneratorSorter.SortGenerators``1(System.Collections.Generic.IEnumerable{AdvancedDLSupport.ImplementationGenerators.IImplementationGenerator{``0}})">
+            <summary>
+            Sorts the input generators based on their complexity.
+            </summary>
+            <param name="generators">The input generators.</param>
+            <typeparam name="T">The member that the generators accept.</typeparam>
+            <returns>The sorted generators.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ImplementationGeneratorSorter.CalculateComplexityScore(AdvancedDLSupport.ImplementationGenerators.GeneratorComplexity)">
+            <summary>
+            Calculates a generator's complexity score. A higher score means a more complex generator.
+            </summary>
+            <param name="complexity">The complexity flags.</param>
+            <returns>An integer value that represents the complexity of the flags.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.ImplementationGenerators.IImplementationGenerator`1">
+            <summary>
+            Interface for classes that generate anonymous implementations for members.
+            <p /><c>[PublicAPI]</c></summary>
+            <typeparam name="TAccepted">The type of member that the class will generate for.</typeparam>
+        </member>
+        <member name="P:AdvancedDLSupport.ImplementationGenerators.IImplementationGenerator`1.Options">
+            <summary>
+            Gets the implementation configuration object to use.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.ImplementationGenerators.IImplementationGenerator`1.Complexity">
+            <summary>
+            Gets the complexity levels of the implementation generator.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.IImplementationGenerator`1.IsApplicable(`0)">
+            <summary>
+            Determines whether or not the implementation generator is applicable for the given member definition.
+            <p /><c>[PublicAPI, Pure]</c></summary>
+            <param name="member">The member definition.<p /><c>[NotNull]</c></param>
+            <returns>true if the generator is applicable; otherwise, false.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.IImplementationGenerator`1.GenerateImplementation(AdvancedDLSupport.Pipeline.PipelineWorkUnit{`0})">
+            <summary>
+            Generates an implementation for the given member, optionally producing more definitions for processing.
+            <p /><c>[PublicAPI, NotNull, ItemNotNull]</c></summary>
+            <param name="workUnit">The member to generate the implementation for.<p /><c>[NotNull]</c></param>
+            <returns>An optional set of more definitions to be processed.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.ImplementationGenerators.ImplementationGeneratorBase`1">
+            <summary>
+            Base class for implementation generators.
+            <p /><c>[PublicAPI]</c></summary>
+            <typeparam name="T">The type of member to generate the implementation for.</typeparam>
+        </member>
+        <member name="P:AdvancedDLSupport.ImplementationGenerators.ImplementationGeneratorBase`1.Options">
+            <inheritdoc />
+        </member>
+        <member name="P:AdvancedDLSupport.ImplementationGenerators.ImplementationGeneratorBase`1.Complexity">
+            <inheritdoc />
+        </member>
+        <member name="P:AdvancedDLSupport.ImplementationGenerators.ImplementationGeneratorBase`1.TargetModule">
+            <summary>
+            Gets the module in which the implementation should be generated.
+            <p /><c>[PublicAPI, NotNull]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.ImplementationGenerators.ImplementationGeneratorBase`1.TargetType">
+            <summary>
+            Gets the type in which the implementation should be generated.
+            <p /><c>[PublicAPI, NotNull]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.ImplementationGenerators.ImplementationGeneratorBase`1.TargetTypeConstructorIL">
+            <summary>
+            Gets the IL generator for the constructor of the type in which the implementation should be generated.
+            <p /><c>[PublicAPI, NotNull]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ImplementationGeneratorBase`1.#ctor(System.Reflection.Emit.ModuleBuilder,System.Reflection.Emit.TypeBuilder,System.Reflection.Emit.ILGenerator,AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.ImplementationGenerators.ImplementationGeneratorBase`1" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="targetModule">The module where the implementation should be generated.<p /><c>[NotNull]</c></param>
+            <param name="targetType">The type in which the implementation should be generated.<p /><c>[NotNull]</c></param>
+            <param name="targetTypeConstructorIL">The IL generator for the target type's constructor.<p /><c>[NotNull]</c></param>
+            <param name="options">The configuration object to use.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ImplementationGeneratorBase`1.IsApplicable(`0)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ImplementationGeneratorBase`1.GenerateImplementation(AdvancedDLSupport.Pipeline.PipelineWorkUnit{`0})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ImplementationGeneratorBase`1.GenerateLazyLoadedObject(System.Reflection.Emit.MethodBuilder,System.Type)">
+            <summary>
+            Generates a lazy loaded field with the specified value factory.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="valueFactory">The value factory to use for the lazy loaded field.<p /><c>[NotNull]</c></param>
+            <param name="type">The return type of the lazy field.<p /><c>[NotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ImplementationGeneratorBase`1.GenerateSymbolPush(System.Reflection.Emit.ILGenerator,System.Reflection.FieldInfo)">
+            <summary>
+            Generates the IL required to push the value of the field to the stack, including the case where the field
+            is lazily loaded.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="il">The IL generator.<p /><c>[NotNull]</c></param>
+            <param name="symbolField">The field to generate the IL for.<p /><c>[NotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ImplementationGeneratorBase`1.GenerateSymbolLoadingLambda(System.String)">
+            <summary>
+            Generates a lambda method for loading the given symbol.
+            <p /><c>[PublicAPI, NotNull]</c></summary>
+            <param name="symbolName">The name of the symbol.<p /><c>[NotNull]</c></param>
+            <returns>A method which, when called, will load and return the given symbol.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ImplementationGeneratorBase`1.GenerateFunctionLoadingLambda(System.Type,System.String)">
+            <summary>
+            Generates a lambda method for loading the given function.
+            <p /><c>[PublicAPI, NotNull]</c></summary>
+            <param name="delegateType">The type of delegate to load.<p /><c>[NotNull]</c></param>
+            <param name="functionName">The name of the function.<p /><c>[NotNull]</c></param>
+            <returns>A method which, when called, will load and return the given function.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.ImplementationGenerators.RefPermutationImplementationGenerator">
+            <summary>
+            Generates a set of method permutations, based on a method with <see cref="T:System.Nullable`1" /> parameters passed by
+            reference.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.ImplementationGenerators.RefPermutationImplementationGenerator.Complexity">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.RefPermutationImplementationGenerator.#ctor(System.Reflection.Emit.ModuleBuilder,System.Reflection.Emit.TypeBuilder,System.Reflection.Emit.ILGenerator,AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.ImplementationGenerators.RefPermutationImplementationGenerator" /> class.
+            </summary>
+            <param name="targetModule">The module in which the method implementation should be generated.</param>
+            <param name="targetType">The type in which the method implementation should be generated.</param>
+            <param name="targetTypeConstructorIL">The IL generator for the target type's constructor.</param>
+            <param name="options">The configuration object to use.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.RefPermutationImplementationGenerator.IsApplicable(AdvancedDLSupport.Reflection.IntrospectiveMethodInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.RefPermutationImplementationGenerator.GenerateImplementation(AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.RefPermutationImplementationGenerator.GenerateTopLevelMethodImplementation(AdvancedDLSupport.Reflection.IntrospectiveMethodInfo,System.Collections.Generic.IReadOnlyList{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <summary>
+            Generates the implementation body of the top-level method, producing a method that selects the appropriate
+            permutation to use for its runtime input.
+            </summary>
+            <param name="definition">The <see cref="T:System.Reflection.MethodInfo" /> describing the base definition of the method.</param>
+            <param name="permutations">The generated methods.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.RefPermutationImplementationGenerator.EmitNullableValueRef(System.Reflection.Emit.ILGenerator,System.Int16,System.Type)">
+            <summary>
+            Emits a set of IL instructions that take the argument at the given index, treating it as a
+            <see cref="T:System.Nullable`1" />, converting it into a ByRef T, pointing to the internal value of the nullable, and
+            pushes it onto the evaluation stack.
+            </summary>
+            <param name="il">The IL generator where the instructions should be emitted.</param>
+            <param name="argumentIndex">The argument index to load.</param>
+            <param name="wrappedType">The type wrapped by the nullable.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.RefPermutationImplementationGenerator.EmitGetPinnedAddressOfNullable(System.Reflection.Emit.ILGenerator,System.Type,System.Int16)">
+            <summary>
+            Emits a set of IL instructions that loads the argument at the given index,
+            treating it as a <see cref="T:System.Nullable`1" />, and gets a pinned pointer to it, pushing it onto the evaluation stack.
+            </summary>
+            <param name="il">The IL generator where the instructions should be emitted.</param>
+            <param name="nullableType">The type that the nullable wraps.</param>
+            <param name="argumentIndex">The argument index to load.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.RefPermutationImplementationGenerator.EmitAccessInternalNullableValue(System.Reflection.Emit.ILGenerator,System.Type)">
+            <summary>
+            Emits a set of IL instructs that takes a value on the evaluation stack, treating it as a pointer to an
+            instance of a <see cref="T:System.Nullable`1" />, and retrieves a ByRef handle to its internal wrapped struct,
+            pushing it onto the evaluation stack.
+            </summary>
+            <param name="il">The IL generator where the instructions should be emitted.</param>
+            <param name="wrappedType">The type that the nullable wraps.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.RefPermutationImplementationGenerator.EmitPermutationIndex(System.Reflection.Emit.ILGenerator)">
+            <summary>
+            Emits a set of IL instructions that creates a new <see cref="T:System.Collections.BitArray" />, constructing it from a
+            <see cref="T:System.Boolean" /> array on the evaluation stack, and then converts it to an <see cref="T:System.Int32" />, placing it
+            back on the evaluation stack.
+            </summary>
+            <param name="il">The IL generator where the instructions should be emitted.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.RefPermutationImplementationGenerator.EmitHasValueArray(System.Reflection.Emit.ILGenerator,System.Collections.Generic.IList{System.Type})">
+            <summary>
+            Emits a set of IL instructions that creates a new <see cref="T:System.Boolean" /> array, storing it in the local variable
+            with the given index. Then, it inspects all parameters for instances of <see cref="T:System.Nullable`1" /> parameters, and
+            stores whether or not that parameter has an underlying value in the array.
+            </summary>
+            <param name="il">The IL generator where the instructions should be emitted.</param>
+            <param name="parameters">The method parameters.</param>
+            <returns>The index of the local variable used for the array.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.RefPermutationImplementationGenerator.EmitNullableGetHasValue(System.Reflection.Emit.ILGenerator,System.ValueTuple{System.Int32,System.Type})">
+            <summary>
+            Emits the IL required for accessing the parameter at a given index, and checking whether or not it has a
+            value, placing a boolean value onto the evaluation stack.
+            </summary>
+            <param name="methodIL">The IL generator where the instructions should be emitted.</param>
+            <param name="parameter">A <see cref="T:System.ValueTuple" /> containing the parameter index, and its associated <see cref="T:System.Reflection.ParameterInfo" />.</param>
+        </member>
+        <member name="T:AdvancedDLSupport.ImplementationGenerators.DelegateMethodImplementationGenerator">
+            <summary>
+            Generates <see cref="T:System.MulticastDelegate" />-based implementations for methods.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.ImplementationGenerators.DelegateMethodImplementationGenerator.Complexity">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.DelegateMethodImplementationGenerator.#ctor(System.Reflection.Emit.ModuleBuilder,System.Reflection.Emit.TypeBuilder,System.Reflection.Emit.ILGenerator,AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.ImplementationGenerators.DelegateMethodImplementationGenerator" /> class.
+            </summary>
+            <param name="targetModule">The module in which the method implementation should be generated.</param>
+            <param name="targetType">The type in which the method implementation should be generated.</param>
+            <param name="targetTypeConstructorIL">The IL generator for the target type's constructor.</param>
+            <param name="options">The configuration object to use.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.DelegateMethodImplementationGenerator.IsApplicable(AdvancedDLSupport.Reflection.IntrospectiveMethodInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.DelegateMethodImplementationGenerator.GenerateImplementation(AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.DelegateMethodImplementationGenerator.AugmentHostingTypeConstructorWithDelegateInitialization(System.String,System.Type,System.Reflection.FieldInfo)">
+            <summary>
+            Augments the hosting type constructor with the logic required to initialize the backing delegate field.
+            </summary>
+            <param name="entrypointName">The name of the entry point.</param>
+            <param name="backingFieldType">The type of the backing field.</param>
+            <param name="backingField">The backing delegate field.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.DelegateMethodImplementationGenerator.GenerateDelegateInvokerBody(AdvancedDLSupport.Reflection.IntrospectiveMethodInfo,System.Type,System.Reflection.FieldInfo)">
+            <summary>
+            Generates the method body for a delegate invoker.
+            </summary>
+            <param name="method">The method to generate the body for.</param>
+            <param name="delegateBuilderType">The type of the method delegate.</param>
+            <param name="delegateField">The delegate field.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.DelegateMethodImplementationGenerator.GenerateDelegateType(AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <summary>
+            Generates a delegate type for the given method.
+            </summary>
+            <param name="workUnit">The method to generate a delegate type for.</param>
+            <returns>A delegate type.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.ImplementationGenerators.IndirectCallMethodImplementationGenerator">
+            <summary>
+            Generates <see cref="F:System.Reflection.Emit.OpCodes.Calli" />-based implementations for methods.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.ImplementationGenerators.IndirectCallMethodImplementationGenerator.Complexity">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.IndirectCallMethodImplementationGenerator.#ctor(System.Reflection.Emit.ModuleBuilder,System.Reflection.Emit.TypeBuilder,System.Reflection.Emit.ILGenerator,AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.ImplementationGenerators.IndirectCallMethodImplementationGenerator" /> class.
+            </summary>
+            <param name="targetModule">The module in which the method implementation should be generated.</param>
+            <param name="targetType">The type in which the method implementation should be generated.</param>
+            <param name="targetTypeConstructorIL">The IL generator for the target type's constructor.</param>
+            <param name="options">The configuration object to use.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.IndirectCallMethodImplementationGenerator.IsApplicable(AdvancedDLSupport.Reflection.IntrospectiveMethodInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.IndirectCallMethodImplementationGenerator.GenerateImplementation(AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.IndirectCallMethodImplementationGenerator.AugmentHostingTypeConstructorWithNativeInitialization(System.String,System.Type,System.Reflection.FieldInfo)">
+            <summary>
+            Augments the hosting type constructor with the logic required to initialize the backing pointer field.
+            </summary>
+            <param name="entrypointName">The name of the entry point.</param>
+            <param name="backingFieldType">The type of the backing field.</param>
+            <param name="backingField">The backing pointer field.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.IndirectCallMethodImplementationGenerator.GenerateNativeInvokerBody(AdvancedDLSupport.Reflection.IntrospectiveMethodInfo,System.Runtime.InteropServices.CallingConvention,System.Reflection.FieldInfo)">
+            <summary>
+            Generates the method body for a native calli invocation.
+            </summary>
+            <param name="method">The method to generate the body for.</param>
+            <param name="callingConvention">The unmanaged calling convention to use.</param>
+            <param name="backingField">The backing field.</param>
+        </member>
+        <member name="T:AdvancedDLSupport.ImplementationGenerators.PropertyImplementationGenerator">
+            <summary>
+            Generates implementations for properties.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.ImplementationGenerators.PropertyImplementationGenerator.Complexity">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.PropertyImplementationGenerator.#ctor(System.Reflection.Emit.ModuleBuilder,System.Reflection.Emit.TypeBuilder,System.Reflection.Emit.ILGenerator,AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.ImplementationGenerators.PropertyImplementationGenerator" /> class.
+            </summary>
+            <param name="targetModule">The module in which the property implementation should be generated.</param>
+            <param name="targetType">The type in which the property implementation should be generated.</param>
+            <param name="targetTypeConstructorIL">The IL generator for the target type's constructor.</param>
+            <param name="options">The configuration object to use.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.PropertyImplementationGenerator.IsApplicable(AdvancedDLSupport.Reflection.IntrospectivePropertyInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.PropertyImplementationGenerator.GenerateImplementation(AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectivePropertyInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.PropertyImplementationGenerator.EmitDisposalCheck(System.Reflection.Emit.ILGenerator)">
+            <summary>
+            Emits a call to <see cref="M:AdvancedDLSupport.NativeLibraryBase.ThrowIfDisposed" />.
+            </summary>
+            <param name="il">The IL generator.</param>
+        </member>
+        <member name="T:AdvancedDLSupport.ImplementationGenerators.BooleanMarshallingWrapper">
+            <summary>
+            Generates wrapper instructions for marshalling boolean parameters under indirect calling conditions, where
+            normal marshalling is not available.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.ImplementationGenerators.BooleanMarshallingWrapper.Complexity">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.BooleanMarshallingWrapper.#ctor(System.Reflection.Emit.ModuleBuilder,System.Reflection.Emit.TypeBuilder,System.Reflection.Emit.ILGenerator,AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.ImplementationGenerators.BooleanMarshallingWrapper" /> class.
+            </summary>
+            <param name="targetModule">The module where the implementation should be generated.</param>
+            <param name="targetType">The type in which the implementation should be generated.</param>
+            <param name="targetTypeConstructorIL">The IL generator for the target type's constructor.</param>
+            <param name="options">The configuration object to use.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.BooleanMarshallingWrapper.IsApplicable(AdvancedDLSupport.Reflection.IntrospectiveMethodInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.BooleanMarshallingWrapper.EmitPrologue(System.Reflection.Emit.ILGenerator,AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.BooleanMarshallingWrapper.EmitEpilogue(System.Reflection.Emit.ILGenerator,AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.BooleanMarshallingWrapper.GeneratePassthroughDefinition(AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.BooleanMarshallingWrapper.EmitBooleanToUnmanagedIntegerConversion(System.Reflection.Emit.ILGenerator,System.Runtime.InteropServices.UnmanagedType)">
+            <summary>
+            Emits the IL instructions neccesary to convert a boolean value on the evaluation stack to its unmanaged
+            integer representation.
+            </summary>
+            <param name="il">The generator where the IL is to be emitted.</param>
+            <param name="unmanagedType">The unmanaged type of the boolean.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.BooleanMarshallingWrapper.EmitUnmanagedIntegerToBooleanConversion(System.Reflection.Emit.ILGenerator,System.Runtime.InteropServices.UnmanagedType)">
+            <summary>
+            Emits the IL instructions neccesary to convert an unmanaged integer value on the evaluation stack to its
+            boolean representation.
+            </summary>
+            <param name="il">The generator where the IL is to be emitted.</param>
+            <param name="unmanagedType">The unmanaged type of the boolean.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.BooleanMarshallingWrapper.GetBooleanIntegerValueForUnmanagedType(System.Runtime.InteropServices.UnmanagedType,System.Boolean)">
+            <summary>
+            Converts a boolean into its integer representation, based on the given unmanaged type.
+            </summary>
+            <param name="unmanagedType">The unmanaged type.</param>
+            <param name="value">The boolean value.</param>
+            <returns>The integer representation.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.BooleanMarshallingWrapper.GetParameterUnmanagedType(System.Collections.Generic.IEnumerable{System.Reflection.CustomAttributeData})">
+            <summary>
+            Gets the unmanaged type that the parameter with the given attributes should be marshalled as. The return
+            type is guaranteed to be one of the signed or unsigned integer types. If no type is specified, a 1-byte
+            unsigned integer is assumed.
+            </summary>
+            <param name="customAttributes">The custom attributes applied to the parameter.</param>
+            <returns>The parameter type.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.BooleanMarshallingWrapper.GetParameterMarshallingType(System.Collections.Generic.IEnumerable{System.Reflection.CustomAttributeData})">
+            <summary>
+            Gets the type that the parameter with the given attributes should be marshalled as. The return type is
+            guaranteed to be one of the signed or unsigned integer types. If no paramter type is specified, a 1-byte
+            unsigned integer is assumed.
+            </summary>
+            <param name="customAttributes">The custom attributes applied to the parameter.</param>
+            <returns>The parameter type.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.ImplementationGenerators.CallWrapperBase">
+            <summary>
+            Base class for call wrappers. This class implements some base functionality which allows inheritors to abstain
+            from emitting prologues or epilogues.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.CallWrapperBase.#ctor(System.Reflection.Emit.ModuleBuilder,System.Reflection.Emit.TypeBuilder,System.Reflection.Emit.ILGenerator,AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.ImplementationGenerators.CallWrapperBase" /> class.
+            </summary>
+            <param name="targetModule">The module where the implementation should be generated.<p /><c>[NotNull]</c></param>
+            <param name="targetType">The type in which the implementation should be generated.<p /><c>[NotNull]</c></param>
+            <param name="targetTypeConstructorIL">The IL generator for the target type's constructor.<p /><c>[NotNull]</c></param>
+            <param name="options">The configuration object to use.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.CallWrapperBase.EmitAdditionalTypes(System.Reflection.Emit.ModuleBuilder,AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <summary>
+            Emits any additional types that a work unit requires. By default, this does nothing.
+            </summary>
+            <param name="module">The module to emit the types in.<p /><c>[NotNull]</c></param>
+            <param name="workUnit">The unit to generate the types from.<p /><c>[NotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.CallWrapperBase.GenerateImplementation(AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.CallWrapperBase.GeneratePassthroughDefinition(AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <summary>
+            Generates the method that should be passed through for further processing.
+            <p /><c>[NotNull]</c></summary>
+            <param name="workUnit">The original definition.<p /><c>[NotNull]</c></param>
+            <returns>The passthrough method.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.CallWrapperBase.EmitPrologue(System.Reflection.Emit.ILGenerator,AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.CallWrapperBase.EmitEpilogue(System.Reflection.Emit.ILGenerator,AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.ImplementationGenerators.DisposalCallWrapper">
+            <summary>
+            Generates a disposal check before the method call.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.ImplementationGenerators.DisposalCallWrapper.Complexity">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.DisposalCallWrapper.#ctor(System.Reflection.Emit.ModuleBuilder,System.Reflection.Emit.TypeBuilder,System.Reflection.Emit.ILGenerator,AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.ImplementationGenerators.DisposalCallWrapper" /> class.
+            </summary>
+            <param name="targetModule">The module where the implementation should be generated.</param>
+            <param name="targetType">The type in which the implementation should be generated.</param>
+            <param name="targetTypeConstructorIL">The IL generator for the target type's constructor.</param>
+            <param name="options">The configuration object to use.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.DisposalCallWrapper.IsApplicable(AdvancedDLSupport.Reflection.IntrospectiveMethodInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.DisposalCallWrapper.EmitPrologue(System.Reflection.Emit.ILGenerator,AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.ImplementationGenerators.GenericDelegateWrapper">
+            <summary>
+            Generates wrapper instructions for marshalling generic delegate types (<see cref="T:System.Func`1" />,
+            <see cref="T:System.Action`1" /> and their variants).
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.ImplementationGenerators.GenericDelegateWrapper.Complexity">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.GenericDelegateWrapper.#ctor(System.Reflection.Emit.ModuleBuilder,System.Reflection.Emit.TypeBuilder,System.Reflection.Emit.ILGenerator,AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.ImplementationGenerators.GenericDelegateWrapper" /> class.
+            </summary>
+            <param name="targetModule">The module where the implementation should be generated.</param>
+            <param name="targetType">The type in which the implementation should be generated.</param>
+            <param name="targetTypeConstructorIL">The IL generator for the target type's constructor.</param>
+            <param name="options">The configuration object to use.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.GenericDelegateWrapper.IsApplicable(AdvancedDLSupport.Reflection.IntrospectiveMethodInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.GenericDelegateWrapper.EmitAdditionalTypes(System.Reflection.Emit.ModuleBuilder,AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.GenericDelegateWrapper.EmitExplicitDelegateDefinition(System.Reflection.Emit.ModuleBuilder,System.Type)">
+            <summary>
+            Generates an explicit delegate definition based on a generic delegate type.
+            </summary>
+            <param name="module">The module to emit the type in.</param>
+            <param name="genericDelegateType">The generic delegate type.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.GenericDelegateWrapper.EmitPrologue(System.Reflection.Emit.ILGenerator,AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.GenericDelegateWrapper.EmitEpilogue(System.Reflection.Emit.ILGenerator,AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.GenericDelegateWrapper.GeneratePassthroughDefinition(AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.GenericDelegateWrapper.GetParameterPassthroughType(System.Type)">
+            <summary>
+            Gets the type that the parameter type should be passed through as.
+            </summary>
+            <param name="originalType">The original type.</param>
+            <returns>The passed-through type.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.GenericDelegateWrapper.GetCreatedExplicitDelegateType(System.Type)">
+            <summary>
+            Gets an already created explicit delegate type, based on the original generic delegate type.
+            </summary>
+            <param name="originalType">The generic type.</param>
+            <returns>The explicitly implemented type.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.GenericDelegateWrapper.GetSignatureTypesFromGenericDelegate(System.Type)">
+            <summary>
+            Gets a method signature from the given generic delegate, consisting of a return type and parameter types.
+            </summary>
+            <param name="delegateType">The type to inspect.</param>
+            <returns>The types.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if no types could be extracted.</exception>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.GenericDelegateWrapper.GetDelegateTypeName(System.Type,System.Collections.Generic.IReadOnlyCollection{System.Type})">
+            <summary>
+            Gets the generated name for an explicit delegate implementation that returns the given type and takes the
+            given parameters. The name is guaranteed to be identical given the same input types in the same order.
+            </summary>
+            <param name="returnType">The return type of the delegate.</param>
+            <param name="parameterTypes">The parameter types of the delegate.</param>
+            <returns>The generated name of the delegate.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.ImplementationGenerators.ICallWrapper">
+            <summary>
+            Represents a wrapper emitter that accepts a method, emits arbitrary prologue instructions, calls the method, and
+            then emits arbitrary epilogue instructions. Typically, the input method is passed through without modifications.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ICallWrapper.EmitPrologue(System.Reflection.Emit.ILGenerator,AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <summary>
+            Emits the wrapper prologue, that is, the instructions before the method call. The evaluation stack is clean
+            at the start of this method. Immediately following this method, a call to the wrapped method will be made.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="il">The generator where the instructions will be emitted.<p /><c>[NotNull]</c></param>
+            <param name="workUnit">The method being worked on.<p /><c>[NotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ICallWrapper.EmitEpilogue(System.Reflection.Emit.ILGenerator,AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <summary>
+            Emits the wrapper prologue, that is, the instructions after the method call. The return value (if any) of
+            the wrapped method will be on top of the evaluation stack at the beginning of this method. The value on top
+            of the evaluation stack at the end of the epilogue (if any) will be returned to the caller.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="il">The generator where the instructions will be emitted.<p /><c>[NotNull]</c></param>
+            <param name="workUnit">The method being worked on.<p /><c>[NotNull]</c></param>
+        </member>
+        <member name="T:AdvancedDLSupport.ImplementationGenerators.StringMarshallingWrapper">
+            <summary>
+            Generates wrapper instructions for marshalling string parameters, with an optional attribute-controlled
+            cleanup step to free the marshalled memory afterwards.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.ImplementationGenerators.StringMarshallingWrapper.Complexity">
+            <inheritdoc />
+        </member>
+        <member name="F:AdvancedDLSupport.ImplementationGenerators.StringMarshallingWrapper._workUnitLocals">
+            <summary>
+            Holds local variables defined for a given work unit. The nested dictionary contains the 0-based input
+            parameter index matched with the local variable containing an unmanaged pointer.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.StringMarshallingWrapper.#ctor(System.Reflection.Emit.ModuleBuilder,System.Reflection.Emit.TypeBuilder,System.Reflection.Emit.ILGenerator,AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.ImplementationGenerators.StringMarshallingWrapper" /> class.
+            </summary>
+            <param name="targetModule">The module where the implementation should be generated.</param>
+            <param name="targetType">The type in which the implementation should be generated.</param>
+            <param name="targetTypeConstructorIL">The IL generator for the target type's constructor.</param>
+            <param name="options">The configuration object to use.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.StringMarshallingWrapper.IsApplicable(AdvancedDLSupport.Reflection.IntrospectiveMethodInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.StringMarshallingWrapper.EmitPrologue(System.Reflection.Emit.ILGenerator,AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.StringMarshallingWrapper.EmitEpilogue(System.Reflection.Emit.ILGenerator,AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.StringMarshallingWrapper.GeneratePassthroughDefinition(AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.StringMarshallingWrapper.SelectManagedToUnmanagedTransformationMethod(System.Runtime.InteropServices.UnmanagedType)">
+            <summary>
+            Selects the appropriate method to transforme a string value on the evaluation stack to an
+            <see cref="T:System.IntPtr" /> of the given unmanaged type.
+            </summary>
+            <param name="unmanagedType">The unmanaged string type.</param>
+            <returns>The method.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown if the given unmanaged type is not a string type.
+            </exception>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.StringMarshallingWrapper.SelectUnmanagedToManagedTransformationMethod(System.Runtime.InteropServices.UnmanagedType)">
+            <summary>
+            Selects the appropriate method to transform a <see cref="T:System.IntPtr" /> value of the given unmanaged type on the
+            evaluation stack to a managed string.
+            </summary>
+            <param name="unmanagedType">The unmanaged string type.</param>
+            <returns>The method.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown if the given unmanaged type is not a string type.
+            </exception>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.StringMarshallingWrapper.SelectUnmanagedFreeMethod(System.Runtime.InteropServices.UnmanagedType)">
+            <summary>
+            Selects the appropriate method to free an <see cref="T:System.IntPtr" /> to an ummanaged string on the evaluation stack.
+            </summary>
+            <param name="unmanagedType">The unmanaged string type.</param>
+            <returns>The method.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown if the given unmanaged type is not a string type.
+            </exception>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.StringMarshallingWrapper.GetParameterUnmanagedType(System.Collections.Generic.IEnumerable{System.Reflection.CustomAttributeData})">
+            <summary>
+            Gets the unmanaged type that the parameter with the given attributes should be marshalled as. The return
+            type is guaranteed to be one of the string types. If no type is specified, a LPTStr is assumed.
+            </summary>
+            <param name="customAttributes">The custom attributes applied to the parameter.</param>
+            <returns>The parameter type.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.ImplementationGenerators.ValueNullableMarshallingWrapper">
+            <summary>
+            Generates wrapper instructions for marshalling string parameters, with an optional attribute-controlled
+            cleanup step to free the marshalled memory afterwards.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.ImplementationGenerators.ValueNullableMarshallingWrapper.Complexity">
+            <inheritdoc />
+        </member>
+        <member name="F:AdvancedDLSupport.ImplementationGenerators.ValueNullableMarshallingWrapper._workUnitLocals">
+            <summary>
+            Holds local variables defined for a given work unit. The nested dictionary contains the 0-based input
+            parameter index matched with the local variable containing an unmanaged pointer.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ValueNullableMarshallingWrapper.#ctor(System.Reflection.Emit.ModuleBuilder,System.Reflection.Emit.TypeBuilder,System.Reflection.Emit.ILGenerator,AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.ImplementationGenerators.ValueNullableMarshallingWrapper" /> class.
+            </summary>
+            <param name="targetModule">The module where the implementation should be generated.</param>
+            <param name="targetType">The type in which the implementation should be generated.</param>
+            <param name="targetTypeConstructorIL">The IL generator for the target type's constructor.</param>
+            <param name="options">The configuration object to use.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ValueNullableMarshallingWrapper.IsApplicable(AdvancedDLSupport.Reflection.IntrospectiveMethodInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ValueNullableMarshallingWrapper.EmitPrologue(System.Reflection.Emit.ILGenerator,AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ValueNullableMarshallingWrapper.EmitEpilogue(System.Reflection.Emit.ILGenerator,AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ValueNullableMarshallingWrapper.GeneratePassthroughDefinition(AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ValueNullableMarshallingWrapper.GetHasValueMethod(System.Type)">
+            <summary>
+            Gets the getter method of the <see cref="P:System.Nullable`1.HasValue" /> property.
+            </summary>
+            <param name="nullableType">The type T of the nullable.</param>
+            <returns>The method.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ValueNullableMarshallingWrapper.GetGetValueMethod(System.Type)">
+            <summary>
+            Gets the getter method of the <see cref="P:System.Nullable`1.Value" /> property.
+            </summary>
+            <param name="nullableType">The type T of the nullable.</param>
+            <returns>The method.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.ImplementationGenerators.ValueNullableMarshallingWrapper.GetNullableConstructor(System.Type)">
+            <summary>
+            Gets the <see cref="T:System.Nullable`1" />(T item) constructor, based on the given input type.
+            </summary>
+            <param name="nullableType">The type T of the nullable.</param>
+            <returns>The constructor.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.ImplementationOptions">
+            <summary>
+            Holds generated implementation flag options.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="F:AdvancedDLSupport.ImplementationOptions.UseLazyBinding">
+            <summary>
+            Generate the bindings with lazy loaded symbol resolution.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="F:AdvancedDLSupport.ImplementationOptions.GenerateDisposalChecks">
+            <summary>
+            Generate disposal checks for all binder methods.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="F:AdvancedDLSupport.ImplementationOptions.EnableDllMapSupport">
+            <summary>
+            Enable Mono dllmap support for library scanning.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="F:AdvancedDLSupport.ImplementationOptions.UseIndirectCalls">
+            <summary>
+            Enables use of the `calli` opcode.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="F:AdvancedDLSupport.ImplementationOptions.EnableOptimizations">
+            <summary>
+            Enables code optimizations for the generated assembly.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="F:AdvancedDLSupport.ImplementationOptions.SuppressSecurity">
+            <summary>
+            Suppresses code security whenever possible.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="T:AdvancedDLSupport.Loaders.BSDPlatformLoader">
+            <summary>
+            Loads libraries on BSD-based platform.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Loaders.BSDPlatformLoader.UseCLibrary">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.Loaders.IPlatformLoader">
+            <summary>
+            Represents a class which can load libraries and symbols on a specific platform.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.IPlatformLoader.LoadFunction``1(System.IntPtr,System.String)">
+            <summary>
+            Loads the given symbol name and marshals it into a function delegate.
+            <p /><c>[PublicAPI, NotNull, Pure]</c></summary>
+            <param name="library">The library handle.</param>
+            <param name="symbolName">The name of the symbol.<p /><c>[NotNull]</c></param>
+            <typeparam name="T">The delegate type to marshal.</typeparam>
+            <returns>A marshalled delegate.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.IPlatformLoader.LoadLibrary(System.String)">
+            <summary>
+            Load the given library. A null path signifies intent to load the main executable instead of an external
+            library.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="path">The path to the library.<p /><c>[CanBeNull]</c></param>
+            <returns>A handle to the library. This value carries no intrinsic meaning.</returns>
+            <exception cref="T:AdvancedDLSupport.LibraryLoadingException">Thrown if the library could not be loaded.</exception>
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.IPlatformLoader.LoadSymbol(System.IntPtr,System.String)">
+            <summary>
+            Load the given symbol.
+            <p /><c>[PublicAPI, Pure]</c></summary>
+            <param name="library">The handle to the library in which the symbol exists.</param>
+            <param name="symbolName">The name of the symbol to load.<p /><c>[NotNull]</c></param>
+            <exception cref="T:AdvancedDLSupport.SymbolLoadingException">Thrown if the symbol could not be loaded.</exception>
+            <returns>A handle to the symbol.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.IPlatformLoader.CloseLibrary(System.IntPtr)">
+            <summary>
+            Closes the open handle to the given library.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="library">The handle to the library to close.</param>
+            <returns>true if the library was closed successfully; otherwise, false.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.Loaders.LinuxPlatformLoader">
+            <summary>
+            Loads libraries on the Linux platform.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Loaders.LinuxPlatformLoader.UseCLibrary">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.Loaders.dl">
+             <summary>
+             Native libdl methods and constants. Unfortunately, the BSD family of operating systems store their dl functions
+             in the C standard library, and not in libdl. Therefore, two internal classes have been added as a workaround.
+            
+             It should be noted that macOS, while strictly a BSD, hosts a shim libdl library which redirects to libc.
+             </summary>
+        </member>
+        <member name="T:AdvancedDLSupport.Loaders.PlatformLoaderBase">
+            <summary>
+            Acts as the base for platform loaders.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.PlatformLoaderBase.LoadFunction``1(System.IntPtr,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.PlatformLoaderBase.LoadLibrary(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.PlatformLoaderBase.LoadLibraryInternal(System.String)">
+            <summary>
+            Load the given library.
+            </summary>
+            <param name="path">The path to the library.<p /><c>[CanBeNull]</c></param>
+            <returns>A handle to the library. This value carries no intrinsic meaning.</returns>
+            <exception cref="T:AdvancedDLSupport.LibraryLoadingException">Thrown if the library could not be loaded.</exception>
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.PlatformLoaderBase.LoadSymbol(System.IntPtr,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.PlatformLoaderBase.CloseLibrary(System.IntPtr)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.PlatformLoaderBase.SelectPlatformLoader">
+            <summary>
+            Selects the appropriate platform loader based on the current platform.
+            <p /><c>[PublicAPI, NotNull, Pure]</c></summary>
+            <returns>A platform loader for the current platform..</returns>
+            <exception cref="T:System.PlatformNotSupportedException">Thrown if the current platform is not supported.</exception>
+        </member>
+        <member name="T:AdvancedDLSupport.Loaders.SymbolFlag">
+             <summary>
+             <see cref="M:AdvancedDLSupport.Loaders.dl.open(System.String,AdvancedDLSupport.Loaders.SymbolFlag,System.Boolean)" /> flags. Taken from the source code of GNU libc.
+            
+             <a href="https://github.com/lattera/glibc/blob/master/bits/dlfcn.h" />
+             <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="F:AdvancedDLSupport.Loaders.SymbolFlag.RTLD_DEFAULT">
+            <summary>
+            The default flags.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.Loaders.SymbolFlag.RTLD_LAZY">
+            <summary>
+            Lazy function call binding.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.Loaders.SymbolFlag.RTLD_NOW">
+            <summary>
+            Immediate function call binding.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.Loaders.SymbolFlag.RTLD_GLOBAL">
+            <summary>
+            If set, makes the symbols of the loaded object and its dependencies visible
+            as if the object was linked directly into the program.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.Loaders.SymbolFlag.RTLD_LOCAL">
+            <summary>
+            The inverse of <see cref="F:AdvancedDLSupport.Loaders.SymbolFlag.RTLD_GLOBAL" />. Typically, this is the default behaviour.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.Loaders.SymbolFlag.RTLD_NODELETE">
+            <summary>
+            Do not delete the object when closed.
+            </summary>
+        </member>
+        <member name="T:AdvancedDLSupport.Loaders.UnixPlatformLoader">
+            <summary>
+            Base class for Unix-family platform loaders, using the dl library.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Loaders.UnixPlatformLoader.UseCLibrary">
+            <summary>
+            Gets a value indicating whether or not the dl methods should be loaded from the C library.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.UnixPlatformLoader.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.Loaders.UnixPlatformLoader" /> class.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.UnixPlatformLoader.LoadLibrary(System.String,AdvancedDLSupport.Loaders.SymbolFlag)">
+            <summary>
+            Load the given library with the given flags.
+            </summary>
+            <param name="path">The path to the library.</param>
+            <param name="flags">The loading flags to use.</param>
+            <returns>A handle to the library. This value carries no intrinsic meaning.</returns>
+            <exception cref="T:AdvancedDLSupport.LibraryLoadingException">Thrown if the library could not be loaded.</exception>
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.UnixPlatformLoader.LoadLibraryInternal(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.UnixPlatformLoader.LoadSymbol(System.IntPtr,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.UnixPlatformLoader.CloseLibrary(System.IntPtr)">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.Loaders.WindowsPlatformLoader">
+            <summary>
+            Loads libraries on the Windows platform.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.WindowsPlatformLoader.LoadLibraryInternal(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.WindowsPlatformLoader.LoadSymbol(System.IntPtr,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.Loaders.WindowsPlatformLoader.CloseLibrary(System.IntPtr)">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.IEntrypointMangler">
+            <summary>
+            Represents a class that can mangle entrypoint names according to an implementation-specific pattern.
+            <p /><c>[PublicAPI, UsedImplicitly]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.IEntrypointMangler.IsManglerApplicable(System.Reflection.MemberInfo)">
+            <summary>
+            Determines whether or not the mangler is applicable to the given member.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="member">The member to check.<p /><c>[NotNull]</c></param>
+            <returns>true if the mangler is applicable; otherwise, false.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.IEntrypointMangler.Mangle``1(``0)">
+            <summary>
+            Mangles the given member.
+            <p /><c>[PublicAPI, NotNull]</c></summary>
+            <typeparam name="T">The type of the member to mangle.</typeparam>
+            <param name="member">The member to mangle.<p /><c>[NotNull]</c></param>
+            <returns>The mangled entrypoint.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.IEntrypointMangler.Demangle(System.String)">
+            <summary>
+            Demangles a mangled entrypoint name, returning it to its original state.
+            <p /><c>[PublicAPI, NotNull]</c></summary>
+            <param name="mangledEntrypoint">A mangled entrypoint name.<p /><c>[NotNull]</c></param>
+            <returns>The demangled entrypoint.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.ManglerRepository">
+            <summary>
+            Repository class for name manglers.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.ManglerRepository.Default">
+            <summary>
+            Gets the default instance of the <see cref="T:AdvancedDLSupport.ManglerRepository" /> class. This instance contains all discovered
+            mangler types.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.ManglerRepository.#cctor">
+            <summary>
+            Initializes static members of the <see cref="T:AdvancedDLSupport.ManglerRepository" /> class.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.ManglerRepository.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.ManglerRepository" /> class.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.ManglerRepository.DiscoverManglers">
+            <summary>
+            Scans the currently executing assembly for classes implementing the <see cref="T:AdvancedDLSupport.IEntrypointMangler" />
+            interface, and creates an instance of each which is added to the repository's internal store.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.ManglerRepository.GetApplicableManglers``1(``0)">
+            <summary>
+            Gets the manglers that are applicable to the given member.
+            <p /><c>[PublicAPI, NotNull, ItemNotNull]</c></summary>
+            <param name="member">The member.</param>
+            <typeparam name="T">A member implementing the <see cref="T:AdvancedDLSupport.Reflection.IIntrospectiveMember" /> interface.</typeparam>
+            <returns>A set of applicable manglers, if any.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.StdCallEntrypointMangler">
+            <summary>
+            Mangles C-style functions decorated with the MSVC __stdcall attribute.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.StdCallEntrypointMangler.Mangle``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.StdCallEntrypointMangler.Demangle(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.StdCallEntrypointMangler.IsManglerApplicable(System.Reflection.MemberInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.NativeLibraryBase">
+            <summary>
+            Internal base class for library implementations.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.NativeLibraryBase.IsDisposed">
+            <summary>
+            Gets a value indicating whether or not the library has been disposed.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.NativeLibraryBase.Options">
+            <summary>
+            Gets or sets the set of options that were used to construct the type.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.NativeLibraryBase._libraryHandle">
+            <summary>
+            Gets an opaque native handle to the library.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.NativeLibraryBase.PlatformLoader">
+            <summary>
+            Gets the library and symbol loader for the current platform.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBase.#cctor">
+            <summary>
+            Initializes static members of the <see cref="T:AdvancedDLSupport.NativeLibraryBase" /> class.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBase.#ctor(System.String,AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.NativeLibraryBase" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="path">The path to the library.<p /><c>[CanBeNull]</c></param>
+            <param name="options">Whether or not this library can be disposed.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBase.LoadSymbol(System.String)">
+            <summary>
+            Forwards the symbol loading call to the wrapped platform loader.
+            </summary>
+            <param name="sym">The symbol name.</param>
+            <returns>A handle to the symbol.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBase.LoadFunction``1(System.String)">
+            <summary>
+            Forwards the function loading call to the wrapped platform loader.
+            </summary>
+            <param name="sym">The symbol name.</param>
+            <typeparam name="T">The delegate to load the symbol as.</typeparam>
+            <returns>A function delegate.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBase.ThrowIfDisposed">
+            <summary>
+            Throws if the library has been disposed.
+            <p /><c>[PublicAPI]</c></summary>
+            <exception cref="T:System.ObjectDisposedException">Thrown if the library has been disposed.</exception>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBase.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.NativeLibraryBuilder">
+            <summary>
+            Builder class for anonymous types that bind to native libraries.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="F:AdvancedDLSupport.NativeLibraryBuilder.DynamicAssemblyName">
+            <summary>
+            Gets the name of the dynamic assembly.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.NativeLibraryBuilder.Default">
+            <summary>
+            Gets a builder instance with default settings. The default settings are
+            <see cref="F:AdvancedDLSupport.ImplementationOptions.GenerateDisposalChecks" /> and
+            <see cref="F:AdvancedDLSupport.ImplementationOptions.EnableDllMapSupport" />.
+            <p /><c>[PublicAPI, NotNull]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.NativeLibraryBuilder.Options">
+            <summary>
+            Gets the configuration object for this builder.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.NativeLibraryBuilder.PathResolver">
+            <summary>
+            Gets the path resolver to use for resolving libraries.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBuilder.#ctor(AdvancedDLSupport.ImplementationOptions,AdvancedDLSupport.ILibraryPathResolver,AdvancedDLSupport.DynamicAssemblyProviders.IDynamicAssemblyProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.NativeLibraryBuilder" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="options">The configuration settings to use for the builder.</param>
+            <param name="pathResolver">The path resolver to use.<p /><c>[CanBeNull]</c></param>
+            <param name="assemblyProvider">Optional. The dynamic assembly provider to use. Defaults to a transient provider..<p /><c>[CanBeNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBuilder.DiscoverCompiledTypes(System.String,System.String)">
+            <summary>
+            Scans the given directory for assemblies, attempting to discover pregenerated native binding types.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="searchDirectory">The directory to search.<p /><c>[NotNull]</c></param>
+            <param name="searchPattern">
+            The pattern to search for in file names. Defaults to all files ending with .dll.
+            <p /><c>[NotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBuilder.ActivateInterface``1(System.String)">
+            <summary>
+            Resolves a C function interface to an anonymous class that implements it, making the native functions
+            available for use.
+            <p /><c>[NotNull, PublicAPI]</c></summary>
+            <param name="libraryPath">The name of or path to the library.<p /><c>[NotNull]</c></param>
+            <typeparam name="TInterface">The interface type.</typeparam>
+            <returns>A generated class that implements the given interface.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if either of the type arguments are incompatible.</exception>
+            <exception cref="T:System.IO.FileNotFoundException">
+            Thrown if the specified library can't be found in any of the loader paths.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Thrown if the resulting instance can't be cast to the expected class. Should never occur in user code.
+            </exception>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBuilder.ActivateClass``1(System.String)">
+            <summary>
+            Resolves a mixed-mode class that implements a C function interface, making the native functions available
+            for use.
+            <p /><c>[NotNull, PublicAPI]</c></summary>
+            <param name="libraryPath">The name of or path to the library.<p /><c>[NotNull]</c></param>
+            <typeparam name="TClass">The base class for the implementation to generate.</typeparam>
+            <returns>An instance of the class.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if either of the type arguments are incompatible.</exception>
+            <exception cref="T:System.IO.FileNotFoundException">
+            Thrown if the specified library can't be found in any of the loader paths.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Thrown if the resulting instance can't be cast to the expected class. Should never occur in user code.
+            </exception>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBuilder.ActivateClass``2(System.String)">
+            <summary>
+            Resolves a mixed-mode class that implements a C function interface, making the native functions available
+            for use.
+            <p /><c>[NotNull, PublicAPI]</c></summary>
+            <param name="libraryPath">The name of or path to the library.<p /><c>[NotNull]</c></param>
+            <typeparam name="TClass">The base class for the implementation to generate.</typeparam>
+            <typeparam name="TInterface">The interface to implement.</typeparam>
+            <returns>An instance of the class.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if either of the type arguments are incompatible.</exception>
+            <exception cref="T:System.IO.FileNotFoundException">
+            Thrown if the specified library can't be found in any of the loader paths.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Thrown if the resulting instance can't be cast to the expected class. Should never occur in user code.
+            </exception>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBuilder.ActivateClass(System.String,System.Type,System.Type[])">
+            <summary>
+            Resolves a mixed-mode class that implements a C function interface, making the native functions available
+            for use.
+            <p /><c>[NotNull, PublicAPI]</c></summary>
+            <param name="libraryPath">The name of or path to the library.<p /><c>[NotNull]</c></param>
+            <param name="baseClassType">The base class for the implementation to generate.<p /><c>[NotNull]</c></param>
+            <param name="interfaceTypes">The interfaces to implement.<p /><c>[NotNull]</c></param>
+            <returns>An instance of the class.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if either of the type arguments are incompatible.</exception>
+            <exception cref="T:System.IO.FileNotFoundException">
+            Thrown if the specified library can't be found in any of the loader paths.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Thrown if the resulting instance can't be cast to the expected class. Should never occur in user code.
+            </exception>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBuilder.PregenerateImplementationType(System.Type,System.Type[])">
+            <summary>
+            Generates the implementation type for a given class and interface combination, caching it for later use.
+            </summary>
+            <param name="classType">The base class for the implementation to generate.</param>
+            <param name="interfaceTypes">The interfaces to implement.</param>
+            <exception cref="T:System.ArgumentException">Thrown if either of the type arguments are incompatible.</exception>
+            <exception cref="T:System.IO.FileNotFoundException">
+            Thrown if the specified library can't be found in any of the loader paths.
+            </exception>
+            <returns>A key-value tuple of the generated type identifier and the type.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBuilder.GenerateInterfaceImplementationType(System.Type,System.Type[])">
+            <summary>
+            Generates a type inheriting from the given class and implementing the given interface, setting it up to bind
+            the interface functions to native C code.
+            </summary>
+            <param name="classType">The base class for the implementation to generate.</param>
+            <param name="interfaceTypes">The interfaces to implement.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBuilder.GenerateTypeName(System.Type)">
+            <summary>
+            Generates a type name for an anonymous type.
+            </summary>
+            <param name="type">The type to generate the name for.</param>
+            <returns>The name.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBuilder.CreateAnonymousImplementationInstance``1(System.Type,System.String,AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Creates an instance of the final implementation type.
+            </summary>
+            <param name="finalType">The constructed anonymous type.</param>
+            <param name="library">The path to or name of the library.</param>
+            <param name="options">The generator options.</param>
+            <typeparam name="TInterface">The interface type.</typeparam>
+            <returns>An instance of the anonymous type implementing <typeparamref name="TInterface" />.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBuilder.CreateAnonymousImplementationInstance(System.Type,System.String,AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Creates an instance of the final implementation type.
+            </summary>
+            <param name="finalType">The constructed anonymous type.</param>
+            <param name="library">The path to or name of the library.</param>
+            <param name="options">The generator options.</param>
+            <returns>An instance of the anonymous type.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBuilder.ConstructMethods(AdvancedDLSupport.Pipeline.ImplementationPipeline,System.Type,System.Type[])">
+            <summary>
+            Constructs the implementations for all normal methods.
+            </summary>
+            <param name="pipeline">The implementation pipeline that consumes the methods.</param>
+            <param name="classType">The base class of the type to generate methods for.</param>
+            <param name="interfaceTypes">The interfaces where the methods originate.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeLibraryBuilder.ConstructProperties(AdvancedDLSupport.Pipeline.ImplementationPipeline,System.Type,System.Type[])">
+            <summary>
+            Constructs the implementations for all properties.
+            </summary>
+            <param name="pipeline">The implementation pipeline that consumes the methods.</param>
+            <param name="classType">The base class of the type to generator properties for.</param>
+            <param name="interfaceTypes">The interfaces where the properties originate.</param>
+            <exception cref="T:System.InvalidOperationException">
+            Thrown if any property is declared as partially abstract.
+            </exception>
+        </member>
+        <member name="T:AdvancedDLSupport.DynamicLinkLibraryPathResolver">
+            <summary>
+            Resolves dynamic link library paths.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.DynamicLinkLibraryPathResolver.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.DynamicLinkLibraryPathResolver" /> class.
+            </summary>
+            <param name="searchLocalFirst">Whether or not the local search pattern should be followed first.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.DynamicLinkLibraryPathResolver.Resolve(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.DynamicLinkLibraryPathResolver.ResolveAbsolutePath(System.String,System.Boolean)">
+            <summary>
+            Resolves the absolute path to the given library.
+            </summary>
+            <param name="library">The name or path of the library to load.</param>
+            <param name="localFirst">Whether or not the executable's local directory should be searched first.</param>
+            <returns>The absolute path to the library.</returns>
+            <exception cref="T:System.PlatformNotSupportedException">
+            Thrown if the current platform doesn't have a path
+            resolver defined.</exception>
+            <exception cref="T:System.IO.FileNotFoundException">Thrown if no library file can be found.</exception>
+        </member>
+        <member name="M:AdvancedDLSupport.DynamicLinkLibraryPathResolver.GenerateLibraryCandidates(System.String)">
+            <summary>
+            Generates a set of platform-specific candidate library names.
+            </summary>
+            <param name="library">The library name to generate candidates for.</param>
+            <returns>A list of candidates.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.ILibraryPathResolver">
+            <summary>
+            Resolves library paths.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.ILibraryPathResolver.Resolve(System.String)">
+            <summary>
+            Resolves the absolute path to the given library. A null return value signifies the main program.
+            <p /><c>[PublicAPI, Pure]</c></summary>
+            <param name="library">The name or path of the library to load.<p /><c>[NotNull]</c></param>
+            <returns>The absolute path to the library.</returns>
+            <exception cref="T:System.PlatformNotSupportedException">
+            Thrown if the current platform doesn't have a path
+            resolver defined.</exception>
+            <exception cref="T:System.IO.FileNotFoundException">Thrown if no library file can be found.</exception>
+        </member>
+        <member name="T:AdvancedDLSupport.LinuxPathResolver">
+            <summary>
+            Resolves library paths on Linux (and other unix-like systems).
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.LinuxPathResolver.Resolve(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.LocalPathResolver">
+            <summary>
+            Resolves locally bundled library paths.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.LocalPathResolver.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.LocalPathResolver" /> class.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.LocalPathResolver.Resolve(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.MacOSPathResolver">
+            <summary>
+            Resolves library paths on macOS.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.MacOSPathResolver.Resolve(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.WindowsPathResolver">
+            <summary>
+            Resolves library paths on Windows.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.WindowsPathResolver.Resolve(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.Pipeline.ImplementationPipeline">
+            <summary>
+            Represents a pipeline which consumes definitions, and processes them to generate a dynamic type.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Pipeline.ImplementationPipeline.#ctor(System.Reflection.Emit.ModuleBuilder,System.Reflection.Emit.TypeBuilder,System.Reflection.Emit.ILGenerator,AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.Pipeline.ImplementationPipeline" /> class.
+            </summary>
+            <param name="targetModule">The module to generates any additional types in.<p /><c>[NotNull]</c></param>
+            <param name="targetType">The target type to generate implementations in.<p /><c>[NotNull]</c></param>
+            <param name="constructorIL">The <see cref="T:System.Reflection.Emit.ILGenerator" /> of the target type's constructor.<p /><c>[NotNull]</c></param>
+            <param name="options">The implementation options to use.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.Pipeline.ImplementationPipeline.InjectMethodStages(AdvancedDLSupport.ImplementationGenerators.IImplementationGenerator{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo}[])">
+            <summary>
+            Injects a set of method implementation generation stages into the pipeline.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="stages">The stages to inject.<p /><c>[NotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.Pipeline.ImplementationPipeline.GetBaselineMethodGenerators">
+            <summary>
+            Gets the baseline set of method implementation generators.
+            </summary>
+            <returns>The baseline set.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Pipeline.ImplementationPipeline.InjectPropertyStage(AdvancedDLSupport.ImplementationGenerators.IImplementationGenerator{AdvancedDLSupport.Reflection.IntrospectivePropertyInfo}[])">
+            <summary>
+            Injects a set of property implementation stages into the pipeline.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="stages">The stages to inject.<p /><c>[NotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.Pipeline.ImplementationPipeline.GetBaselinePropertyGenerators">
+            <summary>
+            Gets the baseline set of property implementation generators.
+            </summary>
+            <returns>The baseline set.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Pipeline.ImplementationPipeline.GenerateDefinitionFromSignature(AdvancedDLSupport.Reflection.IntrospectiveMethodInfo,AdvancedDLSupport.Reflection.IntrospectiveMethodInfo)">
+            <summary>
+            Generates the definition of the complex method.
+            </summary>
+            <param name="interfaceDefinition">The interface definition to base it on.</param>
+            <param name="abstractImplementation">The abstract implementation, if any.</param>
+            <returns>An introspective method info for the definition.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Pipeline.ImplementationPipeline.ConsumeMethodDefinitions(System.Collections.Generic.IEnumerable{AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectiveMethodInfo}})">
+            <summary>
+            Consumes a set of method definitions, passing them through the pipeline.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="methods">The definitions.<p /><c>[NotNull, ItemNotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.Pipeline.ImplementationPipeline.ConsumePropertyDefinitions(System.Collections.Generic.IEnumerable{AdvancedDLSupport.Pipeline.PipelineWorkUnit{AdvancedDLSupport.Reflection.IntrospectivePropertyInfo}})">
+            <summary>
+            Consumes a set of property definitions, passing them through the pipeline.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="properties">The properties.<p /><c>[NotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.Pipeline.ImplementationPipeline.ConsumeDefinitions``1(System.Collections.Generic.IEnumerable{AdvancedDLSupport.Pipeline.PipelineWorkUnit{``0}},System.Collections.Generic.IReadOnlyList{AdvancedDLSupport.ImplementationGenerators.IImplementationGenerator{``0}})">
+            <summary>
+            Consumes a set of definitions, passing them through the given pipeline. Each stage is guaranteed to run only
+            once for any given branch of the input definitions. The generation process follows a recursive depth-first
+            reductive algorithm.
+            </summary>
+            <param name="definitions">The definitions to process.</param>
+            <param name="pipeline">A sorted list of generators, acting as the process pipeline.</param>
+            <typeparam name="T">The type of definition to process.</typeparam>
+        </member>
+        <member name="T:AdvancedDLSupport.Pipeline.PipelineWorkUnit`1">
+            <summary>
+            Represents a unit of work passing through the pipeline.
+            </summary>
+            <typeparam name="T">The type of the unit being worked on.</typeparam>
+        </member>
+        <member name="P:AdvancedDLSupport.Pipeline.PipelineWorkUnit`1.SymbolName">
+            <summary>
+            Gets the name of the native symbol that the unit of work maps to.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Pipeline.PipelineWorkUnit`1.BaseMemberName">
+            <summary>
+            Gets the name of the original member that the unit of work stems from.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Pipeline.PipelineWorkUnit`1.UniqueIdentifier">
+            <summary>
+            Gets a unique identifier that can be used in generated definition names.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Pipeline.PipelineWorkUnit`1.Definition">
+            <summary>
+            Gets the definition that the work unit wraps.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Pipeline.PipelineWorkUnit`1.#ctor(`0,System.String,AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.Pipeline.PipelineWorkUnit`1" /> class.
+            </summary>
+            <param name="definition">The definition to wrap.<p /><c>[NotNull]</c></param>
+            <param name="symbolName">The native symbol name.<p /><c>[NotNull]</c></param>
+            <param name="options">The options used when this work unit was created.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.Pipeline.PipelineWorkUnit`1.#ctor(`0,AdvancedDLSupport.Pipeline.PipelineWorkUnit{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.Pipeline.PipelineWorkUnit`1" /> class.
+            </summary>
+            <param name="definition">The definition to wrap.</param>
+            <param name="baseUnit">The unit of work to base this unit off of.<p /><c>[NotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.Pipeline.PipelineWorkUnit`1.GetUniqueBaseMemberName">
+            <summary>
+            Gets the base member name. This name is guaranteed to be unique for a given native symbol and implementation
+            option combination.
+            <p /><c>[NotNull]</c></summary>
+            <returns>The base member name.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.Reflection.IIntrospectiveMember">
+            <summary>
+            Introspective member interface.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IIntrospectiveMember.Name">
+            <summary>
+            Gets the name of the member.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Reflection.IIntrospectiveMember.GetCustomAttribute``1">
+            <summary>
+            Gets a custom attribute of <typeparamref name="TAttribute" />, or null if none can be found.
+            <p /><c>[PublicAPI, CanBeNull]</c></summary>
+            <typeparam name="TAttribute">The type of attribute to get.</typeparam>
+            <returns>The attribute, or null.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.Reflection.IntrospectiveMemberBase`1">
+            <summary>
+            Abstract base wrapper class for introspective member informations.
+            <p /><c>[PublicAPI]</c></summary>
+            <typeparam name="TMemberInfo">The member info to wrap.</typeparam>
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectiveMemberBase`1.Name">
+            <inheritdoc cref="P:System.Reflection.MemberInfo.Name" />
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectiveMemberBase`1.CustomAttributes">
+            <summary>
+            Gets the custom attributes applies to this member.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectiveMemberBase`1.DeclaringType">
+            <inheritdoc />
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectiveMemberBase`1.MemberType">
+            <inheritdoc />
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectiveMemberBase`1.ReflectedType">
+            <inheritdoc />
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectiveMemberBase`1.Member">
+            <summary>
+            Gets the wrapped member.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Reflection.IntrospectiveMemberBase`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.Reflection.IntrospectiveMemberBase`1" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="memberInfo">The member info object to wrap.<p /><c>[NotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.Reflection.IntrospectiveMemberBase`1.#ctor(`0,System.Collections.Generic.IEnumerable{System.Reflection.CustomAttributeData})">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.Reflection.IntrospectiveMemberBase`1" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="memberInfo">The member info to wrap.<p /><c>[NotNull]</c></param>
+            <param name="customAttributes">The custom attributes associated with the member.<p /><c>[NotNull, ItemNotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.Reflection.IntrospectiveMemberBase`1.GetWrappedMember">
+            <summary>
+            Gets the wrapped member information. No guarantees can be made about its introspective capabilities.
+            <p /><c>[PublicAPI]</c></summary>
+            <returns>The wrapped method.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Reflection.IntrospectiveMemberBase`1.GetCustomAttributes(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.Reflection.IntrospectiveMemberBase`1.GetCustomAttributes(System.Type,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.Reflection.IntrospectiveMemberBase`1.IsDefined(System.Type,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.Reflection.IntrospectiveMemberBase`1.GetCustomAttribute``1">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.Reflection.IntrospectiveMemberBase`1.op_Explicit(AdvancedDLSupport.Reflection.IntrospectiveMemberBase{`0})~`0">
+            <summary>
+            Explicitly casts to and accesses the wrapped member.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="introspectiveInfo">The introspective info.<p /><c>[CanBeNull]</c></param>
+            <returns>The wrapped member.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo">
+            <summary>
+            Wrapper class for <see cref="T:System.Reflection.MethodInfo" /> and <see cref="T:System.Reflection.Emit.MethodBuilder" />, allowing equal compile-time
+            introspection of their respective names, parameters, and types.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo.ReturnType">
+            <summary>
+            Gets the return type of the method.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo.ParameterTypes">
+            <summary>
+            Gets the parameter types of the method.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo.IsSpecialName">
+            <summary>
+            Gets a value indicating whether the name of the method is special.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo.IsAbstract">
+            <summary>
+            Gets a value indicating whether the method is abstract.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo.Attributes">
+            <summary>
+            Gets the method attributes of the definition.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo.ReturnParameterAttributes">
+            <summary>
+            Gets the parameter attributes of the return parameter.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo.ParameterNames">
+            <summary>
+            Gets the names of the parameters.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo.ParameterAttributes">
+            <summary>
+            Gets the parameter attributes of the parameter definitions.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo.ReturnParameterCustomAttributes">
+            <summary>
+            Gets the custom attributes applied to the return value parameter.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo.ParameterCustomAttributes">
+            <summary>
+            Gets the custom attributes applied to the parameters.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo.#ctor(System.Reflection.MethodInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="methodInfo">The <see cref="T:System.Reflection.MethodInfo" /> to wrap.<p /><c>[NotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo.#ctor(System.Reflection.Emit.MethodBuilder,System.Type,System.Collections.Generic.IEnumerable{System.Type},AdvancedDLSupport.Reflection.IntrospectiveMethodInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="builder">The method builder to wrap.<p /><c>[NotNull]</c></param>
+            <param name="returnType">The return type of the method.<p /><c>[NotNull]</c></param>
+            <param name="parameterTypes">The parameter types of the method.<p /><c>[NotNull, ItemNotNull]</c></param>
+            <param name="definitionToCopyAttributesFrom">The definition to copy custom attributes from.<p /><c>[CanBeNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo.HasSameSignatureAs(AdvancedDLSupport.Reflection.IntrospectiveMethodInfo)">
+            <summary>
+            Determines whether or not the current instance has the same signature as another.
+            </summary>
+            <param name="other">The other method info.<p /><c>[NotNull]</c></param>
+            <returns>true if the signatures are the same; otherwise, false.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo.ReturnParameterHasCustomAttribute``1">
+            <summary>
+            Determines whether or not the method's return parameter has an attribute of the given type.
+            </summary>
+            <typeparam name="T">The attribute type.</typeparam>
+            <returns>true if the parameter has an attribute of the given type; otherwise, false.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.Reflection.IntrospectiveMethodInfo.ParameterHasCustomAttribute``1(System.Int32)">
+            <summary>
+            Determines whether or not the parameter at the given index has an attribute of the given type.
+            </summary>
+            <param name="parameterIndex">The index of the parameter.</param>
+            <typeparam name="T">The attribute type.</typeparam>
+            <returns>true if the parameter has an attribute of the given type; otherwise, false.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if the parameter index is out of range.</exception>
+        </member>
+        <member name="T:AdvancedDLSupport.Reflection.IntrospectivePropertyInfo">
+            <summary>
+            Wrapper class for property infos.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectivePropertyInfo.PropertyType">
+            <summary>
+            Gets the type of the property.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectivePropertyInfo.IndexParameterTypes">
+            <summary>
+            Gets the index parameter types of the property.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectivePropertyInfo.CanRead">
+            <summary>
+            Gets a value indicating whether the property can be read.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.Reflection.IntrospectivePropertyInfo.CanWrite">
+            <summary>
+            Gets a value indicating whether the property can be written.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.Reflection.IntrospectivePropertyInfo.#ctor(System.Reflection.PropertyInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.Reflection.IntrospectivePropertyInfo" /> class.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="memberInfo">The property info to wrap.<p /><c>[NotNull]</c></param>
+        </member>
+        <member name="M:AdvancedDLSupport.Reflection.IntrospectivePropertyInfo.HasSameSignatureAs(AdvancedDLSupport.Reflection.IntrospectivePropertyInfo)">
+            <summary>
+            Determines whether or not the current instance has the same signature as another.
+            </summary>
+            <param name="other">The other property info.<p /><c>[NotNull]</c></param>
+            <returns>true if the signatures are the same; otherwise, false.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.IResult">
+            <summary>
+            Represents an attempted action, which may or may not have succeeded.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.IResult.ErrorReason">
+            <summary>
+            Gets a human-readable reason for the error.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.IResult.IsSuccess">
+            <summary>
+            Gets a value indicating whether or not the result is a successful result.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.IResult.Exception">
+            <summary>
+            Gets the exception which caused the error (if any).
+            </summary>
+        </member>
+        <member name="T:AdvancedDLSupport.ResolvePathResult">
+            <summary>
+            Represents an attempt to resolve a path.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.ResolvePathResult.Path">
+            <summary>
+            Gets the resolved path.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.ResolvePathResult.ErrorReason">
+            <inheritdoc />
+        </member>
+        <member name="P:AdvancedDLSupport.ResolvePathResult.IsSuccess">
+            <inheritdoc />
+        </member>
+        <member name="P:AdvancedDLSupport.ResolvePathResult.Exception">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.ResolvePathResult.#ctor(System.String,System.String,System.Boolean,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.ResolvePathResult" /> struct.
+            </summary>
+            <param name="path">The path that was resolved. Can be null.</param>
+            <param name="errorReason">The reason why the path couldn't be resolved. Can be null.</param>
+            <param name="isSuccess">Whether or not a path was resolved.</param>
+            <param name="exception">The exception which caused the path resolving to fail.</param>
+        </member>
+        <member name="M:AdvancedDLSupport.ResolvePathResult.FromSuccess(System.String)">
+            <summary>
+            Creates a successful result.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="resolvedPath">The path that was resolved.<p /><c>[CanBeNull]</c></param>
+            <returns>A successful result.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.ResolvePathResult.FromError(System.String)">
+            <summary>
+            Creates an unsuccessful result.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="errorReason">The reason why the resolution failed.<p /><c>[NotNull]</c></param>
+            <returns>A failed result.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.ResolvePathResult.FromError(System.Exception)">
+            <summary>
+            Creates an unsuccessful result.
+            <p /><c>[PublicAPI]</c></summary>
+            <param name="exception">The exception that caused the resolution to fail.<p /><c>[NotNull]</c></param>
+            <returns>A failed result.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.NativeSymbolsAttribute">
+            <summary>
+            Provides metadata information for expansion of native symbol names in an interface.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.NativeSymbolsAttribute.Prefix">
+            <summary>
+            Gets or sets the prefixes used for the symbols in the interface.
+            <p /><c>[PublicAPI, NotNull]</c></summary>
+        </member>
+        <member name="P:AdvancedDLSupport.NativeSymbolsAttribute.SymbolTransformationMethod">
+            <summary>
+            Gets or sets the expansion method used for symbol names in the interface.
+            <p /><c>[PublicAPI]</c></summary>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeSymbolsAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.NativeSymbolsAttribute" /> class.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.NativeSymbolsAttribute.#ctor(System.String,AdvancedDLSupport.SymbolTransformationMethod)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.NativeSymbolsAttribute" /> class.
+            </summary>
+            <param name="prefix">The symbol prefix to use.<p /><c>[NotNull]</c></param>
+            <param name="symbolTransformationMethod">The expansion method for symbols.</param>
+        </member>
+        <member name="T:AdvancedDLSupport.SymbolTransformationMethod">
+            <summary>
+            The symbol expansion method to use. This maps directly to methods from the Humanizer library.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.SymbolTransformationMethod.None">
+            <summary>
+            No transformation is applied.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.SymbolTransformationMethod.Pascalize">
+            <summary>
+            Converts the input words to UpperCamelCase, also removing underscores.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.SymbolTransformationMethod.Camelize">
+            <summary>
+            Converts the input words to lowerCamelCase, also removing underscores.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.SymbolTransformationMethod.Underscore">
+            <summary>
+            Separates the input words with underscores, and converts all words to lowercase.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.SymbolTransformationMethod.Dasherize">
+            <summary>
+            Separates the input words with dashes.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.SymbolTransformationMethod.Kebaberize">
+            <summary>
+            Separates the input words with dashes, and converts all words to lowercase.
+            </summary>
+        </member>
+        <member name="T:AdvancedDLSupport.SymbolTransformer">
+            <summary>
+            Transforms native symbol names based on information from a <see cref="T:AdvancedDLSupport.NativeSymbolsAttribute" />.
+            </summary>
+        </member>
+        <member name="F:AdvancedDLSupport.SymbolTransformer.Default">
+            <summary>
+            Gets the default instance of the <see cref="T:AdvancedDLSupport.SymbolTransformer" /> class.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.SymbolTransformer.GetTransformedSymbol``1(System.Type,``0)">
+            <summary>
+            Gets the transformed symbol name of the given member.
+            </summary>
+            <param name="containingInterface">The interface that the member belongs to.<p /><c>[NotNull]</c></param>
+            <param name="memberInfo">The member.<p /><c>[NotNull]</c></param>
+            <typeparam name="T">The type of the member.</typeparam>
+            <returns>The transformed symbol.</returns>
+            <exception cref="T:System.Reflection.AmbiguousMatchException">Thrown if the member has more than on applicable name mangler.</exception>
+        </member>
+        <member name="M:AdvancedDLSupport.SymbolTransformer.Transform(System.String,System.String,AdvancedDLSupport.SymbolTransformationMethod)">
+            <summary>
+            Transforms the given symbol name.
+            </summary>
+            <param name="symbol">The symbol to transform.</param>
+            <param name="prefix">The prefix to be added to the symbol. Defaults to nothing.</param>
+            <param name="method">The transformer to apply to the symbol after concatenation.</param>
+            <returns>The transformed symbol name.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.GeneratedImplementationTypeIdentifier">
+            <summary>
+            A key struct for ConcurrentDictionary TypeCache for all generated types provided by DLSupportConstructor.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.GeneratedImplementationTypeIdentifier.#ctor(System.Type,System.Collections.Generic.IReadOnlyList{System.Type},AdvancedDLSupport.ImplementationOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AdvancedDLSupport.GeneratedImplementationTypeIdentifier" /> struct.
+            </summary>
+            <param name="baseClassType">The base class of the library.</param>
+            <param name="interfaceType">The interface type.</param>
+            <param name="options">The configuration used for the library.</param>
+        </member>
+        <member name="P:AdvancedDLSupport.GeneratedImplementationTypeIdentifier.BaseClassType">
+            <summary>
+            Gets the base class type of the library.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.GeneratedImplementationTypeIdentifier.InterfaceTypes">
+            <summary>
+            Gets the interface type for the library.
+            </summary>
+        </member>
+        <member name="P:AdvancedDLSupport.GeneratedImplementationTypeIdentifier.Options">
+            <summary>
+            Gets the configuration used for the library at construction time.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.GeneratedImplementationTypeIdentifier.Equals(AdvancedDLSupport.GeneratedImplementationTypeIdentifier)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.GeneratedImplementationTypeIdentifier.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.GeneratedImplementationTypeIdentifier.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.InternalNullableAccessor">
+            <summary>
+            Helper class for accessing the internal values of <see cref="T:System.Nullable`1" /> instances.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.InternalNullableAccessor.AccessUnderlyingValue``1(System.Int32*)">
+            <summary>
+            Accesses the underlying value of a <see cref="T:System.Nullable`1" /> instance, referred to by the given pointer.
+            </summary>
+            <param name="nullablePtr">A pointer to a pinned nullable.</param>
+            <typeparam name="T">The type of underlying value to access.</typeparam>
+            <returns>The underlying value, passed by reference.</returns>
+        </member>
+        <member name="T:AdvancedDLSupport.LibraryIdentifierEqualityComparer">
+            <summary>
+            Compares library identifiers for equality.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.LibraryIdentifierEqualityComparer.Equals(AdvancedDLSupport.GeneratedImplementationTypeIdentifier,AdvancedDLSupport.GeneratedImplementationTypeIdentifier)">
+            <inheritdoc />
+        </member>
+        <member name="M:AdvancedDLSupport.LibraryIdentifierEqualityComparer.GetHashCode(AdvancedDLSupport.GeneratedImplementationTypeIdentifier)">
+            <inheritdoc />
+        </member>
+        <member name="T:AdvancedDLSupport.PermutationGenerator">
+            <summary>
+            Helper class for generating parameter permutations for methods with <see cref="T:System.Nullable`1" /> parameters that
+            are passed by reference.
+            </summary>
+        </member>
+        <member name="M:AdvancedDLSupport.PermutationGenerator.Generate(AdvancedDLSupport.Reflection.IntrospectiveMethodInfo)">
+            <summary>
+            Generates all possible permutations of either a raw struct passed by reference, or an IntPtr, given a
+            method containing <see cref="T:System.Nullable`1" />s, passed by reference.
+            </summary>
+            <param name="baseMethod">The method to generate permutatations of.</param>
+            <returns>The permutations.</returns>
+        </member>
+        <member name="M:AdvancedDLSupport.PermutationGenerator.GeneratePermutation(System.Collections.Generic.IReadOnlyList{System.Type},System.Collections.BitArray)">
+            <summary>
+            Generates a permutation of the given original parameter types, using the given <see cref="T:System.Collections.BitArray" /> to
+            mutate the parameters that is a <see cref="T:System.Nullable`1" /> passed by reference.
+            </summary>
+            <param name="basePermutation">The base set of parameter types.</param>
+            <param name="mask">The bit mask to use for mutation.</param>
+            <returns>The permutation.</returns>
+        </member>
+    </members>
+</doc>

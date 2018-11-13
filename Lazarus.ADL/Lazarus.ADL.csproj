@@ -5,7 +5,30 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="AdvancedDLSupport" Version="2.3.0" />
+      <Reference Include="AdvancedDLSupport, Version=2.3.1.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\AdvancedDLSupport\2.3.1\lib\netstandard2.0\AdvancedDLSupport.dll</HintPath>
+      </Reference>
     </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Humanizer" Version="2.5.1" />
+      <PackageReference Include="Mono.Cecil" Version="0.10.1" />
+      <PackageReference Include="Mono.DllMap" Version="1.0.1" />
+      <PackageReference Include="StrictEmit" Version="2.7.1" />
+      <PackageReference Include="System.Reflection.Emit" Version="4.3.0" />
+      <PackageReference Include="System.Reflection.Emit.ILGeneration" Version="4.3.0" />
+      <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.5.2" />
+      <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <EmbeddedResource Include="lz32.dll" />
+        <EmbeddedResource Include="lz64.dll" />
+        <!--<EmbeddedResource Include="..\Lazarus.RW.Rewriter\bin\Release\netcoreapp2.1\publish\*" />-->
+    </ItemGroup>
+
+    <!--<ItemGroup>
+      <PackageReference Include="AdvancedDLSupport" Version="2.3.1" />
+    </ItemGroup>-->
 
 </Project>

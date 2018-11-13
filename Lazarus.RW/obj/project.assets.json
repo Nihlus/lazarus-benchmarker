@@ -2,517 +2,496 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "AdvancedDLSupport/2.3.0": {
+      "Humanizer/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer": "2.2.0",
-          "Mono.DllMap": "1.0.1",
-          "StrictEmit": "2.4.2",
-          "System.Reflection.Emit": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.4.0",
-          "System.ValueTuple": "4.4.0"
-        },
+          "Humanizer.Core.af": "2.5.1",
+          "Humanizer.Core.ar": "2.5.1",
+          "Humanizer.Core.bg": "2.5.1",
+          "Humanizer.Core.bn-BD": "2.5.1",
+          "Humanizer.Core.cs": "2.5.1",
+          "Humanizer.Core.da": "2.5.1",
+          "Humanizer.Core.de": "2.5.1",
+          "Humanizer.Core.el": "2.5.1",
+          "Humanizer.Core.es": "2.5.1",
+          "Humanizer.Core.fa": "2.5.1",
+          "Humanizer.Core.fi-FI": "2.5.1",
+          "Humanizer.Core.fr": "2.5.1",
+          "Humanizer.Core.fr-BE": "2.5.1",
+          "Humanizer.Core.he": "2.5.1",
+          "Humanizer.Core.hr": "2.5.1",
+          "Humanizer.Core.hu": "2.5.1",
+          "Humanizer.Core.id": "2.5.1",
+          "Humanizer.Core.it": "2.5.1",
+          "Humanizer.Core.ja": "2.5.1",
+          "Humanizer.Core.lv": "2.5.1",
+          "Humanizer.Core.nb": "2.5.1",
+          "Humanizer.Core.nb-NO": "2.5.1",
+          "Humanizer.Core.nl": "2.5.1",
+          "Humanizer.Core.pl": "2.5.1",
+          "Humanizer.Core.pt": "2.5.1",
+          "Humanizer.Core.ro": "2.5.1",
+          "Humanizer.Core.ru": "2.5.1",
+          "Humanizer.Core.sk": "2.5.1",
+          "Humanizer.Core.sl": "2.5.1",
+          "Humanizer.Core.sr": "2.5.1",
+          "Humanizer.Core.sr-Latn": "2.5.1",
+          "Humanizer.Core.sv": "2.5.1",
+          "Humanizer.Core.tr": "2.5.1",
+          "Humanizer.Core.uk": "2.5.1",
+          "Humanizer.Core.uz-Cyrl-UZ": "2.5.1",
+          "Humanizer.Core.uz-Latn-UZ": "2.5.1",
+          "Humanizer.Core.vi": "2.5.1",
+          "Humanizer.Core.zh-CN": "2.5.1",
+          "Humanizer.Core.zh-Hans": "2.5.1",
+          "Humanizer.Core.zh-Hant": "2.5.1"
+        }
+      },
+      "Humanizer.Core/2.5.1": {
+        "type": "package",
         "compile": {
-          "lib/netstandard2.0/AdvancedDLSupport.dll": {}
+          "lib/netstandard2.0/Humanizer.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/AdvancedDLSupport.dll": {}
+          "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
-      "Humanizer/2.2.0": {
+      "Humanizer.Core.af/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core.af": "2.2.0",
-          "Humanizer.Core.ar": "2.2.0",
-          "Humanizer.Core.bg": "2.2.0",
-          "Humanizer.Core.bn-BD": "2.2.0",
-          "Humanizer.Core.cs": "2.2.0",
-          "Humanizer.Core.da": "2.2.0",
-          "Humanizer.Core.de": "2.2.0",
-          "Humanizer.Core.el": "2.2.0",
-          "Humanizer.Core.es": "2.2.0",
-          "Humanizer.Core.fa": "2.2.0",
-          "Humanizer.Core.fi-FI": "2.2.0",
-          "Humanizer.Core.fr": "2.2.0",
-          "Humanizer.Core.fr-BE": "2.2.0",
-          "Humanizer.Core.he": "2.2.0",
-          "Humanizer.Core.hr": "2.2.0",
-          "Humanizer.Core.hu": "2.2.0",
-          "Humanizer.Core.id": "2.2.0",
-          "Humanizer.Core.it": "2.2.0",
-          "Humanizer.Core.ja": "2.2.0",
-          "Humanizer.Core.lv": "2.2.0",
-          "Humanizer.Core.nb": "2.2.0",
-          "Humanizer.Core.nb-NO": "2.2.0",
-          "Humanizer.Core.nl": "2.2.0",
-          "Humanizer.Core.pl": "2.2.0",
-          "Humanizer.Core.pt": "2.2.0",
-          "Humanizer.Core.ro": "2.2.0",
-          "Humanizer.Core.ru": "2.2.0",
-          "Humanizer.Core.sk": "2.2.0",
-          "Humanizer.Core.sl": "2.2.0",
-          "Humanizer.Core.sr": "2.2.0",
-          "Humanizer.Core.sr-Latn": "2.2.0",
-          "Humanizer.Core.sv": "2.2.0",
-          "Humanizer.Core.tr": "2.2.0",
-          "Humanizer.Core.uk": "2.2.0",
-          "Humanizer.Core.uz-Cyrl-UZ": "2.2.0",
-          "Humanizer.Core.uz-Latn-UZ": "2.2.0",
-          "Humanizer.Core.vi": "2.2.0",
-          "Humanizer.Core.zh-CN": "2.2.0",
-          "Humanizer.Core.zh-Hans": "2.2.0",
-          "Humanizer.Core.zh-Hant": "2.2.0"
-        }
-      },
-      "Humanizer.Core/2.2.0": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
-        "compile": {
-          "lib/netstandard1.0/Humanizer.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/Humanizer.dll": {}
-        }
-      },
-      "Humanizer.Core.af/2.2.0": {
-        "type": "package",
-        "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/af/Humanizer.resources.dll": {
+          "lib/netstandard2.0/af/Humanizer.resources.dll": {
             "locale": "af"
           }
         }
       },
-      "Humanizer.Core.ar/2.2.0": {
+      "Humanizer.Core.ar/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/ar/Humanizer.resources.dll": {
+          "lib/netstandard2.0/ar/Humanizer.resources.dll": {
             "locale": "ar"
           }
         }
       },
-      "Humanizer.Core.bg/2.2.0": {
+      "Humanizer.Core.bg/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/bg/Humanizer.resources.dll": {
+          "lib/netstandard2.0/bg/Humanizer.resources.dll": {
             "locale": "bg"
           }
         }
       },
-      "Humanizer.Core.bn-BD/2.2.0": {
+      "Humanizer.Core.bn-BD/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/bn-BD/Humanizer.resources.dll": {
+          "lib/netstandard2.0/bn-BD/Humanizer.resources.dll": {
             "locale": "bn-BD"
           }
         }
       },
-      "Humanizer.Core.cs/2.2.0": {
+      "Humanizer.Core.cs/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/cs/Humanizer.resources.dll": {
+          "lib/netstandard2.0/cs/Humanizer.resources.dll": {
             "locale": "cs"
           }
         }
       },
-      "Humanizer.Core.da/2.2.0": {
+      "Humanizer.Core.da/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/da/Humanizer.resources.dll": {
+          "lib/netstandard2.0/da/Humanizer.resources.dll": {
             "locale": "da"
           }
         }
       },
-      "Humanizer.Core.de/2.2.0": {
+      "Humanizer.Core.de/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/de/Humanizer.resources.dll": {
+          "lib/netstandard2.0/de/Humanizer.resources.dll": {
             "locale": "de"
           }
         }
       },
-      "Humanizer.Core.el/2.2.0": {
+      "Humanizer.Core.el/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/el/Humanizer.resources.dll": {
+          "lib/netstandard2.0/el/Humanizer.resources.dll": {
             "locale": "el"
           }
         }
       },
-      "Humanizer.Core.es/2.2.0": {
+      "Humanizer.Core.es/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/es/Humanizer.resources.dll": {
+          "lib/netstandard2.0/es/Humanizer.resources.dll": {
             "locale": "es"
           }
         }
       },
-      "Humanizer.Core.fa/2.2.0": {
+      "Humanizer.Core.fa/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/fa/Humanizer.resources.dll": {
+          "lib/netstandard2.0/fa/Humanizer.resources.dll": {
             "locale": "fa"
           }
         }
       },
-      "Humanizer.Core.fi-FI/2.2.0": {
+      "Humanizer.Core.fi-FI/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/fi-FI/Humanizer.resources.dll": {
+          "lib/netstandard2.0/fi-FI/Humanizer.resources.dll": {
             "locale": "fi-FI"
           }
         }
       },
-      "Humanizer.Core.fr/2.2.0": {
+      "Humanizer.Core.fr/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/fr/Humanizer.resources.dll": {
+          "lib/netstandard2.0/fr/Humanizer.resources.dll": {
             "locale": "fr"
           }
         }
       },
-      "Humanizer.Core.fr-BE/2.2.0": {
+      "Humanizer.Core.fr-BE/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/fr-BE/Humanizer.resources.dll": {
+          "lib/netstandard2.0/fr-BE/Humanizer.resources.dll": {
             "locale": "fr-BE"
           }
         }
       },
-      "Humanizer.Core.he/2.2.0": {
+      "Humanizer.Core.he/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/he/Humanizer.resources.dll": {
+          "lib/netstandard2.0/he/Humanizer.resources.dll": {
             "locale": "he"
           }
         }
       },
-      "Humanizer.Core.hr/2.2.0": {
+      "Humanizer.Core.hr/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/hr/Humanizer.resources.dll": {
+          "lib/netstandard2.0/hr/Humanizer.resources.dll": {
             "locale": "hr"
           }
         }
       },
-      "Humanizer.Core.hu/2.2.0": {
+      "Humanizer.Core.hu/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/hu/Humanizer.resources.dll": {
+          "lib/netstandard2.0/hu/Humanizer.resources.dll": {
             "locale": "hu"
           }
         }
       },
-      "Humanizer.Core.id/2.2.0": {
+      "Humanizer.Core.id/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/id/Humanizer.resources.dll": {
+          "lib/netstandard2.0/id/Humanizer.resources.dll": {
             "locale": "id"
           }
         }
       },
-      "Humanizer.Core.it/2.2.0": {
+      "Humanizer.Core.it/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/it/Humanizer.resources.dll": {
+          "lib/netstandard2.0/it/Humanizer.resources.dll": {
             "locale": "it"
           }
         }
       },
-      "Humanizer.Core.ja/2.2.0": {
+      "Humanizer.Core.ja/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/ja/Humanizer.resources.dll": {
+          "lib/netstandard2.0/ja/Humanizer.resources.dll": {
             "locale": "ja"
           }
         }
       },
-      "Humanizer.Core.lv/2.2.0": {
+      "Humanizer.Core.lv/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/lv/Humanizer.resources.dll": {
+          "lib/netstandard2.0/lv/Humanizer.resources.dll": {
             "locale": "lv"
           }
         }
       },
-      "Humanizer.Core.nb/2.2.0": {
+      "Humanizer.Core.nb/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/nb/Humanizer.resources.dll": {
+          "lib/netstandard2.0/nb/Humanizer.resources.dll": {
             "locale": "nb"
           }
         }
       },
-      "Humanizer.Core.nb-NO/2.2.0": {
+      "Humanizer.Core.nb-NO/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/nb-NO/Humanizer.resources.dll": {
+          "lib/netstandard2.0/nb-NO/Humanizer.resources.dll": {
             "locale": "nb-NO"
           }
         }
       },
-      "Humanizer.Core.nl/2.2.0": {
+      "Humanizer.Core.nl/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/nl/Humanizer.resources.dll": {
+          "lib/netstandard2.0/nl/Humanizer.resources.dll": {
             "locale": "nl"
           }
         }
       },
-      "Humanizer.Core.pl/2.2.0": {
+      "Humanizer.Core.pl/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/pl/Humanizer.resources.dll": {
+          "lib/netstandard2.0/pl/Humanizer.resources.dll": {
             "locale": "pl"
           }
         }
       },
-      "Humanizer.Core.pt/2.2.0": {
+      "Humanizer.Core.pt/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/pt/Humanizer.resources.dll": {
+          "lib/netstandard2.0/pt/Humanizer.resources.dll": {
             "locale": "pt"
           }
         }
       },
-      "Humanizer.Core.ro/2.2.0": {
+      "Humanizer.Core.ro/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/ro/Humanizer.resources.dll": {
+          "lib/netstandard2.0/ro/Humanizer.resources.dll": {
             "locale": "ro"
           }
         }
       },
-      "Humanizer.Core.ru/2.2.0": {
+      "Humanizer.Core.ru/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/ru/Humanizer.resources.dll": {
+          "lib/netstandard2.0/ru/Humanizer.resources.dll": {
             "locale": "ru"
           }
         }
       },
-      "Humanizer.Core.sk/2.2.0": {
+      "Humanizer.Core.sk/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/sk/Humanizer.resources.dll": {
+          "lib/netstandard2.0/sk/Humanizer.resources.dll": {
             "locale": "sk"
           }
         }
       },
-      "Humanizer.Core.sl/2.2.0": {
+      "Humanizer.Core.sl/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/sl/Humanizer.resources.dll": {
+          "lib/netstandard2.0/sl/Humanizer.resources.dll": {
             "locale": "sl"
           }
         }
       },
-      "Humanizer.Core.sr/2.2.0": {
+      "Humanizer.Core.sr/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/sr/Humanizer.resources.dll": {
+          "lib/netstandard2.0/sr/Humanizer.resources.dll": {
             "locale": "sr"
           }
         }
       },
-      "Humanizer.Core.sr-Latn/2.2.0": {
+      "Humanizer.Core.sr-Latn/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/sr-Latn/Humanizer.resources.dll": {
+          "lib/netstandard2.0/sr-Latn/Humanizer.resources.dll": {
             "locale": "sr-Latn"
           }
         }
       },
-      "Humanizer.Core.sv/2.2.0": {
+      "Humanizer.Core.sv/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/sv/Humanizer.resources.dll": {
+          "lib/netstandard2.0/sv/Humanizer.resources.dll": {
             "locale": "sv"
           }
         }
       },
-      "Humanizer.Core.tr/2.2.0": {
+      "Humanizer.Core.tr/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/tr/Humanizer.resources.dll": {
+          "lib/netstandard2.0/tr/Humanizer.resources.dll": {
             "locale": "tr"
           }
         }
       },
-      "Humanizer.Core.uk/2.2.0": {
+      "Humanizer.Core.uk/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/uk/Humanizer.resources.dll": {
+          "lib/netstandard2.0/uk/Humanizer.resources.dll": {
             "locale": "uk"
           }
         }
       },
-      "Humanizer.Core.uz-Cyrl-UZ/2.2.0": {
+      "Humanizer.Core.uz-Cyrl-UZ/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/uz-Cyrl-UZ/Humanizer.resources.dll": {
+          "lib/netstandard2.0/uz-Cyrl-UZ/Humanizer.resources.dll": {
             "locale": "uz-Cyrl-UZ"
           }
         }
       },
-      "Humanizer.Core.uz-Latn-UZ/2.2.0": {
+      "Humanizer.Core.uz-Latn-UZ/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/uz-Latn-UZ/Humanizer.resources.dll": {
+          "lib/netstandard2.0/uz-Latn-UZ/Humanizer.resources.dll": {
             "locale": "uz-Latn-UZ"
           }
         }
       },
-      "Humanizer.Core.vi/2.2.0": {
+      "Humanizer.Core.vi/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/vi/Humanizer.resources.dll": {
+          "lib/netstandard2.0/vi/Humanizer.resources.dll": {
             "locale": "vi"
           }
         }
       },
-      "Humanizer.Core.zh-CN/2.2.0": {
+      "Humanizer.Core.zh-CN/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/zh-CN/Humanizer.resources.dll": {
+          "lib/netstandard2.0/zh-CN/Humanizer.resources.dll": {
             "locale": "zh-CN"
           }
         }
       },
-      "Humanizer.Core.zh-Hans/2.2.0": {
+      "Humanizer.Core.zh-Hans/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/zh-Hans/Humanizer.resources.dll": {
+          "lib/netstandard2.0/zh-Hans/Humanizer.resources.dll": {
             "locale": "zh-Hans"
           }
         }
       },
-      "Humanizer.Core.zh-Hant/2.2.0": {
+      "Humanizer.Core.zh-Hant/2.5.1": {
         "type": "package",
         "dependencies": {
-          "Humanizer.Core": "[2.2.0]"
+          "Humanizer.Core": "[2.5.1]"
         },
         "resource": {
-          "lib/netstandard1.0/zh-Hant/Humanizer.resources.dll": {
+          "lib/netstandard2.0/zh-Hant/Humanizer.resources.dll": {
             "locale": "zh-Hant"
           }
         }
@@ -544,6 +523,31 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Mono.Cecil/0.10.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.IO.FileSystem": "4.0.1",
+          "System.IO.FileSystem.Primitives": "4.0.1",
+          "System.Reflection": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Security.Cryptography.Algorithms": "4.2.0",
+          "System.Security.Cryptography.Csp": "4.0.0",
+          "System.Threading": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.3/Mono.Cecil.Mdb.dll": {},
+          "lib/netstandard1.3/Mono.Cecil.Pdb.dll": {},
+          "lib/netstandard1.3/Mono.Cecil.Rocks.dll": {},
+          "lib/netstandard1.3/Mono.Cecil.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Mono.Cecil.Mdb.dll": {},
+          "lib/netstandard1.3/Mono.Cecil.Pdb.dll": {},
+          "lib/netstandard1.3/Mono.Cecil.Rocks.dll": {},
+          "lib/netstandard1.3/Mono.Cecil.dll": {}
+        }
+      },
       "Mono.DllMap/1.0.1": {
         "type": "package",
         "dependencies": {
@@ -571,7 +575,20 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "StrictEmit/2.4.2": {
+      "runtime.native.System.Security.Cryptography/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "Microsoft.NETCore.Targets": "1.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "StrictEmit/2.7.1": {
         "type": "package",
         "dependencies": {
           "System.Reflection.Emit": "4.3.0"
@@ -581,6 +598,71 @@
         },
         "runtime": {
           "lib/netstandard2.0/StrictEmit.dll": {}
+        }
+      },
+      "System.Collections/4.0.11": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "Microsoft.NETCore.Targets": "1.0.1",
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Collections.dll": {}
+        }
+      },
+      "System.Collections.Concurrent/4.0.12": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Diagnostics.Tracing": "4.1.0",
+          "System.Globalization": "4.0.11",
+          "System.Reflection": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks": "4.0.11"
+        },
+        "compile": {
+          "ref/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Collections.Concurrent.dll": {}
+        }
+      },
+      "System.Diagnostics.Debug/4.0.11": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "Microsoft.NETCore.Targets": "1.0.1",
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/_._": {}
+        }
+      },
+      "System.Diagnostics.Tracing/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "Microsoft.NETCore.Targets": "1.0.1",
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.5/_._": {}
+        }
+      },
+      "System.Globalization/4.0.11": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "Microsoft.NETCore.Targets": "1.0.1",
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/_._": {}
         }
       },
       "System.IO/4.3.0": {
@@ -594,6 +676,50 @@
         },
         "compile": {
           "ref/netstandard1.5/System.IO.dll": {}
+        }
+      },
+      "System.IO.FileSystem/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "Microsoft.NETCore.Targets": "1.0.1",
+          "System.IO": "4.1.0",
+          "System.IO.FileSystem.Primitives": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Handles": "4.0.1",
+          "System.Text.Encoding": "4.0.11",
+          "System.Threading.Tasks": "4.0.11"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.IO.FileSystem.dll": {}
+        }
+      },
+      "System.IO.FileSystem.Primitives/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.IO.FileSystem.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.IO.FileSystem.Primitives.dll": {}
+        }
+      },
+      "System.Linq/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.6/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/System.Linq.dll": {}
         }
       },
       "System.Reflection/4.3.0": {
@@ -650,6 +776,19 @@
           "ref/netstandard1.0/System.Reflection.Primitives.dll": {}
         }
       },
+      "System.Resources.ResourceManager/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "Microsoft.NETCore.Targets": "1.0.1",
+          "System.Globalization": "4.0.11",
+          "System.Reflection": "4.1.0",
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/_._": {}
+        }
+      },
       "System.Runtime/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -660,13 +799,174 @@
           "ref/netstandard1.5/System.Runtime.dll": {}
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.4.0": {
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Runtime.Extensions/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "Microsoft.NETCore.Targets": "1.0.1",
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.5/System.Runtime.Extensions.dll": {}
+        }
+      },
+      "System.Runtime.Handles/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "Microsoft.NETCore.Targets": "1.0.1",
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Runtime.Handles.dll": {}
+        }
+      },
+      "System.Runtime.InteropServices/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "Microsoft.NETCore.Targets": "1.0.1",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Primitives": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Handles": "4.0.1"
+        },
+        "compile": {
+          "ref/netstandard1.5/_._": {}
+        }
+      },
+      "System.Runtime.Numerics/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Globalization": "4.0.11",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.1/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
+        }
+      },
+      "System.Security.Cryptography.Algorithms/4.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "System.Collections": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.Handles": "4.0.1",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Runtime.Numerics": "4.0.1",
+          "System.Security.Cryptography.Encoding": "4.0.0",
+          "System.Security.Cryptography.Primitives": "4.0.0",
+          "System.Text.Encoding": "4.0.11",
+          "runtime.native.System.Security.Cryptography": "4.0.0"
+        },
+        "compile": {
+          "ref/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Security.Cryptography.Csp/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "System.IO": "4.1.0",
+          "System.Reflection": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.Handles": "4.0.1",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Security.Cryptography.Algorithms": "4.2.0",
+          "System.Security.Cryptography.Encoding": "4.0.0",
+          "System.Security.Cryptography.Primitives": "4.0.0",
+          "System.Text.Encoding": "4.0.11",
+          "System.Threading": "4.0.11"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Security.Cryptography.Csp.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.Csp.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.Csp.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Security.Cryptography.Encoding/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "System.Collections": "4.0.11",
+          "System.Collections.Concurrent": "4.0.12",
+          "System.Linq": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.Handles": "4.0.1",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Security.Cryptography.Primitives": "4.0.0",
+          "System.Text.Encoding": "4.0.11",
+          "runtime.native.System.Security.Cryptography": "4.0.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Security.Cryptography.Encoding.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.Encoding.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.Encoding.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Security.Cryptography.Primitives/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks": "4.0.11"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Security.Cryptography.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Security.Cryptography.Primitives.dll": {}
         }
       },
       "System.Text.Encoding/4.3.0": {
@@ -680,6 +980,19 @@
           "ref/netstandard1.3/System.Text.Encoding.dll": {}
         }
       },
+      "System.Threading/4.0.11": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.1.0",
+          "System.Threading.Tasks": "4.0.11"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Threading.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Threading.dll": {}
+        }
+      },
       "System.Threading.Tasks/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -691,7 +1004,7 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
-      "System.ValueTuple/4.4.0": {
+      "System.ValueTuple/4.5.0": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/_._": {}
@@ -704,7 +1017,14 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "AdvancedDLSupport": "2.3.0"
+          "Humanizer": "2.5.1",
+          "Mono.Cecil": "0.10.1",
+          "Mono.DllMap": "1.0.1",
+          "StrictEmit": "2.7.1",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2",
+          "System.ValueTuple": "4.5.0"
         },
         "compile": {
           "bin/placeholder/Lazarus.ADL.dll": {}
@@ -716,551 +1036,508 @@
     }
   },
   "libraries": {
-    "AdvancedDLSupport/2.3.0": {
-      "sha512": "L5ULhJS9ccfa7zLmUvFSLvIjY/68Si7ev0JOmufkMdo3G8X8QEGeoW81EaPgXYwOhy9baDNEgY5nJ/eZ1GNESw==",
+    "Humanizer/2.5.1": {
+      "sha512": "QhiLkXDES0bIdZnK7EEresiLJ7eEWt373xuGc7/hVSfWQqtmGr4h1OdmK8L4+xV57+ch9HDooW48pzZmLplrjQ==",
       "type": "package",
-      "path": "advanceddlsupport/2.3.0",
+      "path": "humanizer/2.5.1",
       "files": [
         ".signature.p7s",
-        "advanceddlsupport.2.3.0.nupkg.sha512",
-        "advanceddlsupport.nuspec",
-        "lib/netstandard2.0/AdvancedDLSupport.dll",
-        "lib/netstandard2.0/AdvancedDLSupport.pdb",
-        "lib/netstandard2.0/AdvancedDLSupport.xml",
-        "src/AdvancedDLSupport/AOT/IAOTMetadata.cs",
-        "src/AdvancedDLSupport/AdvancedDLSupport.csproj",
-        "src/AdvancedDLSupport/AssemblyInfo.cs",
-        "src/AdvancedDLSupport/Attributes/AOT/AOTAssemblyAttribute.cs",
-        "src/AdvancedDLSupport/Attributes/AOT/AOTMetadataAttribute.cs",
-        "src/AdvancedDLSupport/Attributes/AOT/AOTTypeAttribute.cs",
-        "src/AdvancedDLSupport/Attributes/AnonymousConstructorAttribute.cs",
-        "src/AdvancedDLSupport/Attributes/CallerFreeAttribute.cs",
-        "src/AdvancedDLSupport/Attributes/NativeSymbolAttribute.cs",
-        "src/AdvancedDLSupport/DynamicAssemblyProviders/IDynamicAssemblyProvider.cs",
-        "src/AdvancedDLSupport/DynamicAssemblyProviders/TransientDynamicAssemblyProvider.cs",
-        "src/AdvancedDLSupport/Exceptions/LibraryLoadingException.cs",
-        "src/AdvancedDLSupport/Exceptions/SymbolLoadingException.cs",
-        "src/AdvancedDLSupport/Extensions/AssemblyExtensions.cs",
-        "src/AdvancedDLSupport/Extensions/BitArrayExtensions.cs",
-        "src/AdvancedDLSupport/Extensions/CustomAttributeDataExtensions.cs",
-        "src/AdvancedDLSupport/Extensions/MarshalAsAttributeExtensions.cs",
-        "src/AdvancedDLSupport/Extensions/MemberInfoExtensions.cs",
-        "src/AdvancedDLSupport/Extensions/MethodBuilderExtensions.cs",
-        "src/AdvancedDLSupport/Extensions/ModuleBuilderExtensions.cs",
-        "src/AdvancedDLSupport/Extensions/StringExtensions.cs",
-        "src/AdvancedDLSupport/Extensions/TypeExtensions.cs",
-        "src/AdvancedDLSupport/ImplementationGenerators/Complexity/GeneratorComplexity.cs",
-        "src/AdvancedDLSupport/ImplementationGenerators/Complexity/ImplementationGeneratorSorter.cs",
-        "src/AdvancedDLSupport/ImplementationGenerators/IImplementationGenerator.cs",
-        "src/AdvancedDLSupport/ImplementationGenerators/ImplementationGeneratorBase.cs",
-        "src/AdvancedDLSupport/ImplementationGenerators/Multiplying/RefPermutationImplementationGenerator.cs",
-        "src/AdvancedDLSupport/ImplementationGenerators/Terminating/DelegateMethodImplementationGenerator.cs",
-        "src/AdvancedDLSupport/ImplementationGenerators/Terminating/IndirectCallMethodImplementationGenerator.cs",
-        "src/AdvancedDLSupport/ImplementationGenerators/Terminating/PropertyImplementationGenerator.cs",
-        "src/AdvancedDLSupport/ImplementationGenerators/Wrappers/BooleanMarshallingWrapper.cs",
-        "src/AdvancedDLSupport/ImplementationGenerators/Wrappers/CallWrapperBase.cs",
-        "src/AdvancedDLSupport/ImplementationGenerators/Wrappers/DisposalCallWrapper.cs",
-        "src/AdvancedDLSupport/ImplementationGenerators/Wrappers/GenericDelegateWrapper.cs",
-        "src/AdvancedDLSupport/ImplementationGenerators/Wrappers/ICallWrapper.cs",
-        "src/AdvancedDLSupport/ImplementationGenerators/Wrappers/StringMarshallingWrapper.cs",
-        "src/AdvancedDLSupport/ImplementationGenerators/Wrappers/ValueNullableMarshallingWrapper.cs",
-        "src/AdvancedDLSupport/ImplementationOptions.cs",
-        "src/AdvancedDLSupport/Loaders/BSDPlatformLoader.cs",
-        "src/AdvancedDLSupport/Loaders/IPlatformLoader.cs",
-        "src/AdvancedDLSupport/Loaders/LinuxPlatformLoader.cs",
-        "src/AdvancedDLSupport/Loaders/Native/dl.cs",
-        "src/AdvancedDLSupport/Loaders/Native/kernel32.cs",
-        "src/AdvancedDLSupport/Loaders/PlatformLoaderBase.cs",
-        "src/AdvancedDLSupport/Loaders/SymbolFlag.cs",
-        "src/AdvancedDLSupport/Loaders/UnixPlatformLoader.cs",
-        "src/AdvancedDLSupport/Loaders/WindowsPlatformLoader.cs",
-        "src/AdvancedDLSupport/Manglers/IEntrypointMangler.cs",
-        "src/AdvancedDLSupport/Manglers/ManglerRepository.cs",
-        "src/AdvancedDLSupport/Manglers/StdCallEntrypointMangler.cs",
-        "src/AdvancedDLSupport/NativeLibraryBase.cs",
-        "src/AdvancedDLSupport/NativeLibraryBuilder.cs",
-        "src/AdvancedDLSupport/PathResolvers/DynamicLinkLibraryPathResolver.cs",
-        "src/AdvancedDLSupport/PathResolvers/ILibraryPathResolver.cs",
-        "src/AdvancedDLSupport/PathResolvers/LinuxPathResolver.cs",
-        "src/AdvancedDLSupport/PathResolvers/LocalPathResolver.cs",
-        "src/AdvancedDLSupport/PathResolvers/MacOSPathResolver.cs",
-        "src/AdvancedDLSupport/PathResolvers/WindowsPathResolver.cs",
-        "src/AdvancedDLSupport/Pipeline/ImplementationPipeline.cs",
-        "src/AdvancedDLSupport/Pipeline/PipelineWorkUnit.cs",
-        "src/AdvancedDLSupport/Reflection/IIntrospectiveMember.cs",
-        "src/AdvancedDLSupport/Reflection/IntrospectiveMemberBase.cs",
-        "src/AdvancedDLSupport/Reflection/IntrospectiveMethodInfo.cs",
-        "src/AdvancedDLSupport/Reflection/IntrospectivePropertyInfo.cs",
-        "src/AdvancedDLSupport/Results/IResult.cs",
-        "src/AdvancedDLSupport/Results/ResolvePathResult.cs",
-        "src/AdvancedDLSupport/SymbolTransformation/Attributes/NativeSymbolsAttribute.cs",
-        "src/AdvancedDLSupport/SymbolTransformation/SymbolTransformationMethod.cs",
-        "src/AdvancedDLSupport/SymbolTransformation/SymbolTransformer.cs",
-        "src/AdvancedDLSupport/Utility/GeneratedImplementationTypeIdentifier.cs",
-        "src/AdvancedDLSupport/Utility/InternalNullableAccessor.cs",
-        "src/AdvancedDLSupport/Utility/LibraryIdentifierEqualityComparer.cs",
-        "src/AdvancedDLSupport/Utility/PermutationGenerator.cs"
-      ]
-    },
-    "Humanizer/2.2.0": {
-      "sha512": "HNd/5qSII0Az+sy3jqRlUgRfXUs0pWO47OdtJAnvsF+WJza/KZbNiOG2RYIfMsnNlbiLQG7qsIHqiw9w7qla3A==",
-      "type": "package",
-      "path": "humanizer/2.2.0",
-      "files": [
-        ".signature.p7s",
-        "humanizer.2.2.0.nupkg.sha512",
+        "humanizer.2.5.1.nupkg.sha512",
         "humanizer.nuspec"
       ]
     },
-    "Humanizer.Core/2.2.0": {
-      "sha512": "4jJFn5FMjn/D+N7mmoXma+uMRFFdTIOpdu4kCEqR8yquYcb4Rf847crgLQvKtE+ewlMnfczy9K5+giNQR7xq3g==",
+    "Humanizer.Core/2.5.1": {
+      "sha512": "5qAHLeUHVjrpe6swtBLWvgxDmc26CtoP/bJVHPGL/iNGfyhkuNlBv0SBzd+0E21DHRRUIwJWJ1EgDA5Hyu0tdw==",
       "type": "package",
-      "path": "humanizer.core/2.2.0",
+      "path": "humanizer.core/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.2.2.0.nupkg.sha512",
+        "humanizer.core.2.5.1.nupkg.sha512",
         "humanizer.core.nuspec",
-        "lib/netstandard1.0/Humanizer.dll"
+        "lib/netstandard1.0/Humanizer.dll",
+        "lib/netstandard1.0/Humanizer.xml",
+        "lib/netstandard2.0/Humanizer.dll",
+        "lib/netstandard2.0/Humanizer.xml"
       ]
     },
-    "Humanizer.Core.af/2.2.0": {
-      "sha512": "cGXQ/eleb0L7vmuLY+NpT1ndGW/pOkO/b1fM3BZNvVhWAig5gBMerobAwDg/Obwgt5vCMqXdaHzvufR872dGeg==",
+    "Humanizer.Core.af/2.5.1": {
+      "sha512": "ktGkYzin7WW/mR9gGa4BhWTMbEVVYud6F7xWg2F+Hh6G2JKj0FgsmQlQ4l6cwpd53qr+ziLKjGorEMXFRD4nPg==",
       "type": "package",
-      "path": "humanizer.core.af/2.2.0",
+      "path": "humanizer.core.af/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.af.2.2.0.nupkg.sha512",
+        "humanizer.core.af.2.5.1.nupkg.sha512",
         "humanizer.core.af.nuspec",
-        "lib/netstandard1.0/af/Humanizer.resources.dll"
+        "lib/netstandard1.0/af/Humanizer.resources.dll",
+        "lib/netstandard2.0/af/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.ar/2.2.0": {
-      "sha512": "3+4Epwkrd+N6CCbNnKC1WpfMVoEIAPop96KL8YsAcYBLowv1o9BYGHIW7zgX+crr0yiJOCcKumSp87kJU5o6nw==",
+    "Humanizer.Core.ar/2.5.1": {
+      "sha512": "n/FvkgWF61UFUhu8rZf4VrNANckpK5cGw3g4ccxqF897JJrkgS3ZaWXLG4w2SeUPI5XUMpNukZm9gF0Av1sbRw==",
       "type": "package",
-      "path": "humanizer.core.ar/2.2.0",
+      "path": "humanizer.core.ar/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.ar.2.2.0.nupkg.sha512",
+        "humanizer.core.ar.2.5.1.nupkg.sha512",
         "humanizer.core.ar.nuspec",
-        "lib/netstandard1.0/ar/Humanizer.resources.dll"
+        "lib/netstandard1.0/ar/Humanizer.resources.dll",
+        "lib/netstandard2.0/ar/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.bg/2.2.0": {
-      "sha512": "OoGQygj4N8dCoyDjsS454m6G8G2qclKZxTp5XyEbRj36sDrj4QPzZukJcjBQg2UyA/t/eGex+NBjavZ0jHuayw==",
+    "Humanizer.Core.bg/2.5.1": {
+      "sha512": "zx92NKj+5Ki/uQuoWBiEkJiQKIWlu/eKtM6ozBFLX8N89NJ2Spfl1ckXq+YY6vTgECtH7C7tYUqv9hnWdynxkg==",
       "type": "package",
-      "path": "humanizer.core.bg/2.2.0",
+      "path": "humanizer.core.bg/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.bg.2.2.0.nupkg.sha512",
+        "humanizer.core.bg.2.5.1.nupkg.sha512",
         "humanizer.core.bg.nuspec",
-        "lib/netstandard1.0/bg/Humanizer.resources.dll"
+        "lib/netstandard1.0/bg/Humanizer.resources.dll",
+        "lib/netstandard2.0/bg/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.bn-BD/2.2.0": {
-      "sha512": "1UIseMGbmd9p1z3+7PUqoKACzdaiP0CWYbzo/1MH422ZpwNiK03CXEBbsb6T09M7DHvnvcPLc4PH8w5glHy4wg==",
+    "Humanizer.Core.bn-BD/2.5.1": {
+      "sha512": "UydwhsDNWzG9YcREWiXoLXqJ8kyVltuCdZ994b+bMTgn0+VDmhN7KoWDonH/OuHCoXTk/MFrM9raiMpDpCP4uA==",
       "type": "package",
-      "path": "humanizer.core.bn-bd/2.2.0",
+      "path": "humanizer.core.bn-bd/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.bn-bd.2.2.0.nupkg.sha512",
+        "humanizer.core.bn-bd.2.5.1.nupkg.sha512",
         "humanizer.core.bn-bd.nuspec",
-        "lib/netstandard1.0/bn-BD/Humanizer.resources.dll"
+        "lib/netstandard1.0/bn-BD/Humanizer.resources.dll",
+        "lib/netstandard2.0/bn-BD/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.cs/2.2.0": {
-      "sha512": "VnR+06+355VjPnwCYgsVvczevyrqIRSXxCGI+y8YfLmh71Ut5xNPJwfyb7c1TNOA/mL9bSb2wB1JM4xSA6yOvA==",
+    "Humanizer.Core.cs/2.5.1": {
+      "sha512": "V/g1Apfh8N5PxgI5KqTTCt1UsayDr+zAB0HA0BxQbZi3DsB/U6+CB3fxyU8C7hZgtaMj8crvT2H5RqMLFSV1cQ==",
       "type": "package",
-      "path": "humanizer.core.cs/2.2.0",
+      "path": "humanizer.core.cs/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.cs.2.2.0.nupkg.sha512",
+        "humanizer.core.cs.2.5.1.nupkg.sha512",
         "humanizer.core.cs.nuspec",
-        "lib/netstandard1.0/cs/Humanizer.resources.dll"
+        "lib/netstandard1.0/cs/Humanizer.resources.dll",
+        "lib/netstandard2.0/cs/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.da/2.2.0": {
-      "sha512": "liAGPPw0IJ1IUHssYMvBnKt9RM1zqBnKoIhCy0YCUu0/UyTbMIHHlFCbqnSafUTHxGP76I/nAktiqXTZpV+Dxg==",
+    "Humanizer.Core.da/2.5.1": {
+      "sha512": "Xnd32B1dkm0a/net0u0NlogbUvVjHm8xNzIp5+AzJKP7IKSblQn79kcQ4DSsps7g7GpIgM+rWziO+IbjHrZg0A==",
       "type": "package",
-      "path": "humanizer.core.da/2.2.0",
+      "path": "humanizer.core.da/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.da.2.2.0.nupkg.sha512",
+        "humanizer.core.da.2.5.1.nupkg.sha512",
         "humanizer.core.da.nuspec",
-        "lib/netstandard1.0/da/Humanizer.resources.dll"
+        "lib/netstandard1.0/da/Humanizer.resources.dll",
+        "lib/netstandard2.0/da/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.de/2.2.0": {
-      "sha512": "QXzqW2RL6j5t3dOjbsfeMROVUb2hCgRhs4jpCBJ/ut9FNwN4S4dRooZUCxnJy1abEjBVhXLglwHNAkPMwvCtfw==",
+    "Humanizer.Core.de/2.5.1": {
+      "sha512": "F2s2B6dlwVUolCOkDOz5C1m9XaL4Hz1h3cyN3IySHeyBgPgVBvY6wRfT+kFk+rR7mGUrNLo2Q8X/WldtHvoP0A==",
       "type": "package",
-      "path": "humanizer.core.de/2.2.0",
+      "path": "humanizer.core.de/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.de.2.2.0.nupkg.sha512",
+        "humanizer.core.de.2.5.1.nupkg.sha512",
         "humanizer.core.de.nuspec",
-        "lib/netstandard1.0/de/Humanizer.resources.dll"
+        "lib/netstandard1.0/de/Humanizer.resources.dll",
+        "lib/netstandard2.0/de/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.el/2.2.0": {
-      "sha512": "VTQ0GcHt3ZMs2w0gmKgNXOIykx+KkzGOHd7i2SO+w7vuJ7aXem1Yg6haFGI3hOp948YPbSTIZ90AHGCw/CUiVA==",
+    "Humanizer.Core.el/2.5.1": {
+      "sha512": "+0zO9ZzyZxUY9HwxKtk3qA75UUKK/UYF7MUG0VL4gRLQYliA3rlx1wk1JYEWT8hEzVqvkeowGLYvwpbRZCzd8w==",
       "type": "package",
-      "path": "humanizer.core.el/2.2.0",
+      "path": "humanizer.core.el/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.el.2.2.0.nupkg.sha512",
+        "humanizer.core.el.2.5.1.nupkg.sha512",
         "humanizer.core.el.nuspec",
-        "lib/netstandard1.0/el/Humanizer.resources.dll"
+        "lib/netstandard1.0/el/Humanizer.resources.dll",
+        "lib/netstandard2.0/el/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.es/2.2.0": {
-      "sha512": "UMm7a18VO+Ko+KOHP7qtKrlpaRpE+5O9rbpFX5a78o50au1YPONzTV5IDwm0/AIk3IfwIi0KIUJEdQ7tpO9wcQ==",
+    "Humanizer.Core.es/2.5.1": {
+      "sha512": "fCdCGAWOAYDKp7hQpxL+7qpiDNZ6b2rx0s8/m5mjf2iT2vDhbF94bmrPLsWjfW91faDVk9d+tWCar1670J4wmA==",
       "type": "package",
-      "path": "humanizer.core.es/2.2.0",
+      "path": "humanizer.core.es/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.es.2.2.0.nupkg.sha512",
+        "humanizer.core.es.2.5.1.nupkg.sha512",
         "humanizer.core.es.nuspec",
-        "lib/netstandard1.0/es/Humanizer.resources.dll"
+        "lib/netstandard1.0/es/Humanizer.resources.dll",
+        "lib/netstandard2.0/es/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.fa/2.2.0": {
-      "sha512": "nzPSKFaW6GZAXTQq4CTxl9kumh2FO9cm7bJjWZ+UYzZGWXne8ZaRdScWQErGiLzedjIiGdBY5yEm9x2+ec47MQ==",
+    "Humanizer.Core.fa/2.5.1": {
+      "sha512": "Jn7U8HHC7W0NkNsALJQgTWGoZhmy8aYhH8w1kLIhuK3vqs4kxejqEbUUdeUVZ5KP1EX/mp8ohgH4TENcf29BRQ==",
       "type": "package",
-      "path": "humanizer.core.fa/2.2.0",
+      "path": "humanizer.core.fa/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.fa.2.2.0.nupkg.sha512",
+        "humanizer.core.fa.2.5.1.nupkg.sha512",
         "humanizer.core.fa.nuspec",
-        "lib/netstandard1.0/fa/Humanizer.resources.dll"
+        "lib/netstandard1.0/fa/Humanizer.resources.dll",
+        "lib/netstandard2.0/fa/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.fi-FI/2.2.0": {
-      "sha512": "MSTSxtrzMf+bYbeTzGQpmkh+FVkXUH9MoZ4vPT/MNqqLd3lssDbvOsnpmDuhWP2dRT5kwyOt9LMx7hXzOrTOsg==",
+    "Humanizer.Core.fi-FI/2.5.1": {
+      "sha512": "8jN9pMUymncQlJ+ae+XUfq7cXSaqKBmgtWt/Y1GenAz8aCMcohgnGHEs4YMmwl9IgpqS7aOu5p9pj0y9lRRUFA==",
       "type": "package",
-      "path": "humanizer.core.fi-fi/2.2.0",
+      "path": "humanizer.core.fi-fi/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.fi-fi.2.2.0.nupkg.sha512",
+        "humanizer.core.fi-fi.2.5.1.nupkg.sha512",
         "humanizer.core.fi-fi.nuspec",
-        "lib/netstandard1.0/fi-FI/Humanizer.resources.dll"
+        "lib/netstandard1.0/fi-FI/Humanizer.resources.dll",
+        "lib/netstandard2.0/fi-FI/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.fr/2.2.0": {
-      "sha512": "gPACLWKLOBLGuoCVuULKwNMdZtF74OoTYc8cMM59AR4h0gkQKgDykSHPhDi/NivYXcg7GAMmxZJoapOMaa+Jiw==",
+    "Humanizer.Core.fr/2.5.1": {
+      "sha512": "zCUcVt4JuzZppTG7AkOmfE7KzDFiPN3VNCvSjoagwWusQPzqc2RWalJxFTv16CD3hdOHF8CiJOqeaxQP0QatnQ==",
       "type": "package",
-      "path": "humanizer.core.fr/2.2.0",
+      "path": "humanizer.core.fr/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.fr.2.2.0.nupkg.sha512",
+        "humanizer.core.fr.2.5.1.nupkg.sha512",
         "humanizer.core.fr.nuspec",
-        "lib/netstandard1.0/fr/Humanizer.resources.dll"
+        "lib/netstandard1.0/fr/Humanizer.resources.dll",
+        "lib/netstandard2.0/fr/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.fr-BE/2.2.0": {
-      "sha512": "1fkUM2Q7IrwIqsxRyZ+NrEh8qkwv7m342iyc880NX29d8kRuTbWONfj9nMwVrLs7CKwY7aFkzNFvf2ki8A9jpg==",
+    "Humanizer.Core.fr-BE/2.5.1": {
+      "sha512": "OJxsaIG8xYV7lBbK4K5OKNsc3Aouq+5GY6AEwoJn32AbmZYZN4OZdp476HEpUpRSmoxId/bqtvFpb6wfblODUQ==",
       "type": "package",
-      "path": "humanizer.core.fr-be/2.2.0",
+      "path": "humanizer.core.fr-be/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.fr-be.2.2.0.nupkg.sha512",
+        "humanizer.core.fr-be.2.5.1.nupkg.sha512",
         "humanizer.core.fr-be.nuspec",
-        "lib/netstandard1.0/fr-BE/Humanizer.resources.dll"
+        "lib/netstandard1.0/fr-BE/Humanizer.resources.dll",
+        "lib/netstandard2.0/fr-BE/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.he/2.2.0": {
-      "sha512": "8wjaEgIentZD9zjEbL2nUqpRscN7r7cwFl18uNkmfN/MaMner1OMI3vBR0iEqcj7TsURc7HahQtkSydjd2fUwg==",
+    "Humanizer.Core.he/2.5.1": {
+      "sha512": "zryb0ju3TLYIM6g6VgkCd5TrbF+qn5WI4bGjiKCTLTvcUhIdgztaI6TB4Pc8xqaE7gyP6iThhcF8uy2fpGydew==",
       "type": "package",
-      "path": "humanizer.core.he/2.2.0",
+      "path": "humanizer.core.he/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.he.2.2.0.nupkg.sha512",
+        "humanizer.core.he.2.5.1.nupkg.sha512",
         "humanizer.core.he.nuspec",
-        "lib/netstandard1.0/he/Humanizer.resources.dll"
+        "lib/netstandard1.0/he/Humanizer.resources.dll",
+        "lib/netstandard2.0/he/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.hr/2.2.0": {
-      "sha512": "RE1rwjmNAraMfskRqaJ/LhldtuQ9by98xE9N4fsQTnnftbJE7d9ExG3qVxumYQm5Uj4OuvAvUoZfW81wkXARow==",
+    "Humanizer.Core.hr/2.5.1": {
+      "sha512": "l8UoNxf8fePpH3ea3oxo4GrBv8iSSo4WIfygNdvNMW8UYeh5R/+WN1ZjwhHDcyrPhUGbxMcLNpIxaxnuTT28kA==",
       "type": "package",
-      "path": "humanizer.core.hr/2.2.0",
+      "path": "humanizer.core.hr/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.hr.2.2.0.nupkg.sha512",
+        "humanizer.core.hr.2.5.1.nupkg.sha512",
         "humanizer.core.hr.nuspec",
-        "lib/netstandard1.0/hr/Humanizer.resources.dll"
+        "lib/netstandard1.0/hr/Humanizer.resources.dll",
+        "lib/netstandard2.0/hr/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.hu/2.2.0": {
-      "sha512": "Dt0ymM1q8JuE1f+fyKxD/4t25CzkeagfHeayimvvHO1ybQVtXCBJzVlS7ngIdc2OCSKTwyhK3X6nCl+pHCKbLg==",
+    "Humanizer.Core.hu/2.5.1": {
+      "sha512": "Hk/pWzQHNai2z/bDkqjfKBxpbUWvIKmKnDGiQYIQj1S2xWhtmJBqzFlCAEoQAfQ3uCStVd+iBoNSSR1c7H031A==",
       "type": "package",
-      "path": "humanizer.core.hu/2.2.0",
+      "path": "humanizer.core.hu/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.hu.2.2.0.nupkg.sha512",
+        "humanizer.core.hu.2.5.1.nupkg.sha512",
         "humanizer.core.hu.nuspec",
-        "lib/netstandard1.0/hu/Humanizer.resources.dll"
+        "lib/netstandard1.0/hu/Humanizer.resources.dll",
+        "lib/netstandard2.0/hu/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.id/2.2.0": {
-      "sha512": "n0QX5FIj8qH5HCXK/f1SJoeJWDOwJ3ukDrFuwWerRJTNkX5yCRyoPHYrrmbEGUgvVYuOFUd+APAI8tpmae6phA==",
+    "Humanizer.Core.id/2.5.1": {
+      "sha512": "6dDPdnBJfoWOWZHZkPM1cg0l7rhsYYzlNTIjaRE5DtM+VgOmI0j+x9KElbJYs19JkM5LMZabdxEs7+L0fIPkpQ==",
       "type": "package",
-      "path": "humanizer.core.id/2.2.0",
+      "path": "humanizer.core.id/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.id.2.2.0.nupkg.sha512",
+        "humanizer.core.id.2.5.1.nupkg.sha512",
         "humanizer.core.id.nuspec",
-        "lib/netstandard1.0/id/Humanizer.resources.dll"
+        "lib/netstandard1.0/id/Humanizer.resources.dll",
+        "lib/netstandard2.0/id/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.it/2.2.0": {
-      "sha512": "2/KClCA0nrHSm6VDOL1LiDsbNXad+xbRwZwqrGIyC95kFrgbRHIhyisu6dawIpxENn4Gfk1qE+AuMOQIBtBBNw==",
+    "Humanizer.Core.it/2.5.1": {
+      "sha512": "F8A+yTBVzNDdZRl8v9rr0Ew3UPufrR09c+4d3I3lo4js015KD44OLYgpC/PPTcJ8cnVB/q7gNpccj2B3aDWimg==",
       "type": "package",
-      "path": "humanizer.core.it/2.2.0",
+      "path": "humanizer.core.it/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.it.2.2.0.nupkg.sha512",
+        "humanizer.core.it.2.5.1.nupkg.sha512",
         "humanizer.core.it.nuspec",
-        "lib/netstandard1.0/it/Humanizer.resources.dll"
+        "lib/netstandard1.0/it/Humanizer.resources.dll",
+        "lib/netstandard2.0/it/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.ja/2.2.0": {
-      "sha512": "RmL+5ytAlEffLv6fKmtITh7TgApQyPG0GWBchHoxCT1MZh/w3vZ6Uf37YNEMVROzpLDRo2/x1P1wq3rvbM0+Tw==",
+    "Humanizer.Core.ja/2.5.1": {
+      "sha512": "NOu2ctb+UuwfsDBwS0Neetpk5bnCHSs6sWNu4aAhU+Mdip9VuV4J+TY0je+mCHjoDmt+qOoux0cf5ccm/LqzBw==",
       "type": "package",
-      "path": "humanizer.core.ja/2.2.0",
+      "path": "humanizer.core.ja/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.ja.2.2.0.nupkg.sha512",
+        "humanizer.core.ja.2.5.1.nupkg.sha512",
         "humanizer.core.ja.nuspec",
-        "lib/netstandard1.0/ja/Humanizer.resources.dll"
+        "lib/netstandard1.0/ja/Humanizer.resources.dll",
+        "lib/netstandard2.0/ja/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.lv/2.2.0": {
-      "sha512": "J9KXjuhru9xrF9RdZFAcxoZmvTo5FXCiCxkZ890taHxSA7LdnFpygYTA9nKz75F7BHMW18aKTVDBqqyFAPSyQg==",
+    "Humanizer.Core.lv/2.5.1": {
+      "sha512": "TNRUZxlGLsB+3Xox3eSEBTzjO1wmT81MVWAvJZp+adiKY5KamrAt+mom4m4gVRNbv6xvdoVhy1jObBFa6iXyUQ==",
       "type": "package",
-      "path": "humanizer.core.lv/2.2.0",
+      "path": "humanizer.core.lv/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.lv.2.2.0.nupkg.sha512",
+        "humanizer.core.lv.2.5.1.nupkg.sha512",
         "humanizer.core.lv.nuspec",
-        "lib/netstandard1.0/lv/Humanizer.resources.dll"
+        "lib/netstandard1.0/lv/Humanizer.resources.dll",
+        "lib/netstandard2.0/lv/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.nb/2.2.0": {
-      "sha512": "IY+Av34CsZL4JToKEBxTG2MG9MrLKPD8Jk+0cnaQcT8U/hu1F2IldFDE6c/wtozl5CoAqW7571Gi6z8e19rGTA==",
+    "Humanizer.Core.nb/2.5.1": {
+      "sha512": "ZJE91M8tZIrZyb24dyR6ZDrn/AawEj8T9+Ov8pIPvl/PbSVrZ7cqUYPTcfjXNAJ/p0eCl2RnleH1qQTbH4sjug==",
       "type": "package",
-      "path": "humanizer.core.nb/2.2.0",
+      "path": "humanizer.core.nb/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.nb.2.2.0.nupkg.sha512",
+        "humanizer.core.nb.2.5.1.nupkg.sha512",
         "humanizer.core.nb.nuspec",
-        "lib/netstandard1.0/nb/Humanizer.resources.dll"
+        "lib/netstandard1.0/nb/Humanizer.resources.dll",
+        "lib/netstandard2.0/nb/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.nb-NO/2.2.0": {
-      "sha512": "xjWS/gWg3SAz5q/wJwwMgo58yQTE62NAv8YA+bv2WNcDhpVqFsr54ACE2JU5MAqd968cERBxu+4EM3LrnCKyPQ==",
+    "Humanizer.Core.nb-NO/2.5.1": {
+      "sha512": "fnzlvZcSN3sn0RXBwzd8itc3AGb/jGebBs+nx+J1oovJZRtdn3PwPy9LifL5MzrdcGdc0DrRod7sZa8IlcB8Jw==",
       "type": "package",
-      "path": "humanizer.core.nb-no/2.2.0",
+      "path": "humanizer.core.nb-no/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.nb-no.2.2.0.nupkg.sha512",
+        "humanizer.core.nb-no.2.5.1.nupkg.sha512",
         "humanizer.core.nb-no.nuspec",
-        "lib/netstandard1.0/nb-NO/Humanizer.resources.dll"
+        "lib/netstandard1.0/nb-NO/Humanizer.resources.dll",
+        "lib/netstandard2.0/nb-NO/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.nl/2.2.0": {
-      "sha512": "dLPGOMNkmElAqx1AOTJTJOROk3aSSSWvXYdoI955ZUpPTEQlehqaedJTLCD6isEYqJLPs646BeCWhtFp12vCOA==",
+    "Humanizer.Core.nl/2.5.1": {
+      "sha512": "4jR6EwByrDkUTxELDi3tsUp+YOLQ7oDWrUeJ5naC4xfr/qkPpj3GBLVShwYeBJIYnBeGLlIAq0GVukoSZ1K8ww==",
       "type": "package",
-      "path": "humanizer.core.nl/2.2.0",
+      "path": "humanizer.core.nl/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.nl.2.2.0.nupkg.sha512",
+        "humanizer.core.nl.2.5.1.nupkg.sha512",
         "humanizer.core.nl.nuspec",
-        "lib/netstandard1.0/nl/Humanizer.resources.dll"
+        "lib/netstandard1.0/nl/Humanizer.resources.dll",
+        "lib/netstandard2.0/nl/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.pl/2.2.0": {
-      "sha512": "QEMRIUZZyorfH4quwbp6W15eyPUyBsUjr0ImuVqPL0eKJiBAifkqiCRRrCMuM4Nf6a0bIJYOb7pDIAXZvcxbRw==",
+    "Humanizer.Core.pl/2.5.1": {
+      "sha512": "5WSSvqwiiTnLTtnBHFfO0x2IDhLWiwKOko/R2AL4G3cqFB/tsVNcjz+AmErJeVvcACyA/wQxMlTdU3eHG5H5EA==",
       "type": "package",
-      "path": "humanizer.core.pl/2.2.0",
+      "path": "humanizer.core.pl/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.pl.2.2.0.nupkg.sha512",
+        "humanizer.core.pl.2.5.1.nupkg.sha512",
         "humanizer.core.pl.nuspec",
-        "lib/netstandard1.0/pl/Humanizer.resources.dll"
+        "lib/netstandard1.0/pl/Humanizer.resources.dll",
+        "lib/netstandard2.0/pl/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.pt/2.2.0": {
-      "sha512": "2xcs7cMm/gCpzKbhcwi3Q5ID/qnsxwrLyvO2zGFR7DWjGaFyxz+yixx+nDRFijdlJXSx1m6kpW5vQ8oTPb5+fw==",
+    "Humanizer.Core.pt/2.5.1": {
+      "sha512": "1a0ptyLU/ShQ0q8kZDygiE1x/T67V3uQHD8y7agPVsn+0XK7ZVE/qp/0fEFrEqUZrFWQ0NGciuY5BvOGjjQoqQ==",
       "type": "package",
-      "path": "humanizer.core.pt/2.2.0",
+      "path": "humanizer.core.pt/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.pt.2.2.0.nupkg.sha512",
+        "humanizer.core.pt.2.5.1.nupkg.sha512",
         "humanizer.core.pt.nuspec",
-        "lib/netstandard1.0/pt/Humanizer.resources.dll"
+        "lib/netstandard1.0/pt/Humanizer.resources.dll",
+        "lib/netstandard2.0/pt/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.ro/2.2.0": {
-      "sha512": "thxUT9i60/nBzpRttIdbTjhws923w0kV8u23fyt3wrRQOTcXb37XA4sWnAuAtbUlliUIt6/8qXsb0iH/dlwWww==",
+    "Humanizer.Core.ro/2.5.1": {
+      "sha512": "HUFM0GCeFy+Wz9FgS8B0lDw5NqOJnucRoou/vR9tHhJjMQXCSDo4vPikWBB0+xaZ6PaAZy4M17koFVWnU4JWUQ==",
       "type": "package",
-      "path": "humanizer.core.ro/2.2.0",
+      "path": "humanizer.core.ro/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.ro.2.2.0.nupkg.sha512",
+        "humanizer.core.ro.2.5.1.nupkg.sha512",
         "humanizer.core.ro.nuspec",
-        "lib/netstandard1.0/ro/Humanizer.resources.dll"
+        "lib/netstandard1.0/ro/Humanizer.resources.dll",
+        "lib/netstandard2.0/ro/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.ru/2.2.0": {
-      "sha512": "6s16pNx19tzcz+i9NcOXayFdG9BQ4ZvoGia2Na9glYh4meEwboVMMD56BWy6xO+hjA9m7E+WqIbLRsojGBkUww==",
+    "Humanizer.Core.ru/2.5.1": {
+      "sha512": "IryjF3UUaMkA2uD+ZTN0JnP8y9bcJ1vbs40ylb9XJlE00HhoHE7CqXkmS0cYMc6h554XYzSaygYOQ+pqdLLSqw==",
       "type": "package",
-      "path": "humanizer.core.ru/2.2.0",
+      "path": "humanizer.core.ru/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.ru.2.2.0.nupkg.sha512",
+        "humanizer.core.ru.2.5.1.nupkg.sha512",
         "humanizer.core.ru.nuspec",
-        "lib/netstandard1.0/ru/Humanizer.resources.dll"
+        "lib/netstandard1.0/ru/Humanizer.resources.dll",
+        "lib/netstandard2.0/ru/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.sk/2.2.0": {
-      "sha512": "QSWWqoDrsLqg8ZYYU6fA8H1Vm9L0YppuzGeCohU7Lo/1aTj/NYy4JlKiesgABtnueJoPK0fOG1crtqesoV2kYg==",
+    "Humanizer.Core.sk/2.5.1": {
+      "sha512": "sIxwja4kQCXgjJtD2O/wgWFAMn++v1B2gP9E59ZV7ByJhA5JV8Qvy2b86uRuEOObqg1Mmu4dh2cFxVuJiPfhJQ==",
       "type": "package",
-      "path": "humanizer.core.sk/2.2.0",
+      "path": "humanizer.core.sk/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.sk.2.2.0.nupkg.sha512",
+        "humanizer.core.sk.2.5.1.nupkg.sha512",
         "humanizer.core.sk.nuspec",
-        "lib/netstandard1.0/sk/Humanizer.resources.dll"
+        "lib/netstandard1.0/sk/Humanizer.resources.dll",
+        "lib/netstandard2.0/sk/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.sl/2.2.0": {
-      "sha512": "ANahG9nzWewFpZPaYByRLFU6NNEw9pFUK9sJgshKywEvreSPfpEuA0cTyWs+qtrQD+yqtsJMHqJJqGhmPweQ1w==",
+    "Humanizer.Core.sl/2.5.1": {
+      "sha512": "LTRShcz/kbHzDqTA5JZJZi1jw7lVxkO97HpTdodcaAOUUsbdExfAfMrXwJnscxzXIEOZ9ljCYOWEiPhoiMHhbw==",
       "type": "package",
-      "path": "humanizer.core.sl/2.2.0",
+      "path": "humanizer.core.sl/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.sl.2.2.0.nupkg.sha512",
+        "humanizer.core.sl.2.5.1.nupkg.sha512",
         "humanizer.core.sl.nuspec",
-        "lib/netstandard1.0/sl/Humanizer.resources.dll"
+        "lib/netstandard1.0/sl/Humanizer.resources.dll",
+        "lib/netstandard2.0/sl/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.sr/2.2.0": {
-      "sha512": "kCVCJalwQrlhz2gBtkCZAM3kJKmWNZHvM6vBY7nw+Id2CcBxlTRafulh7TB8ryjCXqEepHFs2CgiUV2LDw2Phg==",
+    "Humanizer.Core.sr/2.5.1": {
+      "sha512": "TM7DdwvyujtT0tIabJd9p7iQPmxUHMY3olUkhoPc+dt+LoTuwquCxDo5k2vAAvxP+xNhoB1XdvJ2B46ism3rmA==",
       "type": "package",
-      "path": "humanizer.core.sr/2.2.0",
+      "path": "humanizer.core.sr/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.sr.2.2.0.nupkg.sha512",
+        "humanizer.core.sr.2.5.1.nupkg.sha512",
         "humanizer.core.sr.nuspec",
-        "lib/netstandard1.0/sr/Humanizer.resources.dll"
+        "lib/netstandard1.0/sr/Humanizer.resources.dll",
+        "lib/netstandard2.0/sr/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.sr-Latn/2.2.0": {
-      "sha512": "LbXBbCqh9EEAu5AP79Klm66BryMDZtXIaemi31LUD2WUP/hMoeEa44I3UimzX0fa6QosgDIFegKLGZr+h/aR3A==",
+    "Humanizer.Core.sr-Latn/2.5.1": {
+      "sha512": "kosK/PX9PmtxnMG/lekwIdZvb9vqGJZObVxQ3lLU7YHdksTYQVXAFefV92ffxDy/1Xj1hnMo4VU78KEFDk8SFw==",
       "type": "package",
-      "path": "humanizer.core.sr-latn/2.2.0",
+      "path": "humanizer.core.sr-latn/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.sr-latn.2.2.0.nupkg.sha512",
+        "humanizer.core.sr-latn.2.5.1.nupkg.sha512",
         "humanizer.core.sr-latn.nuspec",
-        "lib/netstandard1.0/sr-Latn/Humanizer.resources.dll"
+        "lib/netstandard1.0/sr-Latn/Humanizer.resources.dll",
+        "lib/netstandard2.0/sr-Latn/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.sv/2.2.0": {
-      "sha512": "fO/Ijed46JM0opzAd/q7du+PjoUf4mrzBzojvaZ6CNOyz9wfLkWI/4mkgoWjYVM9LXwn9DxKNBfBRt4OX1IElg==",
+    "Humanizer.Core.sv/2.5.1": {
+      "sha512": "y94keDLpdougnuQo6MuQbtP98pGanMby+bCYKJpc/K3oLhyNjKDLB91qXFI4brHmQBoWf8yZVqt2DaPtjdAbAg==",
       "type": "package",
-      "path": "humanizer.core.sv/2.2.0",
+      "path": "humanizer.core.sv/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.sv.2.2.0.nupkg.sha512",
+        "humanizer.core.sv.2.5.1.nupkg.sha512",
         "humanizer.core.sv.nuspec",
-        "lib/netstandard1.0/sv/Humanizer.resources.dll"
+        "lib/netstandard1.0/sv/Humanizer.resources.dll",
+        "lib/netstandard2.0/sv/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.tr/2.2.0": {
-      "sha512": "hb3T9mo53RsLy26Hy+2+5n+CT1D12GW1MCYubFnWsn+wbfNQAChLwEgNiEQeozLlMraGSoOj1+BenM8uCfXHbg==",
+    "Humanizer.Core.tr/2.5.1": {
+      "sha512": "x8q/qcM+lHC4BndleOrk92r3wDWzPhkcdxu82/bMYOEzw7AEQU/XwmNz8XrXbii0UCnVregWmL8ps6fWlTzRMQ==",
       "type": "package",
-      "path": "humanizer.core.tr/2.2.0",
+      "path": "humanizer.core.tr/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.tr.2.2.0.nupkg.sha512",
+        "humanizer.core.tr.2.5.1.nupkg.sha512",
         "humanizer.core.tr.nuspec",
-        "lib/netstandard1.0/tr/Humanizer.resources.dll"
+        "lib/netstandard1.0/tr/Humanizer.resources.dll",
+        "lib/netstandard2.0/tr/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.uk/2.2.0": {
-      "sha512": "z0POt4nTLxL5Sr00IHxw2i3tDpwYeH4WD2PFEAG7HEGlR/CnLnuWJ1q/t+t9xbwsEh3ssjVriYMI8Yt5KZAImg==",
+    "Humanizer.Core.uk/2.5.1": {
+      "sha512": "i7iDz2zoi74ZiHpOH1AZ+cBO4yJNCFb7E5VbCcksVuo2MZLgG5sN6bpUGsouXoOndJlmlYefR1aX5XaEUYqAUw==",
       "type": "package",
-      "path": "humanizer.core.uk/2.2.0",
+      "path": "humanizer.core.uk/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.uk.2.2.0.nupkg.sha512",
+        "humanizer.core.uk.2.5.1.nupkg.sha512",
         "humanizer.core.uk.nuspec",
-        "lib/netstandard1.0/uk/Humanizer.resources.dll"
+        "lib/netstandard1.0/uk/Humanizer.resources.dll",
+        "lib/netstandard2.0/uk/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.uz-Cyrl-UZ/2.2.0": {
-      "sha512": "9n6tahBeew7Yp4TsBVIjbP8ecVr3x2Qb19Cc1Rxf2c/e6riHn9pt7r6FjwJDyuNwKSz0ptrnnFUtzAsHean3Pw==",
+    "Humanizer.Core.uz-Cyrl-UZ/2.5.1": {
+      "sha512": "hb5bkHKTkcUJNjANB2grm3AqASvI7wUjWKVWQBBqJQvEH3RGNHPRxWw/MU8ZONwhddkQ39hrO5cGp9S6LoLCVQ==",
       "type": "package",
-      "path": "humanizer.core.uz-cyrl-uz/2.2.0",
+      "path": "humanizer.core.uz-cyrl-uz/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.uz-cyrl-uz.2.2.0.nupkg.sha512",
+        "humanizer.core.uz-cyrl-uz.2.5.1.nupkg.sha512",
         "humanizer.core.uz-cyrl-uz.nuspec",
-        "lib/netstandard1.0/uz-Cyrl-UZ/Humanizer.resources.dll"
+        "lib/netstandard1.0/uz-Cyrl-UZ/Humanizer.resources.dll",
+        "lib/netstandard2.0/uz-Cyrl-UZ/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.uz-Latn-UZ/2.2.0": {
-      "sha512": "m4BdB1YV1Yr6fxSXWbby/lWGirmU0kUnSM29JpjoIV55ar7BSUlslgjzhWYy59h1YNNIdXxyZ8IrSslgqAbqgQ==",
+    "Humanizer.Core.uz-Latn-UZ/2.5.1": {
+      "sha512": "Ssd6DXHovRxxHrqSTO4aTDT5l8CeAELUpd8yJs9dIoJPIXUe3JXvIcKqar/Ddw8nRStlOCwKN5vvKZAvGWc5LQ==",
       "type": "package",
-      "path": "humanizer.core.uz-latn-uz/2.2.0",
+      "path": "humanizer.core.uz-latn-uz/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.uz-latn-uz.2.2.0.nupkg.sha512",
+        "humanizer.core.uz-latn-uz.2.5.1.nupkg.sha512",
         "humanizer.core.uz-latn-uz.nuspec",
-        "lib/netstandard1.0/uz-Latn-UZ/Humanizer.resources.dll"
+        "lib/netstandard1.0/uz-Latn-UZ/Humanizer.resources.dll",
+        "lib/netstandard2.0/uz-Latn-UZ/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.vi/2.2.0": {
-      "sha512": "P9ESGmVBgyBBLVW/EmiGXw79IVaxNQebegxJeZ4P1i62WvMz9i74ormEl1cQnYsj7gQaEjtBehfVJhJxnRtsIg==",
+    "Humanizer.Core.vi/2.5.1": {
+      "sha512": "L/1n2Sq24MA19i053IXOL88A5KFM+izUKFTHm3y347fQyqIDyX/0lBcBO7AKTq6oek2gTtsgc4P6PMMv+n9d7w==",
       "type": "package",
-      "path": "humanizer.core.vi/2.2.0",
+      "path": "humanizer.core.vi/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.vi.2.2.0.nupkg.sha512",
+        "humanizer.core.vi.2.5.1.nupkg.sha512",
         "humanizer.core.vi.nuspec",
-        "lib/netstandard1.0/vi/Humanizer.resources.dll"
+        "lib/netstandard1.0/vi/Humanizer.resources.dll",
+        "lib/netstandard2.0/vi/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.zh-CN/2.2.0": {
-      "sha512": "L/kY/N4qgdlZde2wYs92o72ZRKCXSa4NeI1nRimnX/BP3aeAvL0bzddqdstyhjDBH2SJAygNShLgClbgoaVDzQ==",
+    "Humanizer.Core.zh-CN/2.5.1": {
+      "sha512": "68CilkVKr1jz27GI7FTUrQqP9Wl58WbXrXdo+Q0BB1fQkPNW+j7J7GcEtW9oyXJrBUU1afvUuDDeXjY1Oiponw==",
       "type": "package",
-      "path": "humanizer.core.zh-cn/2.2.0",
+      "path": "humanizer.core.zh-cn/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.zh-cn.2.2.0.nupkg.sha512",
+        "humanizer.core.zh-cn.2.5.1.nupkg.sha512",
         "humanizer.core.zh-cn.nuspec",
-        "lib/netstandard1.0/zh-CN/Humanizer.resources.dll"
+        "lib/netstandard1.0/zh-CN/Humanizer.resources.dll",
+        "lib/netstandard2.0/zh-CN/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.zh-Hans/2.2.0": {
-      "sha512": "OPhAFI69wxx3Fb3C38XeRC+xnJC0n7Gce4+XiiGqRLPW6niy16IADCPPsssAGbAf8qHicrAfSayzLx5mT23vYw==",
+    "Humanizer.Core.zh-Hans/2.5.1": {
+      "sha512": "ScP/1EycPtA/UB4K8JpGwp6qnSx3x5QAK1+O8+1AKkrisDkfy6Q/6FLa5pLNqk4R7lhsvgsy30F9qsenDhnKmg==",
       "type": "package",
-      "path": "humanizer.core.zh-hans/2.2.0",
+      "path": "humanizer.core.zh-hans/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.zh-hans.2.2.0.nupkg.sha512",
+        "humanizer.core.zh-hans.2.5.1.nupkg.sha512",
         "humanizer.core.zh-hans.nuspec",
-        "lib/netstandard1.0/zh-Hans/Humanizer.resources.dll"
+        "lib/netstandard1.0/zh-Hans/Humanizer.resources.dll",
+        "lib/netstandard2.0/zh-Hans/Humanizer.resources.dll"
       ]
     },
-    "Humanizer.Core.zh-Hant/2.2.0": {
-      "sha512": "zNZ3evZIFUDGHKOaI0arF/kjlmVCHR86F1UELoUABhbdY44Acd2puSaZLUJ9TpBeN/2nd91U3Dwd1yWPtJkq0A==",
+    "Humanizer.Core.zh-Hant/2.5.1": {
+      "sha512": "Msxxor/sdbCd3hDamdOP70qCkjhXwM2tIkRyAQR8jvrYVAg6fdN88FeJgCHm+Yss3vG759bakkik9xAjy50lvQ==",
       "type": "package",
-      "path": "humanizer.core.zh-hant/2.2.0",
+      "path": "humanizer.core.zh-hant/2.5.1",
       "files": [
         ".signature.p7s",
-        "humanizer.core.zh-hant.2.2.0.nupkg.sha512",
+        "humanizer.core.zh-hant.2.5.1.nupkg.sha512",
         "humanizer.core.zh-hant.nuspec",
-        "lib/netstandard1.0/zh-Hant/Humanizer.resources.dll"
+        "lib/netstandard1.0/zh-Hant/Humanizer.resources.dll",
+        "lib/netstandard2.0/zh-Hant/Humanizer.resources.dll"
       ]
     },
     "Microsoft.CSharp/4.4.1": {
@@ -1352,6 +1629,28 @@
         "microsoft.netcore.targets.1.1.0.nupkg.sha512",
         "microsoft.netcore.targets.nuspec",
         "runtime.json"
+      ]
+    },
+    "Mono.Cecil/0.10.1": {
+      "sha512": "ZpklVgBklS7Rq3UQUzFZZvEpljrdyXxIbHKiZQJ4IMt4CAGYp7Z3mh5hNV4lT2e0CyTJ1Qb5ldNds0HzgYPlGw==",
+      "type": "package",
+      "path": "mono.cecil/0.10.1",
+      "files": [
+        ".signature.p7s",
+        "lib/net35/Mono.Cecil.Mdb.dll",
+        "lib/net35/Mono.Cecil.Pdb.dll",
+        "lib/net35/Mono.Cecil.Rocks.dll",
+        "lib/net35/Mono.Cecil.dll",
+        "lib/net40/Mono.Cecil.Mdb.dll",
+        "lib/net40/Mono.Cecil.Pdb.dll",
+        "lib/net40/Mono.Cecil.Rocks.dll",
+        "lib/net40/Mono.Cecil.dll",
+        "lib/netstandard1.3/Mono.Cecil.Mdb.dll",
+        "lib/netstandard1.3/Mono.Cecil.Pdb.dll",
+        "lib/netstandard1.3/Mono.Cecil.Rocks.dll",
+        "lib/netstandard1.3/Mono.Cecil.dll",
+        "mono.cecil.0.10.1.nupkg.sha512",
+        "mono.cecil.nuspec"
       ]
     },
     "Mono.DllMap/1.0.1": {
@@ -1506,10 +1805,22 @@
         "netstandard.library.nuspec"
       ]
     },
-    "StrictEmit/2.4.2": {
-      "sha512": "boitFu4wrZrgBN0mShNNoBWQW+BOC0RK3DknrqU/iC3jxV4AeZZdJZHu4hIPivmlpTlAd5QXMPQLBgqq+zx0bA==",
+    "runtime.native.System.Security.Cryptography/4.0.0": {
+      "sha512": "2CQK0jmO6Eu7ZeMgD+LOFbNJSXHFVQbCJJkEyEwowh1SCgYnrn9W9RykMfpeeVGw7h4IBvYikzpGUlmZTUafJw==",
       "type": "package",
-      "path": "strictemit/2.4.2",
+      "path": "runtime.native.system.security.cryptography/4.0.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/_._",
+        "runtime.native.system.security.cryptography.4.0.0.nupkg.sha512",
+        "runtime.native.system.security.cryptography.nuspec"
+      ]
+    },
+    "StrictEmit/2.7.1": {
+      "sha512": "/YTN5m4CRiqAPYhVv3RjQ9Z+yAz9TZFyE9/JScQFAqWzk7DJTlNM0ZTrCa6k52v2hn8UhoymYOGn1c2paEL6QQ==",
+      "type": "package",
+      "path": "strictemit/2.7.1",
       "files": [
         ".signature.p7s",
         "lib/net45/StrictEmit.dll",
@@ -1526,12 +1837,365 @@
         "src/StrictEmit/ILGeneratorExtensions.Meta.cs",
         "src/StrictEmit/ILGeneratorExtensions.Objects.cs",
         "src/StrictEmit/ILGeneratorExtensions.Pointers.cs",
+        "src/StrictEmit/ILGeneratorExtensions.Properties.cs",
         "src/StrictEmit/ILGeneratorExtensions.Utility.cs",
         "src/StrictEmit/ILGeneratorExtensions.Values.cs",
         "src/StrictEmit/ILGeneratorExtensions.Variables.cs",
         "src/StrictEmit/StrictEmit.csproj",
-        "strictemit.2.4.2.nupkg.sha512",
+        "strictemit.2.7.1.nupkg.sha512",
         "strictemit.nuspec"
+      ]
+    },
+    "System.Collections/4.0.11": {
+      "sha512": "YUJGz6eFKqS0V//mLt25vFGrrCvOnsXjlvFQs+KimpwNxug9x0Pzy4PlFMU3Q2IzqAa9G2L4LsK3+9vCBK7oTg==",
+      "type": "package",
+      "path": "system.collections/4.0.11",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Collections.dll",
+        "ref/netcore50/System.Collections.xml",
+        "ref/netcore50/de/System.Collections.xml",
+        "ref/netcore50/es/System.Collections.xml",
+        "ref/netcore50/fr/System.Collections.xml",
+        "ref/netcore50/it/System.Collections.xml",
+        "ref/netcore50/ja/System.Collections.xml",
+        "ref/netcore50/ko/System.Collections.xml",
+        "ref/netcore50/ru/System.Collections.xml",
+        "ref/netcore50/zh-hans/System.Collections.xml",
+        "ref/netcore50/zh-hant/System.Collections.xml",
+        "ref/netstandard1.0/System.Collections.dll",
+        "ref/netstandard1.0/System.Collections.xml",
+        "ref/netstandard1.0/de/System.Collections.xml",
+        "ref/netstandard1.0/es/System.Collections.xml",
+        "ref/netstandard1.0/fr/System.Collections.xml",
+        "ref/netstandard1.0/it/System.Collections.xml",
+        "ref/netstandard1.0/ja/System.Collections.xml",
+        "ref/netstandard1.0/ko/System.Collections.xml",
+        "ref/netstandard1.0/ru/System.Collections.xml",
+        "ref/netstandard1.0/zh-hans/System.Collections.xml",
+        "ref/netstandard1.0/zh-hant/System.Collections.xml",
+        "ref/netstandard1.3/System.Collections.dll",
+        "ref/netstandard1.3/System.Collections.xml",
+        "ref/netstandard1.3/de/System.Collections.xml",
+        "ref/netstandard1.3/es/System.Collections.xml",
+        "ref/netstandard1.3/fr/System.Collections.xml",
+        "ref/netstandard1.3/it/System.Collections.xml",
+        "ref/netstandard1.3/ja/System.Collections.xml",
+        "ref/netstandard1.3/ko/System.Collections.xml",
+        "ref/netstandard1.3/ru/System.Collections.xml",
+        "ref/netstandard1.3/zh-hans/System.Collections.xml",
+        "ref/netstandard1.3/zh-hant/System.Collections.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.collections.4.0.11.nupkg.sha512",
+        "system.collections.nuspec"
+      ]
+    },
+    "System.Collections.Concurrent/4.0.12": {
+      "sha512": "2gBcbb3drMLgxlI0fBfxMA31ec6AEyYCHygGse4vxceJan8mRIWeKJ24BFzN7+bi/NFTgdIgufzb94LWO5EERQ==",
+      "type": "package",
+      "path": "system.collections.concurrent/4.0.12",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Collections.Concurrent.dll",
+        "lib/netstandard1.3/System.Collections.Concurrent.dll",
+        "lib/portable-net45+win8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Collections.Concurrent.dll",
+        "ref/netcore50/System.Collections.Concurrent.xml",
+        "ref/netcore50/de/System.Collections.Concurrent.xml",
+        "ref/netcore50/es/System.Collections.Concurrent.xml",
+        "ref/netcore50/fr/System.Collections.Concurrent.xml",
+        "ref/netcore50/it/System.Collections.Concurrent.xml",
+        "ref/netcore50/ja/System.Collections.Concurrent.xml",
+        "ref/netcore50/ko/System.Collections.Concurrent.xml",
+        "ref/netcore50/ru/System.Collections.Concurrent.xml",
+        "ref/netcore50/zh-hans/System.Collections.Concurrent.xml",
+        "ref/netcore50/zh-hant/System.Collections.Concurrent.xml",
+        "ref/netstandard1.1/System.Collections.Concurrent.dll",
+        "ref/netstandard1.1/System.Collections.Concurrent.xml",
+        "ref/netstandard1.1/de/System.Collections.Concurrent.xml",
+        "ref/netstandard1.1/es/System.Collections.Concurrent.xml",
+        "ref/netstandard1.1/fr/System.Collections.Concurrent.xml",
+        "ref/netstandard1.1/it/System.Collections.Concurrent.xml",
+        "ref/netstandard1.1/ja/System.Collections.Concurrent.xml",
+        "ref/netstandard1.1/ko/System.Collections.Concurrent.xml",
+        "ref/netstandard1.1/ru/System.Collections.Concurrent.xml",
+        "ref/netstandard1.1/zh-hans/System.Collections.Concurrent.xml",
+        "ref/netstandard1.1/zh-hant/System.Collections.Concurrent.xml",
+        "ref/netstandard1.3/System.Collections.Concurrent.dll",
+        "ref/netstandard1.3/System.Collections.Concurrent.xml",
+        "ref/netstandard1.3/de/System.Collections.Concurrent.xml",
+        "ref/netstandard1.3/es/System.Collections.Concurrent.xml",
+        "ref/netstandard1.3/fr/System.Collections.Concurrent.xml",
+        "ref/netstandard1.3/it/System.Collections.Concurrent.xml",
+        "ref/netstandard1.3/ja/System.Collections.Concurrent.xml",
+        "ref/netstandard1.3/ko/System.Collections.Concurrent.xml",
+        "ref/netstandard1.3/ru/System.Collections.Concurrent.xml",
+        "ref/netstandard1.3/zh-hans/System.Collections.Concurrent.xml",
+        "ref/netstandard1.3/zh-hant/System.Collections.Concurrent.xml",
+        "ref/portable-net45+win8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.collections.concurrent.4.0.12.nupkg.sha512",
+        "system.collections.concurrent.nuspec"
+      ]
+    },
+    "System.Diagnostics.Debug/4.0.11": {
+      "sha512": "w5U95fVKHY4G8ASs/K5iK3J5LY+/dLFd4vKejsnI/ZhBsWS9hQakfx3Zr7lRWKg4tAw9r4iktyvsTagWkqYCiw==",
+      "type": "package",
+      "path": "system.diagnostics.debug/4.0.11",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Diagnostics.Debug.dll",
+        "ref/netcore50/System.Diagnostics.Debug.xml",
+        "ref/netcore50/de/System.Diagnostics.Debug.xml",
+        "ref/netcore50/es/System.Diagnostics.Debug.xml",
+        "ref/netcore50/fr/System.Diagnostics.Debug.xml",
+        "ref/netcore50/it/System.Diagnostics.Debug.xml",
+        "ref/netcore50/ja/System.Diagnostics.Debug.xml",
+        "ref/netcore50/ko/System.Diagnostics.Debug.xml",
+        "ref/netcore50/ru/System.Diagnostics.Debug.xml",
+        "ref/netcore50/zh-hans/System.Diagnostics.Debug.xml",
+        "ref/netcore50/zh-hant/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.0/System.Diagnostics.Debug.dll",
+        "ref/netstandard1.0/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.0/de/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.0/es/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.0/fr/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.0/it/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.0/ja/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.0/ko/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.0/ru/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.0/zh-hans/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.0/zh-hant/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.3/System.Diagnostics.Debug.dll",
+        "ref/netstandard1.3/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.3/de/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.3/es/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.3/fr/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.3/it/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.3/ja/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.3/ko/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.3/ru/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.3/zh-hans/System.Diagnostics.Debug.xml",
+        "ref/netstandard1.3/zh-hant/System.Diagnostics.Debug.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.diagnostics.debug.4.0.11.nupkg.sha512",
+        "system.diagnostics.debug.nuspec"
+      ]
+    },
+    "System.Diagnostics.Tracing/4.1.0": {
+      "sha512": "vDN1PoMZCkkdNjvZLql592oYJZgS7URcJzJ7bxeBgGtx5UtR5leNm49VmfHGqIffX4FKacHbI3H6UyNSHQknBg==",
+      "type": "package",
+      "path": "system.diagnostics.tracing/4.1.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net462/System.Diagnostics.Tracing.dll",
+        "lib/portable-net45+win8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net462/System.Diagnostics.Tracing.dll",
+        "ref/netcore50/System.Diagnostics.Tracing.dll",
+        "ref/netcore50/System.Diagnostics.Tracing.xml",
+        "ref/netcore50/de/System.Diagnostics.Tracing.xml",
+        "ref/netcore50/es/System.Diagnostics.Tracing.xml",
+        "ref/netcore50/fr/System.Diagnostics.Tracing.xml",
+        "ref/netcore50/it/System.Diagnostics.Tracing.xml",
+        "ref/netcore50/ja/System.Diagnostics.Tracing.xml",
+        "ref/netcore50/ko/System.Diagnostics.Tracing.xml",
+        "ref/netcore50/ru/System.Diagnostics.Tracing.xml",
+        "ref/netcore50/zh-hans/System.Diagnostics.Tracing.xml",
+        "ref/netcore50/zh-hant/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.1/System.Diagnostics.Tracing.dll",
+        "ref/netstandard1.1/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.1/de/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.1/es/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.1/fr/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.1/it/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.1/ja/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.1/ko/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.1/ru/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.1/zh-hans/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.1/zh-hant/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.2/System.Diagnostics.Tracing.dll",
+        "ref/netstandard1.2/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.2/de/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.2/es/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.2/fr/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.2/it/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.2/ja/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.2/ko/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.2/ru/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.2/zh-hans/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.2/zh-hant/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.3/System.Diagnostics.Tracing.dll",
+        "ref/netstandard1.3/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.3/de/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.3/es/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.3/fr/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.3/it/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.3/ja/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.3/ko/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.3/ru/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.3/zh-hans/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.3/zh-hant/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.5/System.Diagnostics.Tracing.dll",
+        "ref/netstandard1.5/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.5/de/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.5/es/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.5/fr/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.5/it/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.5/ja/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.5/ko/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.5/ru/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.5/zh-hans/System.Diagnostics.Tracing.xml",
+        "ref/netstandard1.5/zh-hant/System.Diagnostics.Tracing.xml",
+        "ref/portable-net45+win8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.diagnostics.tracing.4.1.0.nupkg.sha512",
+        "system.diagnostics.tracing.nuspec"
+      ]
+    },
+    "System.Globalization/4.0.11": {
+      "sha512": "B95h0YLEL2oSnwF/XjqSWKnwKOy/01VWkNlsCeMTFJLLabflpGV26nK164eRs5GiaRSBGpOxQ3pKoSnnyZN5pg==",
+      "type": "package",
+      "path": "system.globalization/4.0.11",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Globalization.dll",
+        "ref/netcore50/System.Globalization.xml",
+        "ref/netcore50/de/System.Globalization.xml",
+        "ref/netcore50/es/System.Globalization.xml",
+        "ref/netcore50/fr/System.Globalization.xml",
+        "ref/netcore50/it/System.Globalization.xml",
+        "ref/netcore50/ja/System.Globalization.xml",
+        "ref/netcore50/ko/System.Globalization.xml",
+        "ref/netcore50/ru/System.Globalization.xml",
+        "ref/netcore50/zh-hans/System.Globalization.xml",
+        "ref/netcore50/zh-hant/System.Globalization.xml",
+        "ref/netstandard1.0/System.Globalization.dll",
+        "ref/netstandard1.0/System.Globalization.xml",
+        "ref/netstandard1.0/de/System.Globalization.xml",
+        "ref/netstandard1.0/es/System.Globalization.xml",
+        "ref/netstandard1.0/fr/System.Globalization.xml",
+        "ref/netstandard1.0/it/System.Globalization.xml",
+        "ref/netstandard1.0/ja/System.Globalization.xml",
+        "ref/netstandard1.0/ko/System.Globalization.xml",
+        "ref/netstandard1.0/ru/System.Globalization.xml",
+        "ref/netstandard1.0/zh-hans/System.Globalization.xml",
+        "ref/netstandard1.0/zh-hant/System.Globalization.xml",
+        "ref/netstandard1.3/System.Globalization.dll",
+        "ref/netstandard1.3/System.Globalization.xml",
+        "ref/netstandard1.3/de/System.Globalization.xml",
+        "ref/netstandard1.3/es/System.Globalization.xml",
+        "ref/netstandard1.3/fr/System.Globalization.xml",
+        "ref/netstandard1.3/it/System.Globalization.xml",
+        "ref/netstandard1.3/ja/System.Globalization.xml",
+        "ref/netstandard1.3/ko/System.Globalization.xml",
+        "ref/netstandard1.3/ru/System.Globalization.xml",
+        "ref/netstandard1.3/zh-hans/System.Globalization.xml",
+        "ref/netstandard1.3/zh-hant/System.Globalization.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.globalization.4.0.11.nupkg.sha512",
+        "system.globalization.nuspec"
       ]
     },
     "System.IO/4.3.0": {
@@ -1611,6 +2275,149 @@
         "ref/xamarinwatchos10/_._",
         "system.io.4.3.0.nupkg.sha512",
         "system.io.nuspec"
+      ]
+    },
+    "System.IO.FileSystem/4.0.1": {
+      "sha512": "IBErlVq5jOggAD69bg1t0pJcHaDbJbWNUZTPI96fkYWzwYbN6D9wRHMULLDd9dHsl7C2YsxXL31LMfPI1SWt8w==",
+      "type": "package",
+      "path": "system.io.filesystem/4.0.1",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.IO.FileSystem.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.IO.FileSystem.dll",
+        "ref/netstandard1.3/System.IO.FileSystem.dll",
+        "ref/netstandard1.3/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/de/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/es/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/fr/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/it/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/ja/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/ko/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/ru/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/zh-hans/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/zh-hant/System.IO.FileSystem.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.io.filesystem.4.0.1.nupkg.sha512",
+        "system.io.filesystem.nuspec"
+      ]
+    },
+    "System.IO.FileSystem.Primitives/4.0.1": {
+      "sha512": "kWkKD203JJKxJeE74p8aF8y4Qc9r9WQx4C0cHzHPrY3fv/L/IhWnyCHaFJ3H1QPOH6A93whlQ2vG5nHlBDvzWQ==",
+      "type": "package",
+      "path": "system.io.filesystem.primitives/4.0.1",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.IO.FileSystem.Primitives.dll",
+        "lib/netstandard1.3/System.IO.FileSystem.Primitives.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.IO.FileSystem.Primitives.dll",
+        "ref/netstandard1.3/System.IO.FileSystem.Primitives.dll",
+        "ref/netstandard1.3/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/de/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/es/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/fr/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/it/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/ja/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/ko/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/ru/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/zh-hans/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/zh-hant/System.IO.FileSystem.Primitives.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.io.filesystem.primitives.4.0.1.nupkg.sha512",
+        "system.io.filesystem.primitives.nuspec"
+      ]
+    },
+    "System.Linq/4.1.0": {
+      "sha512": "bQ0iYFOQI0nuTnt+NQADns6ucV4DUvMdwN6CbkB1yj8i7arTGiTN5eok1kQwdnnNWSDZfIUySQY+J3d5KjWn0g==",
+      "type": "package",
+      "path": "system.linq/4.1.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net463/System.Linq.dll",
+        "lib/netcore50/System.Linq.dll",
+        "lib/netstandard1.6/System.Linq.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net463/System.Linq.dll",
+        "ref/netcore50/System.Linq.dll",
+        "ref/netcore50/System.Linq.xml",
+        "ref/netcore50/de/System.Linq.xml",
+        "ref/netcore50/es/System.Linq.xml",
+        "ref/netcore50/fr/System.Linq.xml",
+        "ref/netcore50/it/System.Linq.xml",
+        "ref/netcore50/ja/System.Linq.xml",
+        "ref/netcore50/ko/System.Linq.xml",
+        "ref/netcore50/ru/System.Linq.xml",
+        "ref/netcore50/zh-hans/System.Linq.xml",
+        "ref/netcore50/zh-hant/System.Linq.xml",
+        "ref/netstandard1.0/System.Linq.dll",
+        "ref/netstandard1.0/System.Linq.xml",
+        "ref/netstandard1.0/de/System.Linq.xml",
+        "ref/netstandard1.0/es/System.Linq.xml",
+        "ref/netstandard1.0/fr/System.Linq.xml",
+        "ref/netstandard1.0/it/System.Linq.xml",
+        "ref/netstandard1.0/ja/System.Linq.xml",
+        "ref/netstandard1.0/ko/System.Linq.xml",
+        "ref/netstandard1.0/ru/System.Linq.xml",
+        "ref/netstandard1.0/zh-hans/System.Linq.xml",
+        "ref/netstandard1.0/zh-hant/System.Linq.xml",
+        "ref/netstandard1.6/System.Linq.dll",
+        "ref/netstandard1.6/System.Linq.xml",
+        "ref/netstandard1.6/de/System.Linq.xml",
+        "ref/netstandard1.6/es/System.Linq.xml",
+        "ref/netstandard1.6/fr/System.Linq.xml",
+        "ref/netstandard1.6/it/System.Linq.xml",
+        "ref/netstandard1.6/ja/System.Linq.xml",
+        "ref/netstandard1.6/ko/System.Linq.xml",
+        "ref/netstandard1.6/ru/System.Linq.xml",
+        "ref/netstandard1.6/zh-hans/System.Linq.xml",
+        "ref/netstandard1.6/zh-hant/System.Linq.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.linq.4.1.0.nupkg.sha512",
+        "system.linq.nuspec"
       ]
     },
     "System.Reflection/4.3.0": {
@@ -1824,6 +2631,61 @@
         "system.reflection.primitives.nuspec"
       ]
     },
+    "System.Resources.ResourceManager/4.0.1": {
+      "sha512": "TxwVeUNoTgUOdQ09gfTjvW411MF+w9MBYL7AtNVc+HtBCFlutPLhUCdZjNkjbhj3bNQWMdHboF0KIWEOjJssbA==",
+      "type": "package",
+      "path": "system.resources.resourcemanager/4.0.1",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Resources.ResourceManager.dll",
+        "ref/netcore50/System.Resources.ResourceManager.xml",
+        "ref/netcore50/de/System.Resources.ResourceManager.xml",
+        "ref/netcore50/es/System.Resources.ResourceManager.xml",
+        "ref/netcore50/fr/System.Resources.ResourceManager.xml",
+        "ref/netcore50/it/System.Resources.ResourceManager.xml",
+        "ref/netcore50/ja/System.Resources.ResourceManager.xml",
+        "ref/netcore50/ko/System.Resources.ResourceManager.xml",
+        "ref/netcore50/ru/System.Resources.ResourceManager.xml",
+        "ref/netcore50/zh-hans/System.Resources.ResourceManager.xml",
+        "ref/netcore50/zh-hant/System.Resources.ResourceManager.xml",
+        "ref/netstandard1.0/System.Resources.ResourceManager.dll",
+        "ref/netstandard1.0/System.Resources.ResourceManager.xml",
+        "ref/netstandard1.0/de/System.Resources.ResourceManager.xml",
+        "ref/netstandard1.0/es/System.Resources.ResourceManager.xml",
+        "ref/netstandard1.0/fr/System.Resources.ResourceManager.xml",
+        "ref/netstandard1.0/it/System.Resources.ResourceManager.xml",
+        "ref/netstandard1.0/ja/System.Resources.ResourceManager.xml",
+        "ref/netstandard1.0/ko/System.Resources.ResourceManager.xml",
+        "ref/netstandard1.0/ru/System.Resources.ResourceManager.xml",
+        "ref/netstandard1.0/zh-hans/System.Resources.ResourceManager.xml",
+        "ref/netstandard1.0/zh-hant/System.Resources.ResourceManager.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.resources.resourcemanager.4.0.1.nupkg.sha512",
+        "system.resources.resourcemanager.nuspec"
+      ]
+    },
     "System.Runtime/4.3.0": {
       "sha512": "JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
       "type": "package",
@@ -1914,14 +2776,16 @@
         "system.runtime.nuspec"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/4.4.0": {
-      "sha512": "oXzVVwwsT4sfWRzOEKaHn6GLleNZ7gGTjk+gHgLuXj3M61p3TjoAvWmZDJDeDuf0WX8UW4ew0MTJbJOmCSZrVA==",
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "sha512": "k3rsGIl3aG0AJVIxs8z2mTvF4BSFJtkHSYbnhgcdZX9L80Hr5U8/VYHlci26mJz3gZSFX1JjRyEQZhbDnBb4tw==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/4.4.0",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
       "files": [
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
@@ -1930,10 +2794,402 @@
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "System.Runtime.Extensions/4.1.0": {
+      "sha512": "CUOHjTT/vgP0qGW22U4/hDlOqXmcPq5YicBaXdUR2UiUoLwBT+olO6we4DVbq57jeX5uXH2uerVZhf0qGj+sVQ==",
+      "type": "package",
+      "path": "system.runtime.extensions/4.1.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net462/System.Runtime.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net462/System.Runtime.Extensions.dll",
+        "ref/netcore50/System.Runtime.Extensions.dll",
+        "ref/netcore50/System.Runtime.Extensions.xml",
+        "ref/netcore50/de/System.Runtime.Extensions.xml",
+        "ref/netcore50/es/System.Runtime.Extensions.xml",
+        "ref/netcore50/fr/System.Runtime.Extensions.xml",
+        "ref/netcore50/it/System.Runtime.Extensions.xml",
+        "ref/netcore50/ja/System.Runtime.Extensions.xml",
+        "ref/netcore50/ko/System.Runtime.Extensions.xml",
+        "ref/netcore50/ru/System.Runtime.Extensions.xml",
+        "ref/netcore50/zh-hans/System.Runtime.Extensions.xml",
+        "ref/netcore50/zh-hant/System.Runtime.Extensions.xml",
+        "ref/netstandard1.0/System.Runtime.Extensions.dll",
+        "ref/netstandard1.0/System.Runtime.Extensions.xml",
+        "ref/netstandard1.0/de/System.Runtime.Extensions.xml",
+        "ref/netstandard1.0/es/System.Runtime.Extensions.xml",
+        "ref/netstandard1.0/fr/System.Runtime.Extensions.xml",
+        "ref/netstandard1.0/it/System.Runtime.Extensions.xml",
+        "ref/netstandard1.0/ja/System.Runtime.Extensions.xml",
+        "ref/netstandard1.0/ko/System.Runtime.Extensions.xml",
+        "ref/netstandard1.0/ru/System.Runtime.Extensions.xml",
+        "ref/netstandard1.0/zh-hans/System.Runtime.Extensions.xml",
+        "ref/netstandard1.0/zh-hant/System.Runtime.Extensions.xml",
+        "ref/netstandard1.3/System.Runtime.Extensions.dll",
+        "ref/netstandard1.3/System.Runtime.Extensions.xml",
+        "ref/netstandard1.3/de/System.Runtime.Extensions.xml",
+        "ref/netstandard1.3/es/System.Runtime.Extensions.xml",
+        "ref/netstandard1.3/fr/System.Runtime.Extensions.xml",
+        "ref/netstandard1.3/it/System.Runtime.Extensions.xml",
+        "ref/netstandard1.3/ja/System.Runtime.Extensions.xml",
+        "ref/netstandard1.3/ko/System.Runtime.Extensions.xml",
+        "ref/netstandard1.3/ru/System.Runtime.Extensions.xml",
+        "ref/netstandard1.3/zh-hans/System.Runtime.Extensions.xml",
+        "ref/netstandard1.3/zh-hant/System.Runtime.Extensions.xml",
+        "ref/netstandard1.5/System.Runtime.Extensions.dll",
+        "ref/netstandard1.5/System.Runtime.Extensions.xml",
+        "ref/netstandard1.5/de/System.Runtime.Extensions.xml",
+        "ref/netstandard1.5/es/System.Runtime.Extensions.xml",
+        "ref/netstandard1.5/fr/System.Runtime.Extensions.xml",
+        "ref/netstandard1.5/it/System.Runtime.Extensions.xml",
+        "ref/netstandard1.5/ja/System.Runtime.Extensions.xml",
+        "ref/netstandard1.5/ko/System.Runtime.Extensions.xml",
+        "ref/netstandard1.5/ru/System.Runtime.Extensions.xml",
+        "ref/netstandard1.5/zh-hans/System.Runtime.Extensions.xml",
+        "ref/netstandard1.5/zh-hant/System.Runtime.Extensions.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.runtime.extensions.4.1.0.nupkg.sha512",
+        "system.runtime.extensions.nuspec"
+      ]
+    },
+    "System.Runtime.Handles/4.0.1": {
+      "sha512": "nCJvEKguXEvk2ymk1gqj625vVnlK3/xdGzx0vOKicQkoquaTBJTP13AIYkocSUwHCLNBwUbXTqTWGDxBTWpt7g==",
+      "type": "package",
+      "path": "system.runtime.handles/4.0.1",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/_._",
+        "ref/netstandard1.3/System.Runtime.Handles.dll",
+        "ref/netstandard1.3/System.Runtime.Handles.xml",
+        "ref/netstandard1.3/de/System.Runtime.Handles.xml",
+        "ref/netstandard1.3/es/System.Runtime.Handles.xml",
+        "ref/netstandard1.3/fr/System.Runtime.Handles.xml",
+        "ref/netstandard1.3/it/System.Runtime.Handles.xml",
+        "ref/netstandard1.3/ja/System.Runtime.Handles.xml",
+        "ref/netstandard1.3/ko/System.Runtime.Handles.xml",
+        "ref/netstandard1.3/ru/System.Runtime.Handles.xml",
+        "ref/netstandard1.3/zh-hans/System.Runtime.Handles.xml",
+        "ref/netstandard1.3/zh-hant/System.Runtime.Handles.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.runtime.handles.4.0.1.nupkg.sha512",
+        "system.runtime.handles.nuspec"
+      ]
+    },
+    "System.Runtime.InteropServices/4.1.0": {
+      "sha512": "16eu3kjHS633yYdkjwShDHZLRNMKVi/s0bY8ODiqJ2RfMhDMAwxZaUaWVnZ2P71kr/or+X9o/xFWtNqz8ivieQ==",
+      "type": "package",
+      "path": "system.runtime.interopservices/4.1.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net462/System.Runtime.InteropServices.dll",
+        "lib/portable-net45+win8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net462/System.Runtime.InteropServices.dll",
+        "ref/netcore50/System.Runtime.InteropServices.dll",
+        "ref/netcore50/System.Runtime.InteropServices.xml",
+        "ref/netcore50/de/System.Runtime.InteropServices.xml",
+        "ref/netcore50/es/System.Runtime.InteropServices.xml",
+        "ref/netcore50/fr/System.Runtime.InteropServices.xml",
+        "ref/netcore50/it/System.Runtime.InteropServices.xml",
+        "ref/netcore50/ja/System.Runtime.InteropServices.xml",
+        "ref/netcore50/ko/System.Runtime.InteropServices.xml",
+        "ref/netcore50/ru/System.Runtime.InteropServices.xml",
+        "ref/netcore50/zh-hans/System.Runtime.InteropServices.xml",
+        "ref/netcore50/zh-hant/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/System.Runtime.InteropServices.dll",
+        "ref/netstandard1.1/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/de/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/es/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/fr/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/it/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/ja/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/ko/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/ru/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/zh-hans/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/zh-hant/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/System.Runtime.InteropServices.dll",
+        "ref/netstandard1.2/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/de/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/es/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/fr/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/it/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/ja/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/ko/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/ru/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/zh-hans/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/zh-hant/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/System.Runtime.InteropServices.dll",
+        "ref/netstandard1.3/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/de/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/es/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/fr/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/it/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/ja/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/ko/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/ru/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/zh-hans/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/zh-hant/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/System.Runtime.InteropServices.dll",
+        "ref/netstandard1.5/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/de/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/es/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/fr/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/it/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/ja/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/ko/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/ru/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/zh-hans/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/zh-hant/System.Runtime.InteropServices.xml",
+        "ref/portable-net45+win8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.runtime.interopservices.4.1.0.nupkg.sha512",
+        "system.runtime.interopservices.nuspec"
+      ]
+    },
+    "System.Runtime.Numerics/4.0.1": {
+      "sha512": "+XbKFuzdmLP3d1o9pdHu2nxjNr2OEPqGzKeegPLCUMM71a0t50A/rOcIRmGs9wR7a8KuHX6hYs/7/TymIGLNqg==",
+      "type": "package",
+      "path": "system.runtime.numerics/4.0.1",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Runtime.Numerics.dll",
+        "lib/netstandard1.3/System.Runtime.Numerics.dll",
+        "lib/portable-net45+win8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Runtime.Numerics.dll",
+        "ref/netcore50/System.Runtime.Numerics.xml",
+        "ref/netcore50/de/System.Runtime.Numerics.xml",
+        "ref/netcore50/es/System.Runtime.Numerics.xml",
+        "ref/netcore50/fr/System.Runtime.Numerics.xml",
+        "ref/netcore50/it/System.Runtime.Numerics.xml",
+        "ref/netcore50/ja/System.Runtime.Numerics.xml",
+        "ref/netcore50/ko/System.Runtime.Numerics.xml",
+        "ref/netcore50/ru/System.Runtime.Numerics.xml",
+        "ref/netcore50/zh-hans/System.Runtime.Numerics.xml",
+        "ref/netcore50/zh-hant/System.Runtime.Numerics.xml",
+        "ref/netstandard1.1/System.Runtime.Numerics.dll",
+        "ref/netstandard1.1/System.Runtime.Numerics.xml",
+        "ref/netstandard1.1/de/System.Runtime.Numerics.xml",
+        "ref/netstandard1.1/es/System.Runtime.Numerics.xml",
+        "ref/netstandard1.1/fr/System.Runtime.Numerics.xml",
+        "ref/netstandard1.1/it/System.Runtime.Numerics.xml",
+        "ref/netstandard1.1/ja/System.Runtime.Numerics.xml",
+        "ref/netstandard1.1/ko/System.Runtime.Numerics.xml",
+        "ref/netstandard1.1/ru/System.Runtime.Numerics.xml",
+        "ref/netstandard1.1/zh-hans/System.Runtime.Numerics.xml",
+        "ref/netstandard1.1/zh-hant/System.Runtime.Numerics.xml",
+        "ref/portable-net45+win8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.runtime.numerics.4.0.1.nupkg.sha512",
+        "system.runtime.numerics.nuspec"
+      ]
+    },
+    "System.Security.Cryptography.Algorithms/4.2.0": {
+      "sha512": "8JQFxbLVdrtIOKMDN38Fn0GWnqYZw/oMlwOUG/qz1jqChvyZlnUmu+0s7wLx7JYua/nAXoESpHA3iw11QFWhXg==",
+      "type": "package",
+      "path": "system.security.cryptography.algorithms/4.2.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Security.Cryptography.Algorithms.dll",
+        "lib/net461/System.Security.Cryptography.Algorithms.dll",
+        "lib/net463/System.Security.Cryptography.Algorithms.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Security.Cryptography.Algorithms.dll",
+        "ref/net461/System.Security.Cryptography.Algorithms.dll",
+        "ref/net463/System.Security.Cryptography.Algorithms.dll",
+        "ref/netstandard1.3/System.Security.Cryptography.Algorithms.dll",
+        "ref/netstandard1.4/System.Security.Cryptography.Algorithms.dll",
+        "ref/netstandard1.6/System.Security.Cryptography.Algorithms.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll",
+        "runtimes/win/lib/net46/System.Security.Cryptography.Algorithms.dll",
+        "runtimes/win/lib/net461/System.Security.Cryptography.Algorithms.dll",
+        "runtimes/win/lib/net463/System.Security.Cryptography.Algorithms.dll",
+        "runtimes/win/lib/netcore50/System.Security.Cryptography.Algorithms.dll",
+        "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll",
+        "system.security.cryptography.algorithms.4.2.0.nupkg.sha512",
+        "system.security.cryptography.algorithms.nuspec"
+      ]
+    },
+    "System.Security.Cryptography.Csp/4.0.0": {
+      "sha512": "/i1Usuo4PgAqgbPNC0NjbO3jPW//BoBlTpcWFD1EHVbidH21y4c1ap5bbEMSGAXjAShhMH4abi/K8fILrnu4BQ==",
+      "type": "package",
+      "path": "system.security.cryptography.csp/4.0.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Security.Cryptography.Csp.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Security.Cryptography.Csp.dll",
+        "ref/netstandard1.3/System.Security.Cryptography.Csp.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.Csp.dll",
+        "runtimes/win/lib/net46/System.Security.Cryptography.Csp.dll",
+        "runtimes/win/lib/netcore50/_._",
+        "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.Csp.dll",
+        "system.security.cryptography.csp.4.0.0.nupkg.sha512",
+        "system.security.cryptography.csp.nuspec"
+      ]
+    },
+    "System.Security.Cryptography.Encoding/4.0.0": {
+      "sha512": "FbKgE5MbxSQMPcSVRgwM6bXN3GtyAh04NkV8E5zKCBE26X0vYW0UtTa2FIgkH33WVqBVxRgxljlVYumWtU+HcQ==",
+      "type": "package",
+      "path": "system.security.cryptography.encoding/4.0.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Security.Cryptography.Encoding.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Security.Cryptography.Encoding.dll",
+        "ref/netstandard1.3/System.Security.Cryptography.Encoding.dll",
+        "ref/netstandard1.3/System.Security.Cryptography.Encoding.xml",
+        "ref/netstandard1.3/de/System.Security.Cryptography.Encoding.xml",
+        "ref/netstandard1.3/es/System.Security.Cryptography.Encoding.xml",
+        "ref/netstandard1.3/fr/System.Security.Cryptography.Encoding.xml",
+        "ref/netstandard1.3/it/System.Security.Cryptography.Encoding.xml",
+        "ref/netstandard1.3/ja/System.Security.Cryptography.Encoding.xml",
+        "ref/netstandard1.3/ko/System.Security.Cryptography.Encoding.xml",
+        "ref/netstandard1.3/ru/System.Security.Cryptography.Encoding.xml",
+        "ref/netstandard1.3/zh-hans/System.Security.Cryptography.Encoding.xml",
+        "ref/netstandard1.3/zh-hant/System.Security.Cryptography.Encoding.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.Encoding.dll",
+        "runtimes/win/lib/net46/System.Security.Cryptography.Encoding.dll",
+        "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.Encoding.dll",
+        "system.security.cryptography.encoding.4.0.0.nupkg.sha512",
+        "system.security.cryptography.encoding.nuspec"
+      ]
+    },
+    "System.Security.Cryptography.Primitives/4.0.0": {
+      "sha512": "Wkd7QryWYjkQclX0bngpntW5HSlMzeJU24UaLJQ7YTfI8ydAVAaU2J+HXLLABOVJlKTVvAeL0Aj39VeTe7L+oA==",
+      "type": "package",
+      "path": "system.security.cryptography.primitives/4.0.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Security.Cryptography.Primitives.dll",
+        "lib/netstandard1.3/System.Security.Cryptography.Primitives.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Security.Cryptography.Primitives.dll",
+        "ref/netstandard1.3/System.Security.Cryptography.Primitives.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.security.cryptography.primitives.4.0.0.nupkg.sha512",
+        "system.security.cryptography.primitives.nuspec"
       ]
     },
     "System.Text.Encoding/4.3.0": {
@@ -2002,6 +3258,75 @@
         "system.text.encoding.nuspec"
       ]
     },
+    "System.Threading/4.0.11": {
+      "sha512": "N+3xqIcg3VDKyjwwCGaZ9HawG9aC6cSDI+s7ROma310GQo8vilFZa86hqKppwTHleR/G0sfOzhvgnUxWCR/DrQ==",
+      "type": "package",
+      "path": "system.threading/4.0.11",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Threading.dll",
+        "lib/netstandard1.3/System.Threading.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Threading.dll",
+        "ref/netcore50/System.Threading.xml",
+        "ref/netcore50/de/System.Threading.xml",
+        "ref/netcore50/es/System.Threading.xml",
+        "ref/netcore50/fr/System.Threading.xml",
+        "ref/netcore50/it/System.Threading.xml",
+        "ref/netcore50/ja/System.Threading.xml",
+        "ref/netcore50/ko/System.Threading.xml",
+        "ref/netcore50/ru/System.Threading.xml",
+        "ref/netcore50/zh-hans/System.Threading.xml",
+        "ref/netcore50/zh-hant/System.Threading.xml",
+        "ref/netstandard1.0/System.Threading.dll",
+        "ref/netstandard1.0/System.Threading.xml",
+        "ref/netstandard1.0/de/System.Threading.xml",
+        "ref/netstandard1.0/es/System.Threading.xml",
+        "ref/netstandard1.0/fr/System.Threading.xml",
+        "ref/netstandard1.0/it/System.Threading.xml",
+        "ref/netstandard1.0/ja/System.Threading.xml",
+        "ref/netstandard1.0/ko/System.Threading.xml",
+        "ref/netstandard1.0/ru/System.Threading.xml",
+        "ref/netstandard1.0/zh-hans/System.Threading.xml",
+        "ref/netstandard1.0/zh-hant/System.Threading.xml",
+        "ref/netstandard1.3/System.Threading.dll",
+        "ref/netstandard1.3/System.Threading.xml",
+        "ref/netstandard1.3/de/System.Threading.xml",
+        "ref/netstandard1.3/es/System.Threading.xml",
+        "ref/netstandard1.3/fr/System.Threading.xml",
+        "ref/netstandard1.3/it/System.Threading.xml",
+        "ref/netstandard1.3/ja/System.Threading.xml",
+        "ref/netstandard1.3/ko/System.Threading.xml",
+        "ref/netstandard1.3/ru/System.Threading.xml",
+        "ref/netstandard1.3/zh-hans/System.Threading.xml",
+        "ref/netstandard1.3/zh-hant/System.Threading.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Threading.dll",
+        "system.threading.4.0.11.nupkg.sha512",
+        "system.threading.nuspec"
+      ]
+    },
     "System.Threading.Tasks/4.3.0": {
       "sha512": "LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
       "type": "package",
@@ -2068,10 +3393,10 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "System.ValueTuple/4.4.0": {
-      "sha512": "6FvjECwwsvwtdnm2uD91MlFEgId6C2SWsdZk23gFpynHQ9x5ruqjsfEadb0VNzpkEHDQ6cq31CXUv3ouT09EHA==",
+    "System.ValueTuple/4.5.0": {
+      "sha512": "xZtSZNEHGa+tGsKuP4sh257vxJ/yemShz4EusmomkynMzuEDDjVaErBNewpzEF6swUgbcrSQAX3ELsEp1zCOwA==",
       "type": "package",
-      "path": "system.valuetuple/4.4.0",
+      "path": "system.valuetuple/4.5.0",
       "files": [
         ".signature.p7s",
         "LICENSE.TXT",
@@ -2088,6 +3413,7 @@
         "lib/netstandard2.0/_._",
         "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
         "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
@@ -2095,18 +3421,16 @@
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net461/System.ValueTuple.dll",
-        "ref/net461/System.ValueTuple.xml",
         "ref/net47/System.ValueTuple.dll",
-        "ref/net47/System.ValueTuple.xml",
         "ref/netcoreapp2.0/_._",
         "ref/netstandard2.0/_._",
         "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
-        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "ref/uap10.0.16299/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.valuetuple.4.4.0.nupkg.sha512",
+        "system.valuetuple.4.5.0.nupkg.sha512",
         "system.valuetuple.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"

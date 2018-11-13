@@ -7,3 +7,7 @@ C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.ADL\obj\Release\netstanda
 C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.ADL\obj\Release\netstandard2.0\Lazarus.ADL.AssemblyInfo.cs
 C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.ADL\obj\Release\netstandard2.0\Lazarus.ADL.dll
 C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.ADL\obj\Release\netstandard2.0\Lazarus.ADL.pdb
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.ADL\bin\Release\netstandard2.0\AdvancedDLSupport.dll
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.ADL\bin\Release\netstandard2.0\AdvancedDLSupport.pdb
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.ADL\bin\Release\netstandard2.0\AdvancedDLSupport.xml
+C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.ADL\obj\Release\netstandard2.0\Lazarus.ADL.csproj.CopyComplete

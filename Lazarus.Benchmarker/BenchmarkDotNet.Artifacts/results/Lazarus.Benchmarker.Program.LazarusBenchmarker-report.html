@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Lazarus.Benchmarker.Program.LazarusBenchmarker</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.11.2, OS=Windows 10.0.17134.345 (1803/April2018Update/Redstone4)
+AMD FX-8370, 1 CPU, 8 logical and 4 physical cores
+Frequency=14318180 Hz, Resolution=69.8413 ns, Timer=HPET
+.NET Core SDK=2.1.402
+  [Host]     : .NET Core 2.1.4 (CoreCLR 4.6.26814.03, CoreFX 4.6.26814.02), 64bit RyuJIT
+  Job-NXYTOA : .NET Core 2.1.4 (CoreCLR 4.6.26814.03, CoreFX 4.6.26814.02), 64bit RyuJIT
+</code></pre>
+<pre><code>InvocationCount=1  UnrollFactor=1  
+</code></pre>
+
+<table>
+<thead><tr><th>       Method</th><th>  Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th> P95</th><th>Rank</th>
+</tr>
+</thead><tbody><tr><td>InvertMatrixByPtr</td><td>ADL, calli</td><td>89.29 ns</td><td>49.95 ns</td><td>145.7 ns</td><td>73.33 ns</td><td>562.2 ns</td><td>1</td>
+</tr><tr><td>InvertMatrixByValue</td><td>ADL, calli</td><td>443.00 ns</td><td>95.23 ns</td><td>277.8 ns</td><td>537.78 ns</td><td>1,026.7 ns</td><td>3</td>
+</tr><tr><td>InvertMatrixByPtr</td><td>ADL, delegates</td><td>477.31 ns</td><td>117.22 ns</td><td>336.3 ns</td><td>513.33 ns</td><td>1,002.2 ns</td><td>4</td>
+</tr><tr><td>InvertMatrixByValue</td><td>ADL, delegates</td><td>683.16 ns</td><td>111.06 ns</td><td>318.7 ns</td><td>611.11 ns</td><td>1,100.0 ns</td><td>5</td>
+</tr><tr><td>InvertMatrixByPtr</td><td>Rewritten</td><td>263.90 ns</td><td>99.94 ns</td><td>291.5 ns</td><td>24.44 ns</td><td>586.7 ns</td><td>2</td>
+</tr><tr><td>InvertMatrixByValue</td><td>Rewritten</td><td>376.33 ns</td><td>107.79 ns</td><td>312.7 ns</td><td>456.30 ns</td><td>945.2 ns</td><td>2</td>
+</tr></tbody></table>
+</body>
+</html>

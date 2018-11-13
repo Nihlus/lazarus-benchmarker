@@ -24,7 +24,7 @@ namespace Lazarus.RW
             var hmodule = LoadLibrary(Library);
             EntryPoints[0] = GetProcAddress(hmodule,"lzInvertMatrixByPtr");
             EntryPoints[1] = GetProcAddress(hmodule,"lzInvertMatrixByValue");
-            FreeLibrary(hmodule);
+            //FreeLibrary(hmodule);
         }
         [Slot(0)]
         public static void InvertMatrixByPtr(ref Matrix2 matrix)

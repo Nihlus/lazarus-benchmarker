@@ -1,0 +1,33 @@
+<Project ToolsVersion="15.0">
+  <PropertyGroup>
+    <ImportDirectoryBuildProps>false</ImportDirectoryBuildProps>
+    <ImportDirectoryBuildTargets>false</ImportDirectoryBuildTargets>
+  </PropertyGroup>
+
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+
+  <PropertyGroup>
+    <AssemblyTitle>Job-TKRIPY</AssemblyTitle>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x64</PlatformTarget>
+    <AssemblyName>Job-TKRIPY</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <OutputPath>bin\Release</OutputPath>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Job-TKRIPY.notcs" Exclude="bin\**;obj\**;**\*.xproj;packages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\perks\Documents\RiderProjects\Lazarus\Lazarus.Benchmarker\Lazarus.Benchmarker.csproj" />
+  </ItemGroup>
+  
+
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+</Project>

@@ -26,15 +26,43 @@
   "frameworks": {
     "netstandard2.0": {
       "dependencies": {
-        "AdvancedDLSupport": {
+        "Humanizer": {
           "target": "Package",
-          "version": "[2.3.0, )"
+          "version": "[2.5.1, )"
+        },
+        "Mono.Cecil": {
+          "target": "Package",
+          "version": "[0.10.1, )"
+        },
+        "Mono.DllMap": {
+          "target": "Package",
+          "version": "[1.0.1, )"
         },
         "NETStandard.Library": {
           "suppressParent": "All",
           "target": "Package",
           "version": "[2.0.3, )",
           "autoReferenced": true
+        },
+        "StrictEmit": {
+          "target": "Package",
+          "version": "[2.7.1, )"
+        },
+        "System.Reflection.Emit": {
+          "target": "Package",
+          "version": "[4.3.0, )"
+        },
+        "System.Reflection.Emit.ILGeneration": {
+          "target": "Package",
+          "version": "[4.3.0, )"
+        },
+        "System.Runtime.CompilerServices.Unsafe": {
+          "target": "Package",
+          "version": "[4.5.2, )"
+        },
+        "System.ValueTuple": {
+          "target": "Package",
+          "version": "[4.5.0, )"
         }
       },
       "imports": [

@@ -11,6 +11,7 @@
         "dependencies": {
           "Lazarus.ADL": "1.0.0",
           "Microsoft.NETCore.App": "2.1.4",
+          "AdvancedDLSupport.Reference": "2.3.1.0",
           "Lazarus.RW": "1.0.0.0"
         },
         "runtime": {
@@ -26,12 +27,6 @@
           "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Runtime.CompilerServices.Unsafe": "4.4.0",
           "System.ValueTuple": "4.4.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/AdvancedDLSupport.dll": {
-            "assemblyVersion": "2.3.0.0",
-            "fileVersion": "2.3.0.0"
-          }
         }
       },
       "Humanizer/2.2.0": {
@@ -1445,6 +1440,14 @@
           "Lazarus.ADL.dll": {}
         }
       },
+      "AdvancedDLSupport.Reference/2.3.1.0": {
+        "runtime": {
+          "AdvancedDLSupport.dll": {
+            "assemblyVersion": "2.3.1.0",
+            "fileVersion": "2.3.1.0"
+          }
+        }
+      },
       "Lazarus.RW/1.0.0.0": {
         "runtime": {
           "Lazarus.RW.dll": {
@@ -1932,6 +1935,11 @@
     },
     "Lazarus.ADL/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AdvancedDLSupport.Reference/2.3.1.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },

@@ -8,6 +8,8 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="ILazarus.cs" t="Include" />
         <e p="Lazarus.ADL.csproj" t="IncludeRecursive" />
+        <e p="lz32.dll" t="Include" />
+        <e p="lz64.dll" t="Include" />
         <e p="Matrix2.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Release" t="Include">
@@ -19,6 +21,16 @@
         <e p="Vector2.cs" t="Include" />
       </e>
       <e p="Lazarus.Benchmarker" t="IncludeRecursive">
+        <e p="BenchmarkDotNet.Artifacts" t="Include">
+          <e p="Lazarus.Benchmarker.Program.LazarusBenchmarker.log" t="Include" />
+          <e p="results" t="Include">
+            <e p="BuildPlots.R" t="Include" />
+            <e p="Lazarus.Benchmarker.Program.LazarusBenchmarker-measurements.csv" t="Include" />
+            <e p="Lazarus.Benchmarker.Program.LazarusBenchmarker-report-github.md" t="Include" />
+            <e p="Lazarus.Benchmarker.Program.LazarusBenchmarker-report.csv" t="Include" />
+            <e p="Lazarus.Benchmarker.Program.LazarusBenchmarker-report.html" t="Include" />
+          </e>
+        </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Lazarus.Benchmarker.csproj" t="IncludeRecursive" />
         <e p="lz.dll" t="Include" />
