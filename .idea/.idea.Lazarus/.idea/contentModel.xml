@@ -22,6 +22,7 @@
       </e>
       <e p="Lazarus.Benchmarker" t="IncludeRecursive">
         <e p="BenchmarkDotNet.Artifacts" t="Include">
+          <e p="Lazarus.Benchmarker.Program.InvertMatrixByPtrBenchmark.log" t="Include" />
           <e p="Lazarus.Benchmarker.Program.LazarusBenchmarker.log" t="Include" />
           <e p="results" t="Include">
             <e p="BuildPlots.R" t="Include" />
